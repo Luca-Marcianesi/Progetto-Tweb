@@ -1,0 +1,988 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* home*/
+
+.home{
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+.titoloo{
+    margin-top: 5%;
+    text-align: center;
+    color: #30306C;
+    font-size: xx-large;
+    font-weight: bolder;
+}
+
+.iconimage{
+    height: auto;
+    width: 40px;
+}
+
+
+
+.whoarewetext{
+    padding: 30px;
+    text-align: center;
+    color: black;
+    font-size: x-large;
+}
+
+
+/*stile icone: lente-contratto-*/
+
+.divtreimmagini{
+    margin-top: 5%;
+    padding-left: 17%;
+    height: 250px;
+
+}
+
+.treimmagini{
+    height: 150px;
+    width: 200px;
+}
+
+.treimmaginitext{
+    font-size: small;
+    float: left;
+    padding-left: 13.8%;
+    color:#30306C;
+    text-align: center;
+}
+
+.rectangle{
+    width: auto;
+    background: #faad77;
+    height: 380px;
+
+}
+
+/*stile frecce per studente successivo e precedente*/
+
+.prec, .succ {
+    cursor: pointer;
+    user-select:none;
+    position: absolute;
+    top: 50%;
+    width: 40px;
+    height:40px;
+    border:2px solid #DDDDDD;
+    color: rgb(45,45,45);
+    font-size: 18px;
+    transition: 0.5s ease;
+    border-radius:50%;
+    text-align: center;
+    line-height: 38px;
+  }
+  .succ {
+    right: 0;
+  }
+  .prec:hover, .succ:hover {
+    background-color: #DDDDDD;
+    color: black;
+  }
+
+/*stile parte riguardante studenti e div arancione*/
+
+.rectangletext{
+    padding-top: 8px;
+    font-size: xx-large;
+    color: #30306C;
+    text-align: center;
+}
+
+.student{
+    margin-top: 2%;
+    margin-left: 2%;
+    border-radius: 50%;
+    width: 290px;
+    height: 200px;
+    border: groove;
+    border-color: #30306C;;
+    float: left;
+}
+
+.studenttext{
+    text-align: justify;
+    padding-top: 4%;
+    font-size: x-large;
+    color: #30306C;
+    float: left;
+}
+
+.studentdescription{
+    padding: 4%;
+    font-size: large;
+    font-style:oblique;
+    color: #30306C;
+    text-align: center;
+}
+
+
+.cities{
+    width: 180px;
+    height: 160px;
+}
+
+.divcities{
+    margin-right: 8%;
+    width: 200px;
+    height: auto;
+    text-align: justify;
+    float:left;
+}
+
+.divtextspaces{
+    color: white;
+    height: 30px;
+    border: white;
+}
+
+.alignment, .alignment2{
+    padding-top: 5%;
+    text-align: center;
+    margin-left: 62%;
+    color: #FF974B;
+    font-size: xx-large;
+    height: 450px;
+    width: 550px;
+}
+
+.alignment2{
+align-items: center;
+margin-left: 25%;
+}
+
+/*stile immagine delle chiavi*/
+
+.keys{
+    width: 300px;
+    height: 280px;
+    transform: rotate(30deg);
+}
+
+/*stile prime immagini della pagina*/
+
+.firstimagehome{
+    background-image: url(images/affitto-casa-studenti.png);
+    height: 450px;
+    width: 100%;
+    text-align: center;
+    display: flex;
+}
+.firstimagehomelocatore{
+    background-image: url(images/affitto-stanza.jpg);
+    height: 100%;
+    width: 100%;
+    background-repeat: round;
+    align-items: center;
+    text-align: center;
+    display: flex;
+}
+
+/*stile linea separatrice*/
+
+.spaceline{
+    width: 15%;
+    background-color: black;
+    margin-left: 42%;
+}
+
+/*stile tag nativi per la pagina home*/
+
+.bodyhome{
+    background-color:linear-gradient(0deg, rgb(170, 26, 26) 0%, rgb(73, 3, 58) 31%);
+    background-color: rgb(255, 255, 255);
+    font-family: 'Work Sans', sans-serif;
+    font-size: 100%;
+}
+
+
+.phome{
+    font-size:32px ;
+    font-weight: 600;
+    margin-bottom:12px;
+    margin-left: 30px;
+}
+
+.h3home{
+    font-size:38px ;
+    font-weight: 800;
+}
+
+
+.ahome {
+    font-size: 35px;
+    font-weight: 800;
+    line-height: 42px;
+    color: #FF974B;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+
+a:hover{
+    color: #30306C;
+}
+
+
+.about{
+    width: 45%;
+    margin: 0px 0px;
+}
+
+
+.headerhome{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color:rgb(255, 255, 255);
+    z-index: 5;
+    padding: 5px 5px;
+    display: flex;
+    flex-wrap: wrap;
+    
+  /*  background:linear-gradient(0deg, rgb(0, 0, 0) 0%, rgb(0, 0, 0) 31%);*/
+}
+
+/*stile bottoni header*/
+
+.headerbuttons{
+    position: fixed;
+    right: 2%;
+    top: 1%;
+}
+
+.blubuttons, .buttonlocatore{
+    background-color: rgb(7, 1, 87);
+    color: #FFFFFF;
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding:0px 30px ;
+    border: none;
+    border-radius: 26px;
+    margin-right: 0px;
+    line-height: 42px;
+    display: inline-flex;
+}
+
+.buttonlocatore{
+    padding:5px 30px ;
+    align-items: center;
+    text-align: center;
+    font-size: 33px;
+    background-color: #f9b686;
+}
+
+.blubuttons:hover{
+    color: rgb(237, 157, 76);
+}
+
+.sectionhome{
+    padding-bottom: 34px;
+    padding-top: 34px;
+}
+
+.hero-cta{
+    align-self: flex-end;
+}
+
+
+.header-container{
+   /* width: 80%;*/
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.logo{
+    max-width: 135px;
+    max-height: 100px;
+}
+
+.imghome{
+    width: 80px;
+    height: auto;
+}
+
+.logoimmagine{
+    width: 40px;
+    height: auto;
+}
+
+.name{
+    margin-left: 10px;
+    margin-right: 140px;
+    font-size: 33px;
+    font-weight: 300;
+    color: #30306C;
+    line-height: 42px;}
+
+.menu_ul_home{
+    list-style-type: none;
+    display: flex;
+}
+
+.menu_ul_li{
+    list-style-type: none;
+    margin-right: 10px;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 42px;
+    display: inline-flex;
+}
+
+.menu_ul_li_a {
+    list-style-type: none;
+    font-size: 14px;
+}  
+
+.anchors{
+    visibility: hidden;
+    position: relative;
+    top: -50px;
+
+}
+/*stile e centro area email*/
+
+.centro{
+    text-align: center;
+}
+
+.areaEmail{
+    width: auto;
+    font-size: 13px;
+    font-weight: 700;
+    border-radius: 26px;
+    line-height: 42px;
+    display: inline-flex;
+    background-color: #FF974B;
+    text-align: center;
+}
+
+.container{
+    width: 80%;
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 1140px; /* in modo da vincolare l'estensione massima
+    in modo che resti tutto contenuto e compresso senza rompere il layout*/
+
+}
+
+/*stile sezione contatti*/
+
+.contacts-section{
+    margin-bottom: 200px;
+    margin-left: 100px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.contactscolumn{
+
+    float: left;
+    width: 45%;
+    padding: 30px;
+    
+}
+@media screen and (max-width:800px){
+    .imgcontactscolumn{
+        display: none;    
+    }
+    .contactscolumn{
+        width: 100%;
+        padding: 0%;
+    }
+    .rectangle{
+        display: none;
+    }
+}
+
+.p.contactscolumn{
+    text-align: center;
+}
+
+.icon-contacts{
+    width: 350px;
+    height: auto;
+}
+
+.maintext-contact{
+    color: #FF974B;
+    font-size: xx-large;
+    text-align: center;
+
+}
+
+.contact-info{
+    font-size: 16px;
+    margin-bottom:12px;
+    color: #30306C;
+    text-align: center;
+
+}
+
+/*esploracittà,3 img*/
+
+.treimg{
+    margin-top: 0;
+    padding-top: 0;
+}
+.container{
+    margin: 0 auto;
+    padding: 4px;
+    text-align: center;
+}
+.griglia
+.griglia3img{
+    padding: 0;
+    margin: 0;
+}
+
+.griglia li{
+    display: inline-block;
+    margin: 15px;
+}
+
+.griglia3img li{
+    display: inline-block;
+    margin: 40px;
+    padding: 9px;
+    /*border: 4px solid #30306C;
+    border-radius: 30px;*/
+}
+
+.griglia ul li p
+.griglia3img ul li p{
+    padding: 5px 5px 0 5px;
+    margin: 0;
+    font-size: 12px;
+}
+
+/*stile tutte le città*/
+
+.foto{
+    height: 210px;
+    width: 210px;
+}
+
+
+.arancione, .arancione2{
+    margin-left: 0%;
+    text-align: start;
+    color: #FF974B;
+    background-color: #FFFFFF;
+}
+
+.blu{
+    margin-left: 0%;
+    margin-top: -8px;
+    text-align: start;
+    background-color: #FFFFFF;
+    color: #30306C;
+    font-size: smaller;
+}
+
+.arancione2{
+    font-size: xx-small;
+    margin-top: -20px;
+}
+
+.tuttelecittà{
+    text-align: center;
+    color: #FF974B;
+    font-size: large;
+}
+.tuttelecittà:hover{
+    color: #30306C;
+}
+
+/*stile regolamento*/
+.reg{
+    text-align:center;
+}
+
+.regolamento1{
+    font-size: xx-large;
+    color: #30306C;
+    text-align: center;
+}
+
+.photo{
+    width: 90px;
+    height: 90px;
+    
+}  
+
+.rectangle1{
+    width: auto;
+    background: #f9b686;
+    height: auto;
+    padding: 20px;
+    margin: 10%;
+    margin-top:0%;
+}   
+.rectangle1text{
+    padding-top: 7px;
+    font-size: x-large;
+    color: #30306C;
+    text-align: left;
+}
+
+.areapubtext,
+.areaprivtext{
+    padding-top: 2px;
+    font-size: medium;
+    margin-left: 2%;
+    color: #000000;
+    text-align: left;
+}
+
+/*stile footer*/
+.footerhome{
+    background-color: #FF974B;
+    height: 200px;
+    margin-top: 100px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/*stile FAQ*/
+
+    .faq-container{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    }
+
+    .faq-page {
+        color: #30306C;
+        cursor: pointer;
+        padding: 15px 10px;
+        width: 60%;
+        transition: 0.4s;
+        margin: auto;
+    }
+    
+    .active,
+    .faq-page:hover {
+        background-color: #FF974B;
+    }
+    .faq-body {
+        padding: 10px 20px;
+        background-color: #30306C ;
+        display: none;
+        overflow: hidden;
+        margin: auto;
+        width: 60%; 
+        padding: auto;
+    }
+    .faq-page:after {
+        content: '\02795'; /* Unicode  (+) */
+        font-size: 13px;
+        color: #30306C;
+        float: right;
+        margin-left: 5px;
+    }
+    .active:after {
+        content: "\2796"; /* Unicode (-) */
+    }
+
+
+/*stile freccia su*/
+.back-to-top{
+    background-image: url('images/products/1500306-icona-freccia-verso-l-alto-gratuito-vettoriale.png');
+    background-size: contain ;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-color: #30306C;
+    cursor: pointer;
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    position: fixed;
+    bottom: 80px;
+    left: 87%;
+}
+
+
+.dot,.fulldot {
+    height: 8px;
+    width: 8px;
+    background-color: #FF974B;
+    border-radius: 50%;
+    display: inline-block;
+  }
+
+  .fulldot{
+      background-color: #30306C;
+  }
+
+/*login*/
+
+.bodylogin{
+    width: 650px;
+    height: auto;
+    background: aqua;
+    
+}
+
+.titolo{
+    text-transform: uppercase;
+    margin-top: 5%;
+    text-align: center;
+    color: #30306C;
+    font-size: xx-large;
+    font-weight: bolder;
+}
+
+.loginsection{
+    text-align: center;
+}
+.label-input,
+.label-input-smaller,
+.label-input1
+{
+    font-size: 16px;
+    font-weight:600;
+    color: #30306C;
+}
+
+.label-input1
+{color: #FF974B;}
+.input-field{
+    font-family:'Work Sans', sans-serif;
+    font-size: 13px;
+    color: #30306C;
+    background-color: #fac49d;
+    padding: 12px 16px;
+    width: auto;
+    border-radius: 30px;
+    border: none;
+    margin-bottom: 16px;
+    margin-top: 8px;
+}
+
+.button{
+    color: #FFFFFF;
+    background-color: #FF974B;
+    font-size: 15px;
+    font-weight: 600;
+    text-transform: uppercase;
+    padding:12px 24px ;
+    border: none;
+    border-radius: 36px;
+}
+
+.bottomlogo{
+    font-size: 13px;
+    font-weight: 300;
+    color: #30306C;
+}
+
+/*annunci*/
+
+.annuncio{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr ;
+    margin-top: 100px;
+    float: left;
+    display: flex;
+    flex-wrap: wrap;
+    border-color: #30306C;
+    border: #30306C;
+
+}
+
+.annunciosingolo{
+    margin-top: 5%;
+    float: left;
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+.titoloannuncio{
+    color: #FF974B;
+    float: left;
+    margin-left: 35px;
+    font-size: xx-large;
+    text-transform: uppercase;
+}
+
+.columnimg {
+    color: #30306C;
+    grid-template-columns: 1fr 1fr 1fr ;
+    float: left;
+    padding: 1rem;
+    width: 30%;
+}
+
+.columnsections, .col1, .col2{
+    margin-top: 10px;
+    width: 45%;
+    float:left
+}
+.col2{
+float: right;
+margin-top: 150px;
+}
+
+.columntext,
+.columnprice{
+    margin-top: 10px;
+    padding-top: 10px;
+    height: 260px;
+    width: 25%;
+}
+
+.columntext{
+    width: 35%;
+}
+
+.titolocolonna{
+    font-size: large;
+    color: #30306C;
+    text-transform: uppercase;
+}
+
+.back-to-previous{
+    background-image: url('images/products/1500306-icona-freccia-verso-l-alto-gratuito-vettoriale.png');
+    transform: rotate(270deg);
+    background-size: contain ;
+    background-repeat: no-repeat;
+    background-position: center center;
+    cursor: pointer;
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    top: 180px;
+    left: 80px;
+}
+
+.nomecittàselezionata{
+    margin-top: 60px;
+    font-size: xx-large;
+    color: #30306C;
+    text-transform: uppercase;
+   text-align: center;
+}
+
+.testocolonna{
+    font-size: medium;
+    color: #30306C;
+}
+
+.annunci{
+    float: center;
+    padding:0px 5px ;
+    border: none;
+    border-radius: 26px;
+    margin-left: 40px;
+    line-height: 22px;
+}
+
+.imgaffitto{
+    background-color: #30306C;
+    border-radius: 26px;
+    height: 700px;
+    width: 500px;
+}
+
+@media screen and (max-width:1200px){
+    .imgaffitto{
+        height: 400px;
+        width: 450px;  
+    }
+}
+
+@media screen and (max-width:750px){
+    .imgaffitto{
+        height: 180px;
+        width: 150px;  
+    }
+}
+
+.dettaglibutton{
+    background-color: #FF974B;
+    color: #FFFFFF;
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding:0px 20px ;
+    border: none;
+    border-radius: 26px;
+    margin-left: 25px;
+    line-height: 38px;
+    display: inline-flex;
+
+}
+
+.annuncibutton{
+    color: #30306C;
+    background-color: #f8c7a4;
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    width: 100px;
+    padding:0px 20px ;
+    border: #30306C;
+    list-style-type: none;
+    border-radius: 10px;
+    line-height: 38px;
+    display: inline-flex;
+
+
+}
+
+.description, .titolo, .infolocatore, .descriptionlocatore{
+    font-size: medium;
+    color: #30306C;
+    float: left;
+    margin-left: 0%;
+    text-align: start;
+    display: inline;
+    width:100%;
+
+}
+
+.infolocatore, .descriptionlocatore{
+    margin-left: 5%;
+}
+
+.titolo, .infolocatore{
+    font-size: large;
+    text-transform: uppercase;
+    color: #FF974B;
+}
+
+.ann{
+    display: inline-flex;
+    list-style-type: none;
+    float: left;
+    margin-left: -29px;
+    margin-top: 10px;
+
+}
+
+/*citta*/
+
+.cittaref{
+    margin-top: 30px;
+    text-transform: none;
+    color: #30306C;
+    font-size: x-large;
+}
+
+.annunci{
+    margin-top: 2px;
+    color: coral;
+    font-size: smaller;
+}
+
+.arancione, .arancione2{
+    margin-left: 0%;
+    text-align: start;
+    color: #FF974B;
+    background-color: #FFFFFF;
+}
+
+.titolo{
+    margin-top: 5%;
+    text-align: center;
+    color: #30306C;
+    font-size: xx-large;
+    font-weight: bolder;
+}
+
+.blu{
+    margin-left: 0%;
+    margin-top: -8px;
+    text-align: start;
+    background-color: #FFFFFF;
+    color: #30306C;
+    font-size: smaller;
+}
+
+.arancione2{
+    font-size: xx-small;
+    margin-top: -20px;
+}
+
+.griglia li{
+    display: inline-block;
+    margin: 24px;
+}
+
+.griglia ul li p {
+    padding: 5px 5px 0 5px;
+    margin: 0;
+    font-size: 12px;
+}
+
+.foto{
+    height: 210px;
+    width: 210px;
+}
+
+.container{
+    width: 90%;
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 1140px; /* in modo da vincolare l'estensione massima
+    in modo che resti tutto contenuto e compresso senza rompere il layout*/
+
+}
+
+.acittà {
+    font-size: 35px;
+    font-weight: 800;
+    line-height: 42px;
+    color: #FF974B;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.pcittà {
+    font-size: 16px;
+    margin-bottom:12px;
+    margin-left: 30px;
+
+}
+
+a:hover{
+    color: #30306C;
+}
+ 
+.anchors{
+    visibility: hidden;
+    position: relative;
+    top: -50px;
+
+}
+
+.menucatalogo ul{
+    margin-left: 290px;
+    list-style-type: none;
+    display: flex;
+}
+
+.menucatalogo ul li{
+    list-style-type: none;
+    margin-right: 30px;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 42px;
+    display: inline-flex;
+}
+
+.menucatalogo ul li a {
+    list-style-type: none;
+    font-size: 14px;}
