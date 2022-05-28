@@ -5,7 +5,7 @@
 @section('content')
 <p> la home è da rifare bene </p>
 <section class="home">
-<div class="firstimagehome">
+<div class="firstimagehome" >
   <div class="alignment"><b>TROVA L'ALLOGGIO<br> GIUSTO PER TE</b>
   <img class="keys" src="images/products/chiavi-removebg-preview.png" alt="Passaggio di chiavi">
   </div>
@@ -148,16 +148,16 @@
     <p class="titoloo"> Esplora in base alla tua città</p><br>
     <ul class="griglia">
       <li><img class ="foto" src="images/products/Ancona.jpg" alt="Ancona">
-        <p class="arancione">Ancona</p><p class="blu">x annunci disponibili</p><p class="arancione2">
+        <p class="arancione">Ancona</p><p class="arancione2">
           <a class="arancione2">Visualizza</p></a></li>
       <li><img class ="foto" src="images/products/Milano.jpg">
-        <p class="arancione">Milano</p><p class="blu">x annunci disponibili</p><p class="arancione2">
+        <p class="arancione">Milano</p><p class="arancione2">
           <a class="arancione2">Visualizza</p></a></li>
       <li><img class ="foto" src="images/products/Roma.webp">
-        <p class="arancione">Roma</p><p class="blu">x annunci disponibili</p><p class="arancione2">
+        <p class="arancione">Roma</p><p class="arancione2">
           <a class="arancione2">Visualizza</p></a></li>
       <li><img class ="foto" src="images/products/Bari.jpg">
-        <p class="arancione">Bari</p><p class="blu">x annunci disponibili</p><p class="arancione2">
+        <p class="arancione">Bari</p><p class="arancione2">
           <a class="arancione2">Visualizza</p></a></li>
     </ul>
     <p><a class="tuttelecittà" href="{{ route('elencocitta') }}"><b>Tutte le città</b></a></p>

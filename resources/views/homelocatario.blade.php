@@ -1,5 +1,5 @@
 <div class="firstimagehomelocatario">
-  <div class="alignment3"><b>benvenuto, trova l'alloggio adatto a te<br> <br> <br>
+  <div class="alignment3"><b>Eccoti, {{ Auth::user()->name }} {{ Auth::user()->surname }}, trova l'alloggio adatto a te<br> <br> <br>
  </b>
   </div>
   </div>
@@ -142,16 +142,16 @@
     <p class="titolo"> Esplora in base alla tua città</p><br>
     <ul class="griglia">
       <li><img class ="foto" src="images/products/Ancona.jpg" alt="Ancona">
-        <p class="arancione">Ancona</p><p class="blu">x annunci disponibili</p><p class="arancione2">
+        <p class="arancione">Ancona></p><p class="arancione2">
           <a class="arancione2">Visualizza</p></a></li>
       <li><img class ="foto" src="images/products/Milano.jpg">
-        <p class="arancione">Milano</p><p class="blu">x annunci disponibili</p><p class="arancione2">
+        <p class="arancione">Milano></p><p class="arancione2">
           <a class="arancione2">Visualizza</p></a></li>
       <li><img class ="foto" src="images/products/Roma.webp">
-        <p class="arancione">Roma</p><p class="blu">x annunci disponibili</p><p class="arancione2">
+        <p class="arancione">Roma></p><p class="arancione2">
           <a class="arancione2">Visualizza</p></a></li>
       <li><img class ="foto" src="images/products/Bari.jpg">
-        <p class="arancione">Bari</p><p class="blu">x annunci disponibili</p><p class="arancione2">
+        <p class="arancione">Bari></p><p class="arancione2">
           <a class="arancione2">Visualizza</p></a></li>
     </ul>
     <p><a class="tuttelecittà" href="{{ route('listacitta1') }}"><b>Tutte le città</b></a></p>

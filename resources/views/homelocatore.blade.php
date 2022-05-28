@@ -1,7 +1,7 @@
 <section class="home">
 <div class="firstimagehomelocatore">
-  <div class="alignment2"><b>BENVENUTO<br> <br> <br>
-  <a class="buttonlocatore" href=""> Inserisci annuncio </a>
+  <div class="alignment2"><b>Eccoti, {{ Auth::user()->name }} {{ Auth::user()->surname }} ! <br> <br> <br>
+  <a class="buttonlocatore" href="{{ route('aggiungiOfferta') }}"> Inserisci annuncio </a>
  </b>
   </div>
   </div>

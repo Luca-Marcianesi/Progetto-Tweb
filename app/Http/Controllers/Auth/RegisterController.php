@@ -67,7 +67,8 @@ class RegisterController extends Controller
             'password' => ['required', 'string', 'min:8', 'confirmed'],
             'data_nascita'=>['required','date'],
             'sesso' => ['required', 'string', 'max:255'],
-            'role' => ['required']
+            'role' => ['required'],
+            'descrizione' => ['required', 'string', 'min:8', 'max:1000']
         ]);
     }
 
@@ -88,6 +89,9 @@ class RegisterController extends Controller
             'sesso' => $data['sesso'],
             'role' => $data['role'],
             'data_nascita' => $data['data_nascita'],
+            'descrizione' => $data['descrizione'],
+
+
 
         ]);
     }
