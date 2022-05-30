@@ -4,7 +4,9 @@ namespace App\Http\Controllers;
 
 use App\Models\ListaCitta;
 use App\Models\Resources\Offerta;
+use App\Models\Resources\Interagisce;
 use App\Models\Resources\PostoLetto;
+use App\Models\Resources\Appartamento;
 use App\Http\Requests\OffertaRequest;
 
 class locatoreController extends Controller {
@@ -29,8 +31,11 @@ class locatoreController extends Controller {
                     
     }
 
-    public function showMieiAlloggi(){ 
-        return view('mieiAlloggi');
+    public function showMieiAlloggi(){
+        $interazioni = Interagisce::select('offerta')->where('utente',auth()->user()->username)->get();
+        $offerte = Offerta::whereIn('id',$interazioni)->get();
+        return view('mieiAlloggi')
+                ->with('mieiAlloggi',$offerte);
                     
     }
 
@@ -48,13 +53,32 @@ class locatoreController extends Controller {
         $offerta->genere = $request->genere;
         $offerta->save();
 
-        $postoletto = new PostoLetto;
-        $postoletto->offerta = $offerta->id;
-        $postoletto->posti_letto_appartamento = 1;
-        $postoletto->posti_letto_camera = 1;
-        $postoletto->dimensioni_camera = 1;
-        $postoletto->save();
-        return view('areaLocatore');
+        $interazione = new Interagisce;
+        $interazione->utente = auth()->user()->username;
+        $interazione->offerta = $offerta->id;
+        $interazione->tipo_interazione = "c";
+        $interazione->data = date("Y-m-d");
+        $interazione->save();
+
+        if($request->tipo= "P"){
+            $postoletto = new PostoLetto;
+            $postoletto->offerta = $offerta->id;
+            $postoletto->posti_letto_appartamento = 1;
+            $postoletto->posti_letto_camera = 1;
+            $postoletto->dimensioni_camera = 1;
+            $postoletto->save();
+        }
+        else{
+            $appartamento = new Appartamento;
+            $appartamento->offerta = $offerta->id;
+            $appartamento->posti_letto_appartamento = 1;
+            $appartamento->numero_di_camere = 2;
+            $appartamento->dimensioni;
+            $appartamento->save();
+        }
+
+    return view('areaLocatore');
+        
         
 
                     

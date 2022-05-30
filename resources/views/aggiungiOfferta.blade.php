@@ -25,7 +25,7 @@
     <div>
     <div class="wrap-contact2">
             {{ Form::open(array('route' => 'aggiungiOfferta', 'class' => 'contact-form')) }}
-    
+
             <div  class="wrap-input">
                 {{ Form::label('titolo', 'Titolo annuncio', ['class' => 'label-input']) }}
                 {{ Form::text('titolo', '', ['class' => 'input', 'id' => 'titolo']) }}
