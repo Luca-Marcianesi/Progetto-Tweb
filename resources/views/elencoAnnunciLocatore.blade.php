@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <link rel="stylesheet" type="text/css" href="{{ asset('css/stile.css') }}" >
-        <title>LaProj5 | @yield('title', 'Catalogo')</title>
+        <title>LaProj5 | @yield('title', 'Annunci')</title>
     </head>
     <body>
         <header class="header">
@@ -37,7 +37,13 @@
 
           <p class="titolocolonna"> {{$offerta->tipo}} :  {{$offerta->titolo}}   </p>
           <p class="testocolonna"> {{$offerta->descrizione_breve}} <br> {{$offerta->locazione}}</p>
-
+          </div>
+          <div class="columnimg columnprice">
+            <p class="testocolonna"> CANONE MENSILE <br>{{$offerta->prezzo}} EURO  </p>
+          <p> <a class="dettaglibutton" href="{{ route('dettagliAnnuncio', [$offerta->id]) }}"> dettagli </a></p>
+          </div>
+          <div id="content"></div>
+    </div>
    
 </section>    
   @endforeach

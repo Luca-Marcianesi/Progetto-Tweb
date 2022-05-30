@@ -93,3 +93,17 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')
         ->name('home');
+/*
+rotta per visualizzare il singolo annuncio
+*/
+
+Route::get('/locatore/offerta{id}', 'HomeController@showAnnuncioSingolo')
+        ->name('dettagliAnnuncio');
+
+
+Route::get('/locatore/offerta{id}', 'HomeController@showAnnuncioSingoloLocatore')
+        ->name('dettagliAnnuncio');
+
+
+Route::get('/locatore/offerta{id}', 'HomeController@showAnnuncioSingoloLocatario')
+        ->name('dettagliAnnuncio');

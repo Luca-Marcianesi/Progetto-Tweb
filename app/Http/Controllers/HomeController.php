@@ -40,7 +40,25 @@ class HomeController extends Controller
         $offerte = Offerta::where('città', $citta)->get();
         return view('elencoAnnunciHome')
                 ->with('offerte', $offerte);
+    }
 
-            
+    public function showAnnuncioSingolo($id){
+        $offerta = $this->_ListaCittaModel->getOffertabyId($id);
+        return view('annunciosingolo')  
+                ->with('offerta', $offerta);
 }
+            
+
+    public function showAnnuncioSingoloLocatore($id){
+        $offerta = $this->_ListaCittaModel->getOffertabyId($id);
+        return view('annunciosingoloLocatore')  
+                ->with('offerta', $offerta);}
+                              
+
+    public function showAnnuncioSingoloLocatario($id){
+        $offerta = $this->_ListaCittaModel->getOffertabyId($id);
+        return view('annunciosingoloLocatario')  
+                ->with('offerta', $offerta);}
+        
+                        
 }
