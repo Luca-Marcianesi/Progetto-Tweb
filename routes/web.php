@@ -112,3 +112,7 @@ Route::get('/locatore/offerta{id}', 'HomeController@showAnnuncioSingoloLocatario
 Route::view('/messaggiLocatore', 'messaggiLocatore')
         ->name('messaggiLocatore');
         
+
+Route::view('/messaggiLocatario', 'messaggiLocatario')
+        ->name('messaggiLocatario');
+        
