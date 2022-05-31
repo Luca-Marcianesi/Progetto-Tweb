@@ -31,13 +31,13 @@
       <div class="messaggioaperto">
         <p class="nomecognome2"> Nome Cognome</p>        
         <img class="fototonda2"src="images/products/studente.jpeg" alt="right">
-        <div class="container darker">
+        <div class="containerchat darker">
   <img src="images/products/studentessa.jpg" alt="Avatar" class="right">
   <p>ciao,sono interessata al tuo appartamento in centro.</p>
   <span class="time-left">11:00</span>
 </div>
 
-<div class="container">
+<div class="containerchat">
   <img src="images/products/studente.jpeg" alt="Avatar">
   <p>CONTRATTO GENERATO</p>
   <a class="arancione2" href=""> Download</a>

@@ -43,7 +43,7 @@
       <div class="messaggioaperto">
         <p class="nomecognome2"> Nome Cognome</p>        
         <img class="fototonda2"src="images/products/studentessa.jpg" alt="">
-        <div class="container">
+        <div class="containerchat">
   <img src="images/products/studentessa.jpg" alt="Avatar">
   <p>ciao,sono interessata al tuo appartamento in centro.</p>
   <span class="time-right">11:00</span>
@@ -60,7 +60,7 @@
   <p>Sweet! So, what do you wanna do today?</p>
   <span class="time-right">11:02</span>
 </div>
--->        <div class="container containerbott">
+-->        <div class="containerchat containerbott">
 
         <a class="button" href="">rispondi</a>
         <a class="button" href="">genera contratto</a>

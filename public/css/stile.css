@@ -1894,7 +1894,7 @@ margin-top: 150px;
     }
    
      /* Chat containers */
-.container{
+.containerchat{
     border: 2px solid #dedede;
     background-color: #f1f1f1;
     border-radius: 5px;
@@ -1909,14 +1909,14 @@ margin-top: 150px;
   }
   
   /* Clear floats */
-  .container::after {
+  .containerchat::after {
     content: "";
     clear: both;
     display: table;
   }
   
   /* Style images */
-  .container img {
+  .containerchat img {
     float: left;
     max-width: 60px;
     width: 100%;
@@ -1925,7 +1925,7 @@ margin-top: 150px;
   }
   
   /* Style the right image */
-  .container img.right {
+  .containerchat img.right {
     float: right;
     margin-left: 20px;
     margin-right:0;
