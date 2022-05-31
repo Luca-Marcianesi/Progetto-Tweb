@@ -21,6 +21,15 @@
 </head>
 <body>
     <div id="app">
+    <header class="header">
+    <div class="header-container">
+        <div class="logo"><img class="logoimmagine" src="images/products/Logo.png" alt="Logo"></div>
+        <div class="name">ALLOGGISTUDENTI.com</div>
+        <nav class="menu" fixed="right">
+             @include('layouts/_navlogin')
+        </nav>
+    </div>
+    </header>
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
@@ -36,13 +45,7 @@
                     <ul class="navbar-nav ml-auto">
                         <!-- Authentication Links -->
                         @guest
-                            <li class="menu_ul_li">
-                                <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
-                            </li>
                             @if (Route::has('register'))
-                                <li class="menu_ul_li">
-                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
-                                </li>
                             @endif
                         @else
                             <li class="nav-item dropdown">
