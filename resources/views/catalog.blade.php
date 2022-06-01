@@ -3,15 +3,14 @@
 @section('title', 'Home')
 
 @section('content')
-<p> la home è da rifare bene </p>
 <section class="home">
-<div class="firstimagehome" >
+<div class="firstimagehome">
   <div class="alignment"><b>TROVA L'ALLOGGIO<br> GIUSTO PER TE</b>
   <img class="keys" src="images/products/chiavi-removebg-preview.png" alt="Passaggio di chiavi">
   </div>
 </div>
 </section>
-<br id="cs">
+<br>
   <p class="titoloo">Chi siamo <img class="iconimage" src="images/products/posizione.png" alt="Logo posizione geografica"> </p>
   <div>
     <p class="whoarewetext">Sei uno studente e cerchi un alloggio nella tua città universitaria?
@@ -34,6 +33,7 @@
     </ul>
   </div>
 </section>
+<hr class="spaziatura">
 
 <section class="recensioni">
   <style>
@@ -142,7 +142,7 @@
   <script src="reviews.js"></script>
   </section>
   
-
+<hr class="spaziatura">
 <section class="esploracittà">
   <div class="container">
     <p class="titoloo"> Esplora in base alla tua città</p><br>
@@ -161,10 +161,9 @@
           <a class="arancione2">Visualizza</p></a></li>
     </ul>
     <p><a class="tuttelecittà" href="{{ route('elencocitta') }}"><b>Tutte le città</b></a></p>
-
-
   </div>
 </section>
+<hr class="spaziatura">
 
 <section id="regolamento">
   <div class="reg" > 
@@ -213,7 +212,8 @@
 <script src="faq-js.js"></script>
 </section>
 
-<section >
+<br style="height:20px">
+<section>
 <div><p class="titoloo">Inserisci la tua mail per rimanere aggiornato</p></div>
 <div class ="titoloo"> 
   <input class="areaEmail" type="text" value="" name="email" id="newsletter" placeholder="Inserisci la tua Email" title="Iscriviti alla nostra newsletter" >
@@ -221,9 +221,9 @@
 </div>
 </section>
 
+<hr class="spaziatura">
 
 <section class="contacts-section" id="contatti">
-  
   <div class="contactscolumn">
     <div class="imgcontactscolumn"><img class="icon-contacts" src="images/products/imgcontatti.png" alt="Icon"></div>
   </div>
@@ -239,10 +239,9 @@
 
   </div>
 
-
 </section>
-<div id ="backBtn" class="back-to-top" ></div>
-<script src="backbtn.js"></script>
+<div id ="backBtn" class="back-to-top"></div>
+<script src="resources/js/backbtn.js"></script>
 
 @endsection
 
