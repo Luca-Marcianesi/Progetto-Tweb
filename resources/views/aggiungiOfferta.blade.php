@@ -88,7 +88,7 @@
 
             <div  class="wrap-input">
                 {{ Form::label('tipo', 'Tipo offerta', ['class' => 'label-input']) }}
-                {{ Form::select('tipo',['A' => 'Appartamento','P' => 'PostoLetto'], '', ['class' => 'input','id' => 'tipo']) }}
+                {{ Form::select('tipo',['A' => 'Appartamento','P' => 'PostoLetto'], ['class' => 'input','id' => 'tipo']) }}
                 @if ($errors->first('tipo'))
                 <ul class="errors">
                     @foreach ($errors->get('tipo') as $message)

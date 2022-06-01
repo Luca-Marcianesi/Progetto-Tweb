@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\ListaCitta;
+use App\Models\MieiAlloggi;
 use App\Models\Resources\Offerta;
 use App\Models\Resources\Interagisce;
 use App\Models\Resources\PostoLetto;
@@ -13,6 +14,7 @@ class locatoreController extends Controller {
 
     public function __construct() {
         $this->middleware('can:isLocatore');
+        $this->_alloggiModel = new MieiAlloggi;
     }
 
     public function areaLocatore() {
@@ -32,10 +34,35 @@ class locatoreController extends Controller {
     }
 
     public function showMieiAlloggi(){
-        $interazioni = Interagisce::select('offerta')->where('utente',auth()->user()->username)->get();
-        $offerte = Offerta::whereIn('id',$interazioni)->get();
-        return view('mieiAlloggi')
-                ->with('mieiAlloggi',$offerte);
+            $offerte = $this->_alloggiModel->getMieiAlloggi(auth()->user()->username);
+            return view('mieiAlloggi')
+                    ->with('mieiAlloggi',$offerte);                        
+        }
+
+        public function getAllInfoAlloggio($id) {
+            $offerta = Offerta::find($id);
+
+            $dettagli_appartamento = Appartamento::find($id);
+
+            $dettagli_postoLetto = PostoLetto::find($id);
+
+            return view('annunciosingoloLocatore')
+                            ->with('offerta', $offerta)
+                            ->with('postoLetto', $dettagli_postoLetto)
+                            ->with('appartamento',$dettagli_appartamento);
+        }
+
+
+    public function alloggiFiltrati(FiltriRequest $request){
+        if($request->tipo == null){
+
+        }else if($request->tipo == 'A'){
+
+        }else{
+            
+        }
+
+        
                     
     }
 
@@ -60,7 +87,7 @@ class locatoreController extends Controller {
         $interazione->data = date("Y-m-d");
         $interazione->save();
 
-        if($request->tipo= "P"){
+        if($request->tipo ==  "P"){
             $postoletto = new PostoLetto;
             $postoletto->offerta = $offerta->id;
             $postoletto->posti_letto_appartamento = 1;
@@ -73,7 +100,7 @@ class locatoreController extends Controller {
             $appartamento->offerta = $offerta->id;
             $appartamento->posti_letto_appartamento = 1;
             $appartamento->numero_di_camere = 2;
-            $appartamento->dimensioni;
+            $appartamento->dimensioni =24;
             $appartamento->save();
         }
 

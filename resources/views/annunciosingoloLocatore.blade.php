@@ -15,7 +15,7 @@
             </nav>
             </div>
         </header>
-
+        @isset($offerta)
 <div class="annunciosingolo">
       <div class="columnsections col1">
       <p class ="titoloannuncio">  {{$offerta->titolo}} </p> <br> <br> <br>
@@ -31,10 +31,23 @@
        <p class = "description titolo"> Servizi inclusi</p>  
        <p class="description">  {{$offerta->descrizione}}</p> 
        <p class = "description titolo"> canone mensile</p>  
-       <p class="description">  {{$offerta->prezzo}}</p> 
-      </div>
+       <p class="description">  {{$offerta->prezzo}}</p>
+       @endisset()
+       
+       @isset($postoLetto)
+        <p class = "description titolo"> Posti letto camera</p>  
+        <p class="description">  {{$postoLetto->posti_letto_camera}}</p>
+        @endisset()
 
-     
+        @isset($appartamento)
+        <p class = "description titolo"> dimensioni</p>  
+        <p class="description">  {{$appartamento->dimensioni}}</p>
+       @endisset()
+
+       
+      </div>
+      
+      
       </div>
     </div>
 
