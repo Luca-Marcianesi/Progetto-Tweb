@@ -183,28 +183,33 @@
 
       <h1 class="faq-page">Posso affittare più di un appartamento?</h1>
       <div class="faq-body">
-          <p>Risposta</p>
-      </div>
+      <h1 class="faq-answer">è possibile modificare gli annunci in ogni momento: la modifica verrà visualizzata
+            24 ore dopo il salvataggio
+  </h1>      </div>
  
       <h1 class="faq-page">Posso proporre un'offerta diversa dal prezzo indicato dal locatore?</h1>
       <div class="faq-body">
-          <p>Risposta</p>
-      </div>
+      <h1 class="faq-answer">è possibile modificare gli annunci in ogni momento: la modifica verrà visualizzata
+            24 ore dopo il salvataggio
+  </h1>      </div>
     
       <h1 class="faq-page">Posso visualizzare il profilo del locatore?</h1>
       <div class="faq-body">
-          <p>Rispsta</p>
-      </div>
+      <h1 class="faq-answer">è possibile modificare gli annunci in ogni momento: la modifica verrà visualizzata
+            24 ore dopo il salvataggio
+  </h1>      </div>
 
       <h1 class="faq-page">Devo chiudere il contratto prima del termine, posso farlo?</h1>
       <div class="faq-body">
-          <p>Rispsta</p>
-      </div>
+      <h1 class="faq-answer">è possibile modificare gli annunci in ogni momento: la modifica verrà visualizzata
+            24 ore dopo il salvataggio
+  </h1>      </div>
 
       <h1 class="faq-page">Il locatore vedrà i miei contatti?</h1>
       <div class="faq-body">
-          <p>Rispsta</p>
-      </div>
+      <h1 class="faq-answer">è possibile modificare gli annunci in ogni momento: la modifica verrà visualizzata
+            24 ore dopo il salvataggio
+  </h1>      </div>
 
 <script src="js/faq-js.js"></script>
 </section>

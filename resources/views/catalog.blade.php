@@ -185,28 +185,33 @@
 
       <h1 class="faq-page">Domanda 1</h1>
       <div class="faq-body">
-          <p>Risposta</p>
-      </div>
+      <h1 class="faq-answer">è possibile modificare gli annunci in ogni momento: la modifica verrà visualizzata
+            24 ore dopo il salvataggio
+  </h1>      </div>
  
       <h1 class="faq-page">Domanda 2</h1>
       <div class="faq-body">
-          <p>Risposta</p>
-      </div>
+      <h1 class="faq-answer">è possibile modificare gli annunci in ogni momento: la modifica verrà visualizzata
+            24 ore dopo il salvataggio
+  </h1>      </div>
     
       <h1 class="faq-page">Domanda 3</h1>
       <div class="faq-body">
-          <p>Rispsta</p>
-      </div>
+      <h1 class="faq-answer">è possibile modificare gli annunci in ogni momento: la modifica verrà visualizzata
+            24 ore dopo il salvataggio
+  </h1>      </div>
 
       <h1 class="faq-page">Domanda 4</h1>
       <div class="faq-body">
-          <p>Rispsta</p>
-      </div>
+      <h1 class="faq-answer">è possibile modificare gli annunci in ogni momento: la modifica verrà visualizzata
+            24 ore dopo il salvataggio
+  </h1>      </div>
 
       <h1 class="faq-page">Domanda 5</h1>
       <div class="faq-body">
-          <p>Rispsta</p>
-      </div>
+      <h1 class="faq-answer">è possibile modificare gli annunci in ogni momento: la modifica verrà visualizzata
+            24 ore dopo il salvataggio
+  </h1>      </div>
 
 <script src="js/faq-js.js"></script>
 </section>
