@@ -23,7 +23,7 @@
             @foreach ($mieiAlloggi as $alloggio)
             <div class="annunciosingololoc">
                 <p class ="description titolo">  {{$alloggio->titolo}}</p> <br> <br> <br>
-                <button class="modifica">modifica</button>
+                <a class="modifica" href = "{{ route('dettagliAlloggioProprietario', [$alloggio->id])}}">modifica</a>
                 <button class="modifica">elimina</button>
 
                 <div >
@@ -37,6 +37,7 @@
                     <p class="description">  {{$alloggio->stato}}</p> 
                     <p class = "description titolo"> canone mensile</p>  
                     <p class="description">  {{$alloggio->prezzo}}</p> 
+                    <p class = "description titolo"> dimensioni </p>
                     <p class = "description titolo"> foto </p>
                     <img src="images/products/affitto-stanza.jpg" alt="">
                 </div>
