@@ -33,7 +33,6 @@
     </ul>
   </div>
 </section>
-<hr class="spaziatura">
 
 <section class="recensioni">
   <style>
@@ -82,8 +81,9 @@
             UNIBA
           </p>
           <img class="student" src="images/products/studente.jpeg" alt="Studente">
-          <p class="studentdescription"> "grazie a questo sito web sono riuscito a trovare l'alloggio fatto su misura
-            per me, non mi sarei aspettato di raggiungere questo risultato con un click"
+          <p class="studentdescription"> "Grazie a questo sito web sono riuscito a trovare l'alloggio fatto su misura
+            per me, non mi sarei aspettato di raggiungere questo risultato con un click. Lo consiglio a tutti, io non avrei potuto
+            farne a meno "
           </p>
           <div class="dots">
             <span class="dot"></span>
@@ -103,7 +103,8 @@
           </p>
           <img class="student" src="images/products/studentessa2.webp" alt="Studentessa">
           <p class="studentdescription">"ho trovato la casa perfetta per me nel centro di Roma, ho la fermata dell'
-            autobus a due passi e due simpatiche coinquiline. Tutto grazie ad ALLOGGISTUDENTI.com "
+            autobus a due passi e due simpatiche coinquiline. Tutto grazie ad ALLOGGISTUDENTI.com. Studenti in cerca di 
+            alloggio dovrebbero iscriversi! "
           </p>
           <div class="dots">
             <span class="dot"></span>
@@ -139,10 +140,9 @@
     <a class="succ" onclick="cambiaSlide(1, 0)">&#10095;
     </a>
   </div>
-  <script src="reviews.js"></script>
+  <script src="js/reviews.js"></script>
   </section>
   
-<hr class="spaziatura">
 <section class="esploracittà">
   <div class="container">
     <p class="titoloo"> Esplora in base alla tua città</p><br>
@@ -163,7 +163,6 @@
     <p><a class="tuttelecittà" href="{{ route('elencocitta') }}"><b>Tutte le città</b></a></p>
   </div>
 </section>
-<hr class="spaziatura">
 
 <section id="regolamento">
   <div class="reg" > 
@@ -186,30 +185,35 @@
 
       <h1 class="faq-page">Domanda 1</h1>
       <div class="faq-body">
-          <p>Risposta</p>
-      </div>
+      <h1 class="faq-answer">è possibile modificare gli annunci in ogni momento: la modifica verrà visualizzata
+            24 ore dopo il salvataggio
+  </h1>      </div>
  
       <h1 class="faq-page">Domanda 2</h1>
       <div class="faq-body">
-          <p>Risposta</p>
-      </div>
+      <h1 class="faq-answer">è possibile modificare gli annunci in ogni momento: la modifica verrà visualizzata
+            24 ore dopo il salvataggio
+  </h1>      </div>
     
       <h1 class="faq-page">Domanda 3</h1>
       <div class="faq-body">
-          <p>Rispsta</p>
-      </div>
+      <h1 class="faq-answer">è possibile modificare gli annunci in ogni momento: la modifica verrà visualizzata
+            24 ore dopo il salvataggio
+  </h1>      </div>
 
       <h1 class="faq-page">Domanda 4</h1>
       <div class="faq-body">
-          <p>Rispsta</p>
-      </div>
+      <h1 class="faq-answer">è possibile modificare gli annunci in ogni momento: la modifica verrà visualizzata
+            24 ore dopo il salvataggio
+  </h1>      </div>
 
       <h1 class="faq-page">Domanda 5</h1>
       <div class="faq-body">
-          <p>Rispsta</p>
-      </div>
+      <h1 class="faq-answer">è possibile modificare gli annunci in ogni momento: la modifica verrà visualizzata
+            24 ore dopo il salvataggio
+  </h1>      </div>
 
-<script src="faq-js.js"></script>
+<script src="js/faq-js.js"></script>
 </section>
 
 <br style="height:20px">
@@ -221,7 +225,6 @@
 </div>
 </section>
 
-<hr class="spaziatura">
 
 <section class="contacts-section" id="contatti">
   <div class="contactscolumn">
@@ -240,8 +243,10 @@
   </div>
 
 </section>
+
 <div id ="backBtn" class="back-to-top"></div>
-<script src="resources/js/backbtn.js"></script>
+<script src="js/backbtn.js"></script>
+
 
 @endsection
 

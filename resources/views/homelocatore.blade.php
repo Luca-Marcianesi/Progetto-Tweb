@@ -92,32 +92,37 @@
 
       <h1 class="faq-page">Posso pubblicare più di un annuncio?</h1>
       <div class="faq-body">
-          <p>Certo, non è previsto un numero massimo di annunci da pubblicare</p>
+          <h1 class="faq-answer">Certo, non è previsto un numero massimo di annunci da pubblicare</h1>
       </div>
  
       <h1 class="faq-page"> Posso modificare i miei annunci? </h1>
       <div class="faq-body">
-          <p>è possibile modificare gli annunci in ogni momento: la modifica verrà visualizzata
+      <h1 class="faq-answer">è possibile modificare gli annunci in ogni momento: la modifica verrà visualizzata
             24 ore dopo il salvataggio
-          </p>
+  </h1>
       </div>
     
       <h1 class="faq-page">Come faccio a produrre il contratto?</h1>
       <div class="faq-body">
-          <p>Rispsta</p>
+      <h1 class="faq-answer">è possibile modificare gli annunci in ogni momento: la modifica verrà visualizzata
+            24 ore dopo il salvataggio
+  </h1>
       </div>
 
       <h1 class="faq-page">Se il mio alloggio non viene affittato, l'annuncio viene cancellato?</h1>
       <div class="faq-body">
-          <p>Rispsta</p>
+      <h1 class="faq-answer">è possibile modificare gli annunci in ogni momento: la modifica verrà visualizzata
+            24 ore dopo il salvataggio
+  </h1>
       </div>
 
       <h1 class="faq-page">Posso vedere il profilo dell'eventuale locatario?</h1>
       <div class="faq-body">
-          <p>Rispsta</p>
-      </div>
+      <h1 class="faq-answer">è possibile modificare gli annunci in ogni momento: la modifica verrà visualizzata
+            24 ore dopo il salvataggio
+  </h1>      </div>
 
-<script src="faq-js.js"></script>
+<script src="js/faq-js.js"></script>
 </section>
 
 
@@ -142,4 +147,4 @@
 
 </section>
 <div id ="backBtn" class="back-to-top" ></div>
-<script src="backbtn.js"></script>
+<script src="js/backbtn.js"></script>

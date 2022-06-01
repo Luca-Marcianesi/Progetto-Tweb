@@ -1278,6 +1278,15 @@ footer{
         transition: 0.4s;
         margin: auto;
     }
+
+    .faq-answer{
+        font-size: medium;
+        color: #30306C;
+        padding: 5px 5px;
+        width: 94%;
+        margin: auto;
+
+    }
     
     .active,
     .faq-page:hover {
@@ -1285,7 +1294,6 @@ footer{
     }
     .faq-body {
         padding: 10px 20px;
-        background-color: #30306C ;
         display: none;
         overflow: hidden;
         margin: auto;
