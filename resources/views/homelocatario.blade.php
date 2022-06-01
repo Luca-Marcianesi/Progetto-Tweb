@@ -77,7 +77,8 @@
           </p>
           <img class="student" src="images/products/studente.jpeg" alt="Studente">
           <p class="studentdescription"> "grazie a questo sito web sono riuscito a trovare l'alloggio fatto su misura
-            per me, non mi sarei aspettato di raggiungere questo risultato con un click"
+            per me, non mi sarei aspettato di raggiungere questo risultato con un click.Lo consiglio a tutti, io non avrei potuto
+            farne a meno "
           </p>
           <div class="dots">
             <span class="dot"></span>
@@ -97,7 +98,8 @@
           </p>
           <img class="student" src="images/products/studentessa2.webp" alt="Studentessa">
           <p class="studentdescription">"ho trovato la casa perfetta per me nel centro di Roma, ho la fermata dell'
-            autobus a due passi e due simpatiche coinquiline. Tutto grazie ad ALLOGGISTUDENTI.com "
+            autobus a due passi e due simpatiche coinquiline. Tutto grazie ad ALLOGGISTUDENTI.com. Studenti in cerca di 
+            alloggio dovrebbero iscriversi! " "
           </p>
           <div class="dots">
             <span class="dot"></span>
@@ -133,7 +135,7 @@
     <a class="succ" onclick="cambiaSlide(1, 0)">&#10095;
     </a>
   </div>
-  <script src="reviews.js"></script>
+  <script src="js/reviews.js"></script>
   </section>
   
 
@@ -204,7 +206,7 @@
           <p>Rispsta</p>
       </div>
 
-<script src="faq-js.js"></script>
+<script src="js/faq-js.js"></script>
 </section>
 
 <section >
@@ -234,5 +236,5 @@
   </div>
 
   <div id ="backBtn" class="back-to-top" ></div>
-<script src="backbtn.js"></script>
+<script src="js/backbtn.js"></script>
 </section>

@@ -7,6 +7,9 @@
     </head>
     <body>
         <header class="header">
+
+        <script type="text/javascript" src="{{ asset('js/backbtn.js') }}"></script>
+
             <div class="header-container">
             <div class="logo"><img class="logoimmagine" src="images/products/Logo.png" alt="Logo"></div>
             <div class="name">ALLOGGISTUDENTI.com</div>
@@ -24,4 +27,10 @@
             @include('layouts/-footer')
         </footer>
     </body>
+
+    @section('extra-script')
+
+{{Html::script('js/script.js')}}
+
+@endsection
 </html>

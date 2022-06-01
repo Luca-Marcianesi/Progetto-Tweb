@@ -117,7 +117,7 @@
           <p>Rispsta</p>
       </div>
 
-<script src="faq-js.js"></script>
+<script src="js/faq-js.js"></script>
 </section>
 
 
@@ -142,4 +142,4 @@
 
 </section>
 <div id ="backBtn" class="back-to-top" ></div>
-<script src="backbtn.js"></script>
+<script src="js/backbtn.js"></script>
