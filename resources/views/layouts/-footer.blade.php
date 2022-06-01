@@ -12,19 +12,19 @@
            target="_blank">Dove siamo</a>
         </p>
         <p class="footer-support-text">
-          <a class="footer-link" href="" target="_self">???</a>
+          <a class="footer-link" href="" target="_self">Come operiamo</a>
         </p>
       </div>
       <div class="column column-3">
         <h2 class="small-footer-header">privacy</h2>
         <p class="footer-support-text">
-          <a class="footer-link" href="" target="_blank">Privacy Policy</a>
+          <a class="footer-link" href="" target="_blank">Informativa sulla privacy</a>
         </p>
         <p class="footer-support-text">
-            <a class="footer-link" href="" target="_blank">???</a>
+            <a class="footer-link" href="" target="_blank">Info e risorse sulla sicurezza</a>
         </p>
       </div>
     </div>
-    <div class="bottomFooter">2022 Copyright ALLOGGISTUDENTI.com</div>
+    <div class="bottomFooter">Copyright © 2022 ALLOGGISTUDENTI.com Tutti i diritti riservati.</div>
   </footer>
 </div>
