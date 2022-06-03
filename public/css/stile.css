@@ -672,11 +672,10 @@ a {
 }
 
 .student{
-    margin-top: 2%;
     margin-left: 2%;
     border-radius: 50%;
-    width: 290px;
-    height: 200px;
+    width: 200px;
+    height: 180px;
     border: groove;
     border-color: #30306C;;
     float: left;

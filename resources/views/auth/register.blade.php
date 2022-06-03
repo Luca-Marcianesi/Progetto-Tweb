@@ -107,6 +107,18 @@
                 @endif
             </div>
             
+            <div  class="wrap-input">
+                {{ Form::label('fotoprofilo', 'Foto Profilo', ['class' => 'label-input']) }}
+                {{ Form::text('fotoprofilo', '', ['class' => 'input','id' => 'fotoprofilo']) }}
+                @if ($errors->first('fotoprofilo'))
+                <ul class="errors">
+                    @foreach ($errors->get('fotoprofilo') as $message)
+                    <li>{{ $message }}</li>
+                    @endforeach
+                </ul>
+                @endif
+            </div>
+            
              <div  class="wrap-input">
                 {{ Form::label('password', 'Password', ['class' => 'label-input']) }}
                 {{ Form::password('password', ['class' => 'input', 'id' => 'password']) }}
