@@ -128,19 +128,19 @@ class locatoreController extends Controller {
                     
     }
 
-    public function modificaOfferta(ModificaOffertaRequest $request){ 
-        $offerta = new Offerta;
-        $offerta->stato = "libera";
+    public function modificaOfferta(ModificaOffertaRequest $request,$id){ 
+        
+        $offerta = Offerta::find($id);
+        $offerta->stato = $request->stato;
         $offerta->titolo = $request->titolo;
         $offerta->descrizione_breve = $request->desc_b;
-        $offerta->città = $request->città;
-        $offerta->locazione = $request->locazione;
         $offerta->prezzo = $request->prezzo;
-        $offerta->tipo = $request->tipo;
         $offerta->descrizione = $request->desc_l;
         $offerta->image = $request->image;
         $offerta->genere = $request->genere;
         $offerta->save();
+
+        /*
 
         $interazione = new Interagisce;
         $interazione->utente = auth()->user()->username;
@@ -165,6 +165,7 @@ class locatoreController extends Controller {
             $appartamento->dimensioni =24;
             $appartamento->save();
         }
+        */
 
     return view('areaLocatore');
         
