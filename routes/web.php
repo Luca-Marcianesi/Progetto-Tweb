@@ -99,8 +99,13 @@ rotta per visualizzare il singolo annuncio
 
 Route::get('/locatore/offerta{id}', 'HomeController@showAnnuncioSingolo')
         ->name('dettagliAnnuncio');
-Route::get('/locatore/mieiAlloggi{id}', 'locatoreController@getAllInfoAlloggio')
+
+
+Route::get('/locatore/mieiAlloggi{id}', 'locatoreController@showModificaOfferta')
         ->name('dettagliAlloggioProprietario');
+
+Route::post('/locatore/modificaOff{id}', 'locatoreController@modificaOfferta')
+        ->name('modificaOffertaProp');
 
 
 Route::get('/locatore/offerta{id}', 'HomeController@showAnnuncioSingoloLocatore')
