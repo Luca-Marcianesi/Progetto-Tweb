@@ -93,6 +93,7 @@ class locatoreController extends Controller {
         $offerta->prezzo = $request->prezzo;
         $offerta->tipo = $request->tipo;
         $offerta->descrizione = $request->desc_l;
+        $offerta->image = $request->image;
         $offerta->genere = $request->genere;
         $offerta->save();
 
@@ -137,6 +138,7 @@ class locatoreController extends Controller {
         $offerta->prezzo = $request->prezzo;
         $offerta->tipo = $request->tipo;
         $offerta->descrizione = $request->desc_l;
+        $offerta->image = $request->image;
         $offerta->genere = $request->genere;
         $offerta->save();
 

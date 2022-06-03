@@ -24,11 +24,10 @@
         @foreach ($topCities as $citta)
        <li> 
            <div class="foto">
-               <img src="{{ $citta->image }}">
+           @include('helpers/annunciosingoloImg', ['imgFile' => $citta->image])
            </div>
-         
+
         <p class="arancione"> {{ $citta->name }} </p>
-       <p class="blu">{{ $citta->numeroannunci }}</span>
         <p class="arancione2"> <a class="blu" href="{{ route('annunciHome', [$citta->name])}}" >Visualizza</p></a></li>
         @endforeach
     </ul>

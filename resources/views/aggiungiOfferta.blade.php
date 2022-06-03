@@ -111,6 +111,18 @@
             </div>
 
             <div  class="wrap-input">
+                {{ Form::label('image', 'Immagine', ['class' => 'label-input']) }}
+                {{ Form::text('image', '', ['class' => 'input', 'id' => 'image']) }}
+                @if ($errors->first('image'))
+                <ul class="errors">
+                    @foreach ($errors->get('image') as $message)
+                    <li>{{ $message }}</li>
+                    @endforeach
+                </ul>
+                @endif
+            </div>
+
+            <div  class="wrap-input">
                 {{ Form::label('genere', 'Vincolo di genere(escludi)', ['class' => 'label-input']) }}
                 {{ Form::select('genere',['n' => '----','M' => 'Maschio','F' => 'Femmina'], '', ['class' => 'input','id' => 'genere']) }}
                 @if ($errors->first('genere'))
