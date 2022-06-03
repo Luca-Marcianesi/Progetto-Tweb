@@ -27,8 +27,8 @@
         <section class= "profilolocatario">
     <div class= "fotoprofilo">
     <p class="locatarioprofilo"> {{ Auth::user()->name }} {{ Auth::user()->surname }}</p>
-    <img class="student" src="images/products/locatrice.webp" alt="locatore">
-    <p class="locataridescrizione"> I miei appartamenti nel cuore di Ancona saranno perfetti per le esigenze di tutti gli studenti.
+    <img class="student" src="{{ Auth::user()->fotoprofilo }}" alt="locatore">
+    <p class="locataridescrizione">  {{ Auth::user()->descrizione }}
           <br>
         <button class="modifica">modifica</button>
         <br>
@@ -41,7 +41,6 @@
     <p class="locatarioprofilo1"> Cognome: {{ Auth::user()->surname }}</p>
     <p class="locatarioprofilo1"> Data di nascita: {{ Auth::user()->data_nascita }}</p>
     <p class="locatarioprofilo1"> Sesso: {{ Auth::user()->sesso }}</p>
-    <p class="locatarioprofilo1"><button class="modifica">modifica</button>   <br></p>
     </div>
     
 
