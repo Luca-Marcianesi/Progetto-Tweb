@@ -34,9 +34,11 @@ use AuthenticatesUsers;
     protected function redirectTo() {        
         $role = auth()->user()->role;
         switch ($role) {
-            case '1': return '/locatore';
+            case 'locatore': return '/locatore';
                 break;
-            case '2': return '/locatario';
+            case 'locatario': return '/locatario';
+                break;
+            case 'admin': return '/locatario';
                 break;
             default: return '/';
         };
