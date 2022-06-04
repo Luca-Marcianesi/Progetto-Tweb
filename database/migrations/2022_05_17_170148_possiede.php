@@ -16,7 +16,7 @@ class Possiede extends Migration
         Schema::create('possiede', function (Blueprint $table) {
             $table->bigIncrements('offerta');            
             $table->string('tipo',30); 
-            $table->integer('quantita');
+            $table->integer('quantita')->nullable();
             
             
         });

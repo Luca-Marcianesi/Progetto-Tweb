@@ -19,6 +19,7 @@ class PostoLetto extends Migration
             $table->tinyInteger('posti_letto_appartamento');
             $table->tinyInteger('posti_letto_camera');
             $table->float('dimensioni_camera');
+            $table->string('angolo_studio');
            
         });
     }
