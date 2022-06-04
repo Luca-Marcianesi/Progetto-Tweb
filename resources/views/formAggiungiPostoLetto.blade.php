@@ -66,17 +66,7 @@
             </ul>
             @endif
          </div>
-         <div  class="wrap-input">
-            {{ Form::label('angolo_studio', 'Angolo Studio', ['class' => 'label-input']) }}
-            {{ Form::select('angolo_studio',['no' => 'no','Si' => 'Si'], 'no', ['class' => 'input','id' => 'angolo_studio']) }}
-            @if ($errors->first('angolo_studio'))
-            <ul class="errors">
-               @foreach ($errors->get('angolo_studio') as $message)
-               <li>{{ $message }}</li>
-               @endforeach
-            </ul>
-            @endif
-         </div>
+         
          <div  class="wrap-input">
             {{ Form::label('genere', 'Vincolo di genere(escludi)', ['class' => 'label-input']) }}
             {{ Form::select('genere',['n' => '----','M' => 'Maschio','F' => 'Femmina'], '', ['class' => 'input','id' => 'genere']) }}
@@ -89,7 +79,55 @@
             @endif
          </div>
 
-         @include('formAggiuntaServizi') 
+         <div  class="wrap-input">
+            {{ Form::label('angolo_studio', 'Angolo Studio', ['class' => 'label-input']) }}
+            {{ Form::select('angolo_studio',['no' => 'no','Si' => 'Si'], 'no', ['class' => 'input','id' => 'angolo_studio']) }}
+            @if ($errors->first('angolo_studio'))
+            <ul class="errors">
+               @foreach ($errors->get('angolo_studio') as $message)
+               <li>{{ $message }}</li>
+               @endforeach
+            </ul>
+            @endif
+         </div>
+
+         <div  class="wrap-input">
+            {{ Form::label('posti_letto_appartamento', 'Posti letto dell appartamento', ['class' => 'label-input']) }}
+            {{ Form::number('posti_letto_appartamento', '0', ['class' => 'input','id' => 'posti_letto_appartamento']) }}
+            @if ($errors->first('posti_letto_appartamento'))
+            <ul class="errors">
+               @foreach ($errors->get('posti_letto_appartamento') as $message)
+               <li>{{ $message }}</li>
+               @endforeach
+            </ul>
+            @endif
+         </div>
+
+         <div  class="wrap-input">
+            {{ Form::label('posti_letto_camera', 'Posti letto nella camera', ['class' => 'label-input']) }}
+            {{ Form::number('posti_letto_camera', '1', ['class' => 'input','id' => 'posti_letto_camera']) }}
+            @if ($errors->first('posti_letto_camera'))
+            <ul class="errors">
+               @foreach ($errors->get('posti_letto_camera') as $message)
+               <li>{{ $message }}</li>
+               @endforeach
+            </ul>
+            @endif
+         </div>
+
+         <div  class="wrap-input">
+            {{ Form::label('dimensioni_camera', 'Dimensioni della camera', ['class' => 'label-input']) }}
+            {{ Form::text('dimensioni_camera','', ['class' => 'input','id' => 'dimensioni_camera']) }}
+            @if ($errors->first('dimensioni_camera'))
+            <ul class="errors">
+               @foreach ($errors->get('dimensioni_camera') as $message)
+               <li>{{ $message }}</li>
+               @endforeach
+            </ul>
+            @endif
+         </div>
+
+         <!-- @include('formAggiuntaServizi') -->
          <div class="container-form-btn">                
             {{ Form::submit('Aggiungi Offerta', ['class' => 'button']) }}
          </div>

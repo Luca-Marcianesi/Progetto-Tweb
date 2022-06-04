@@ -1,5 +1,5 @@
 <div class="wrap-contact2">
-         {{ Form::open(array('route' => 'aggiungiOfferta', 'class' => 'contact-form')) }}
+         {{ Form::open(array('route' => 'aggiungiPostoLetto', 'class' => 'contact-form')) }}
          <div  class="wrap-input">
             {{ Form::label('titolo', 'Titolo annuncio', ['class' => 'label-input']) }}
             {{ Form::text('titolo', '', ['class' => 'input', 'id' => 'titolo']) }}
@@ -100,7 +100,43 @@
             @endif
          </div>
 
-         @include('formAggiuntaServizi') 
+         <div  class="wrap-input">
+            {{ Form::label('posti_letto_appartamento', 'Posti letto dell appartamento', ['class' => 'label-input']) }}
+            {{ Form::number('posti_letto_appartamento', '0', ['class' => 'input','id' => 'posti_letto_appartamento']) }}
+            @if ($errors->first('posti_letto_appartamento'))
+            <ul class="errors">
+               @foreach ($errors->get('posti_letto_appartamento') as $message)
+               <li>{{ $message }}</li>
+               @endforeach
+            </ul>
+            @endif
+         </div>
+
+         <div  class="wrap-input">
+            {{ Form::label('numero_camere', 'Numero di camere', ['class' => 'label-input']) }}
+            {{ Form::number('numero_camere', '1', ['class' => 'input','id' => 'numero_camere']) }}
+            @if ($errors->first('numero_camere'))
+            <ul class="errors">
+               @foreach ($errors->get('numero_camere') as $message)
+               <li>{{ $message }}</li>
+               @endforeach
+            </ul>
+            @endif
+         </div>
+         
+         <div  class="wrap-input">
+            {{ Form::label('dimensioni', 'Dimensioni appartamento', ['class' => 'label-input']) }}
+            {{ Form::text('dimensioni', '', ['class' => 'input','id' => 'dimensioni']) }}
+            @if ($errors->first('dimensioni'))
+            <ul class="errors">
+               @foreach ($errors->get('dimensioni') as $message)
+               <li>{{ $message }}</li>
+               @endforeach
+            </ul>
+            @endif
+         </div>
+
+         <!-- @include('formAggiuntaServizi') -->
         
          <div class="container-form-btn">                
             {{ Form::submit('Aggiungi Offerta', ['class' => 'button']) }}

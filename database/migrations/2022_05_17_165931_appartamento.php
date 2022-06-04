@@ -19,6 +19,9 @@ class Appartamento extends Migration
             $table->tinyInteger('posti_letto_appartamento');
             $table->tinyInteger('numero_di_camere');
             $table->float('dimensioni');
+            $table->string('cucina');
+            $table->string('locale_ricreativo');
+
         });
     }
 
