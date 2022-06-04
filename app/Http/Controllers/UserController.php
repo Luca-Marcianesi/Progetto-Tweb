@@ -25,7 +25,9 @@ class userController extends Controller {
     }
 
     public function showAccount() {
-        return view('account');
+        $account = auth()->user();
+        return view('account')
+            ->with('account',$account);;
     }
 
     public function showModificaAccount() {
@@ -35,15 +37,14 @@ class userController extends Controller {
     }
 
     public function modificaAccount(ModificaAccountRequest $resqust){
-        $user = User::find(auth()->user()->username);
-        $user->name = $resqust->name;
-        $user->surname = $resqust->surname;
-        $user->descrizione = $resqust->descrizione;
-        $user->data_nascita = $resqust->data_nascita;
-        $user->fotoprofilo = $resqust->fotoprofilo;
-        $user->save();
+        $account = User::find(auth()->user()->id);
+        $account->name = $resqust->name;
+        $account->surname = $resqust->surname;
+        $account->descrizione = $resqust->descrizione;
+        $account->data_nascita = $resqust->data_nascita;
+        $account->fotoprofilo = $resqust->fotoprofilo;
+        $account->save();
 
-
-        return view ('account');
+        return view('layouts.public');
     }
 }
