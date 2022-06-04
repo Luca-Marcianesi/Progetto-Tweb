@@ -35,7 +35,7 @@ class NewPostoLettoRequest extends FormRequest {
             'angolo_studio' => 'string|required',
             'posti_letto_appartamento' => 'string|required',
             'posti_letto_camera' => 'string|required',
-            'dimensioni' => 'string|required',
+            'dimensioni_camera' => 'string|required',
             
         ];
     }
