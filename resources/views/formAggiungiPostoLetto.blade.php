@@ -1,5 +1,5 @@
 <div class="wrap-contact2">
-         {{ Form::open(array('route' => 'aggiungiPostoLetto','id'=> 'addPostoLetto', 'class' => 'contact-form')) }}
+         {{ Form::open(array('route' => 'aggiungiPostoLetto', 'class' => 'contact-form')) }}
          <div  class="wrap-input">
             {{ Form::label('titolo', 'Titolo annuncio posto letto', ['class' => 'label-input']) }}
             {{ Form::text('titolo', '', ['class' => 'input', 'id' => 'titolo']) }}
