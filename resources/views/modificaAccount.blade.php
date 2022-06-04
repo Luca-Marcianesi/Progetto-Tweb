@@ -22,6 +22,8 @@
             </div>
         </header>
         <section>
+<div class="container-contact">
+
         <h3 class ="titoloo">Modifica Account</h3> <br>
 
         @isset($account)
@@ -61,6 +63,8 @@
     
     {{ Form::close() }}
     </div>
+    </div>
+
     </section>
     @endisset()
         
