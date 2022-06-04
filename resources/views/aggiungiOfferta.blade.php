@@ -59,13 +59,11 @@
       <div class="container-contact" >
         <div class="imgicona"><img src="images/products/iconalogin.png" alt="icona" style="width: 200px;; height:auto;" ></div>
         <h3 class ="titoloo">Inserisci offerta</h3>
-    </div>
-    
 
-    <div>
-        <p onclick="toggleMenu('formPostoLetto','formAppartamento')" >Posto Letto</P>
-        <p onclick="toggleMenu('formAppartamento','formPostoLetto')" >Appartamento</P>
-      </div>
+        
+    <div class="labelspa">
+        <button class="labelpostoletto" onclick="toggleMenu('formPostoLetto','formAppartamento')" >Posto Letto</button>
+        <button class="labelappartamento" onclick="toggleMenu('formAppartamento','formPostoLetto')" >Appartamento</button>
 
       <div class="wrap-contact2" id="formPostoLetto" style="display:none">
         @include('formAggiungiPostoLetto') 
@@ -74,6 +72,8 @@
       <div class="wrap-contact2" id="formAppartamento" style="display:none">
         @include('formAggiungiAppartamento')  
       </div>
+      </div>
+    </div>
       <footer>
          @include('layouts/-footer')
       </footer>

@@ -458,7 +458,13 @@ a {
   color: #555555;
   line-height: 1,5;
 }
+.label-input2{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    color: #555555;
+    line-height: 1,5;
 
+}
 .input {
   display: block;
   width: 90%; 
@@ -1439,6 +1445,12 @@ footer{
     color: #30306C;
 }
 
+.label-input2
+{
+    font-size: 16px;
+    font-weight:600;
+    color: #3D444F;
+}
 .label-input1
 {color: #FF974B;}
 .input-field{
@@ -2058,6 +2070,38 @@ margin-top: 150px;
     width: 100%;
     height: 150px;
 }
+.labelpostoletto,
+.labelappartamento {
+    width: fit-content;
+    border-radius: 10%;
+    color: white;
+    cursor: pointer;
+    padding: 8px;
+    background-color: #30306C;
+  }
+
+  .labelpostoletto:focus,
+  .labelpostoletto:active,
+.labelappartamento:focus,
+.labelappartamento:active
+ {
+
+    background-color: #417FDA;
+  }
+
+
+  .labelspa{
+      margin-top: 40px;
+    display: flex;
+    flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      display: inline-flex;
+
+      
+
+  }
+  
 
 /* Forms */
 

@@ -24,7 +24,7 @@
         @foreach ($topCities as $citta)
        <li> 
            <div class="foto">
-           @include('helpers/annunciosingoloImg', ['imgFile' => $citta->image])
+           @include('helpers/cittaImg', ['imgFile' => $citta->image])
            </div>
 
         <p class="arancione"> {{ $citta->name }} </p>
