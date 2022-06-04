@@ -44,11 +44,20 @@ Route::get('/elencocitta', 'HomeController@showlistacitta')
 Route::get('/locatore/annunciLocatore', 'locatoreController@showaggiungiofferta')
         ->name('aggiungiOfferta');
 
-Route::post('/locatore/annunciLocatore', 'locatoreController@aggiungiOfferta')
-        ->name('aggiungiOfferta');
+Route::post('/locatore/annunciLocatore/aggiungiAppartamento', 'locatoreController@aggiungiOffertaAppartamento')
+        ->name('aggiungiAppartamento');
+
+Route::post('/locatore/annunciLocatore/aggiungiPostoLetto', 'locatoreController@aggiungiOffertaPostoLetto')
+        ->name('aggiungiPostoLetto');
 
 Route::get('/account', 'UserController@showAccount')
         ->name('showAccount');
+
+Route::get('/modifica-account', 'UserController@showModificaAccount')
+        ->name('modificaAccount');
+
+Route::post('/modifica-account', 'UserController@modificaAccount')
+        ->name('modificaAccount');
 
 
 Route::get('/locatore', 'UserController@areaLocatore')

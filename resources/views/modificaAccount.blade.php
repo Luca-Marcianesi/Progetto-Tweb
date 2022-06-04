@@ -1,54 +1,71 @@
-@extends('layouts.app')
+<!DOCTYPE html>
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 
-@section('content')
-<div class="static">
-
-
-   
-<div class="container-contact">
-    <div class="imgicona"><img src="images/products/iconalogin.png" alt="icona" style="width: 200px;; height:auto;" ></div> 
-    <h3 class ="titoloo">Modifica Account</h3> <br>
-
-        <div class="wrap-contact1">
-            {{ Form::open(array('route' => 'login', 'class' => 'contact-form')) }}
-            
-      
-             <div  class="wrap-input">
-                {{ Form::label('username', 'Nome Utente', ['class' => 'label-input']) }}
-                {{ Form::text('username', '', ['class' => 'input','id' => 'username']) }}
-                @if ($errors->first('username'))
-                <ul class="errors">
-                    @foreach ($errors->get('username') as $message)
-                    <li>{{ $message }}</li>
-                    @endforeach
-                </ul>
-                @endif
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="{{ asset('css/stile.css') }}" >
+        <title>LaProj5 | @yield('title', 'Catalogo')</title>
+    </head>
+    <body>
+        <header class="header">
+            <div class="header-container">
+            <div class="logo"><img class="logoimmagine" src="images/products/Logo.png" alt="Logo"></div>
+            <div class="name">ALLOGGISTUDENTI.com</div>
+            <nav class="menu" fixed="right">
+            @can('isLocatore')
+                @include('layouts/_navLocatore')
+            @endcan
+            @can('isLocatario')
+                @include('layouts/_navLocatario')
+            @endcan
+            </nav>
             </div>
-            
-             <div  class="wrap-input">
-                {{ Form::label('password', 'Password', ['class' => 'label-input']) }}
-                {{ Form::password('password', ['class' => 'input', 'id' => 'password']) }}
-                @if ($errors->first('password'))
-                <ul class="errors">
-                    @foreach ($errors->get('password') as $message)
-                    <li>{{ $message }}</li>
-                    @endforeach
-                </ul>
-                @endif
-            </div>
-            
-            <div class="container-form-btn">                
-                {{ Form::submit('Login', ['class' => 'button']) }}
-            </div>
-            
-            {{ Form::close() }}
-        </div>
+        </header>
+        <section>
+        <h3 class ="titoloo">Modifica Account</h3> <br>
 
-        <nav class="label-input" > Non sei ancora registrato?<a class="label-input1" href="{{ route('register') }}">registrati</a> </nav><br>
-        <img src="images/products/Logo.png" alt="logo" style="width:30px; height:30px; " >
-        <label class="bottomlogo"> ALLOGGISTUDENTI.com</p>
+        @isset($account)
 
+<div class="wrap-contact1">
+    {{ Form::open(array('route' => 'modificaAccount', 'class' => 'contact-form')) }}
+    
+
+     <div  class="wrap-input">
+        {{ Form::label('name', 'Nome ', ['class' => 'label-input']) }}
+        {{ Form::text('name', $account->name, ['class' => 'input','id' => 'name']) }}
+    </div>
+    
+     <div  class="wrap-input">
+        {{ Form::label('surname', 'Cognome', ['class' => 'label-input']) }}
+        {{ Form::text('surname',$account->surname, ['class' => 'input', 'id' => 'surname']) }}
+    </div>
+    
+    <div  class="wrap-input">
+        {{ Form::label('descrizione', 'Descrizione', ['class' => 'label-input']) }}
+        {{ Form::textarea('descrizione',$account->descrizione, ['class' => 'input', 'id' => 'descrizione']) }}
     </div>
 
-</div>
-@endsection
+    <div  class="wrap-input">
+        {{ Form::label('fotoprofilo', 'fotoprofilo', ['class' => 'label-input']) }}
+        {{ Form::text('fotoprofilo',$account->fotoprofilo, ['class' => 'input', 'id' => 'fotoprofilo']) }}
+    </div>
+
+    <div  class="wrap-input">
+        {{ Form::label('data_nascita', 'Data di nascita', ['class' => 'label-input']) }}
+        {{ Form::date('data_nascita',$account->data_nascita, ['class' => 'input', 'id' => 'data_nascita']) }}
+    </div>
+
+    <div class="container-form-btn">                
+        {{ Form::submit('Modifica', ['class' => 'button']) }}
+    </div>
+    
+    {{ Form::close() }}
+    </div>
+    </section>
+    @endisset()
+        
+        <footer>
+            @include('layouts/-footer')
+        </footer>
+    </body>
+</html>
