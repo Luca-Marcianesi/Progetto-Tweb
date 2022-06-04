@@ -1,5 +1,5 @@
 <div class="wrap-contact2">
-         {{ Form::open(array('route' => 'aggiungiAppartamento', 'id'=> 'addAppartamento' , 'class' => 'contact-form')) }}
+         {{ Form::open(array('route' => 'aggiungiAppartamento', 'class' => 'contact-form')) }}
 
          <div  class="wrap-input">
             {{ Form::label('titolo', 'Titolo annuncio', ['class' => 'label-input']) }}
