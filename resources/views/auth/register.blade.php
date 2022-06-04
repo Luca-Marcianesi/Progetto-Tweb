@@ -61,7 +61,7 @@
 
             <div  class="wrap-input">
                 {{ Form::label('role', 'Tipo utente', ['class' => 'label-input']) }}
-                {{ Form::select('role',['1' => 'Locatore','2' => 'Locatario'], '', ['class' => 'input','id' => 'role']) }}
+                {{ Form::select('role',['locatore' => 'Locatore','locatario' => 'Locatario'], '', ['class' => 'input','id' => 'role']) }}
                 @if ($errors->first('role'))
                 <ul class="errors">
                     @foreach ($errors->get('role') as $message)
