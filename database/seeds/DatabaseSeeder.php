@@ -39,11 +39,11 @@ class DatabaseSeeder extends Seeder {
         ]);
 
         DB::table('città')->insert([
-            ['id' => 1, 'name' => 'Ancona', 'image' => 'brescia.jpg'],
-            ['id' => 2, 'name' => 'Bari', 'image' => 'brescia.jpg'],
-            ['id' => 3, 'name' => 'Bergamo', 'image' => 'brescia.jpg'],
-            ['id' => 4, 'name' => 'Bologna', 'image' => 'brescia.jpg'],
-            ['id' => 5, 'name' => 'Brescia', 'image' => 'brescia.jpg'],
+            ['id' => 1, 'name' => 'Ancona', 'image'=>'affitto-stanza.jpg'],
+            ['id' => 2, 'name' => 'Bari', 'image'=>'affitto-stanza.jpg'],
+            ['id' => 3, 'name' => 'Bergamo', 'image'=>'affitto-stanza.jpg'],
+            ['id' => 4, 'name' => 'Bologna', 'image'=>'affitto-stanza.jpg'],
+            ['id' => 5, 'name' => 'Brescia', 'image'=>'affitto-stanza.jpg'],
             ['id' => 6, 'name' => 'Caltanissetta', 'image' => 'caltanissetta.jpg'],
             ['id' => 7, 'name' => 'Camerino', 'image' => 'camerino.jpg'],
             ['id' => 8, 'name' => 'Catanzaro', 'image' => 'catanzaro.jpg'],
