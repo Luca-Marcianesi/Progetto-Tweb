@@ -98,7 +98,7 @@
           </p>
           <img class="student" src="images/products/studentessa2.webp" alt="Studentessa">
           <p class="studentdescription">"ho trovato la casa perfetta per me nel centro di Roma, ho la fermata dell'
-            autobus a due passi e due simpatiche coinquiline. Tutto grazie ad ALLOGGISTUDENTI.com. Studenti in cerca di 
+            autobus a due passi. Tutto grazie ad ALLOGGISTUDENTI.com. Studenti in cerca di 
             alloggio dovrebbero iscriversi! " "
           </p>
           <div class="dots">

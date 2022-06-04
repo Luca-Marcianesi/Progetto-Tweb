@@ -16,8 +16,7 @@ class Città extends Migration
         Schema::create('città', function (Blueprint $table) {
             $table->bigIncrements('id');            
             $table->string('name',30);
-            $table->string('image',200);
-            $table->string('numeroannunci',30);
+            $table->text('image')->nullable();
         });
     }
 

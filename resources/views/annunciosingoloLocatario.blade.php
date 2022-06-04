@@ -19,8 +19,9 @@
 <div class="annunciosingolo">
       <div class="columnsections col1">
       <p class ="titoloannuncio">  {{$offerta->titolo}} </p> <br> <br> <br>
-      <br> <!-- <img class="imgaffitto" src="images/affitto-stanza.jpg" alt="imgaffitto"> -->
-      <p class = "imgaffitto">  </p>
+      <div class="imgaffitto">
+           @include('helpers/annunciosingoloImg', ['attrs' => 'imagefrm', 'imgFile' => $offerta->image])
+           </div> 
       </div>
 
       <div class="columnsections col2">

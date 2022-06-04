@@ -264,13 +264,13 @@ a {
 .prod .image {
 	float:left;
 	text-align: left;
-    width: 80px;
+    width: 490px;
 	height: inherit;
 }
 
 .prod .image .imagefrm {
-    width: 80px;
-	height: 80px;
+    width: 400px;
+	height: 500px;
 	padding-top: 10px;
 }
 
@@ -1727,9 +1727,25 @@ margin-top: 150px;
 }
 
 .imgaffitto{
-    border-radius: 5%;
-    height: 700px;
+
+    padding: 15%;
+    padding-left: 5%;
+    height: 500px;
     width: 500px;
+}
+
+.annunciimg{
+    height: 300px;
+    width: 260px;
+    padding: 8%;
+    border-radius:10% ;
+}
+
+.imgaffittocol{
+    border-radius: 5%;
+    height: 200px;
+    width: 200px;
+
 }
 
 @media screen and (max-width:1200px){
