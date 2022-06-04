@@ -2042,3 +2042,23 @@ margin-top: 150px;
     width: 100%;
     height: 150px;
 }
+
+/* Forms */
+
+.formerror {
+    background: none repeat scroll 0 0 #FFECEC;
+    border: 3px solid #f93d00;
+    height: auto;
+    margin: 0 0 1px;
+    text-align: center;
+
+}
+
+.errors {
+	color: #f93d00;
+        font-size: 12px;
+}
+
+.errors ul {
+	line-height: 100%;
+}

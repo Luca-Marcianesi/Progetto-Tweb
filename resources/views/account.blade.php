@@ -30,7 +30,7 @@
     <img class="student" src="{{ Auth::user()->fotoprofilo }}" alt="locatore">
     <p class="locataridescrizione">  {{ Auth::user()->descrizione }}
           <br>
-        <button class="modifica">modifica</button>
+            <p><a href="{{ route('modificaAccount') }}">Modifica</a><p>
         <br>
     </p>
     </div>

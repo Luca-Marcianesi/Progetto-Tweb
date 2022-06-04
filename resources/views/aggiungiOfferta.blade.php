@@ -4,6 +4,38 @@
       <meta charset="utf-8">
       <link rel="stylesheet" type="text/css" href="{{ asset('css/stile.css') }}" >
       <title>LaProj5 | @yield('title', 'Inserisci Offerta')</title>
+      <!--
+      <script src="{{ asset('js/validazione.js') }}" ></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+      <script>
+         $(function () {
+            var actionUrl = "{{ route('aggiungiAppartamento') }}";
+            var formId = 'addAppartamento';
+            $(":input").on('blur', function (event) {
+               var formElementId = $(this).attr('id');
+               doElemValidation(formElementId, actionUrl, formId);
+               });
+            $("#addAppartamento").on('submit', function (event) {
+            event.preventDefault();
+            doFormValidation(actionUrl, formId);
+            });
+         });
+      </script>
+      
+      <script>
+         $(function () {
+            var actionUrl = "{{ route('aggiungiPostoLetto') }}";
+            var formId = 'addPostoLetto';
+            $(":input").on('blur', function (event) {
+               var formElementId = $(this).attr('id');
+               doElemValidation(formElementId, actionUrl, formId);
+               });
+            $("#addPostoLetto").on('submit', function (event) {
+            event.preventDefault();
+            doFormValidation(actionUrl, formId);
+            });
+         });
+      </script> -->
       <script type="text/javascript">
             function toggleMenu(currMenu,nMenu){
                 var thisMenu = document.getElementById(currMenu).style
@@ -33,7 +65,7 @@
     <div>
         <p onclick="toggleMenu('formPostoLetto','formAppartamento')" >Posto Letto</P>
         <p onclick="toggleMenu('formAppartamento','formPostoLetto')" >Appartamento</P>
-        </div>
+      </div>
 
       <div class="wrap-contact2" id="formPostoLetto" style="display:none">
         @include('formAggiungiPostoLetto') 
