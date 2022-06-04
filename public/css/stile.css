@@ -203,12 +203,6 @@ a {
 	background: url(images/img06.jpg) no-repeat left bottom;
 }
 
-/* Static */
-
-.static {
-	padding: 60px 20px 20px 20px;
-}
-
 /* Content */
 
 #content {
@@ -2043,3 +2037,51 @@ margin-top: 150px;
     width: 100%;
     height: 150px;
 }
+
+/*Tutti i css relativi all'area Admin*/
+
+.pAdmin{
+    padding-top: 1.5%;
+    font-size: large;
+    text-align: center;
+    color: #30306C;
+}
+
+u{
+    color: #30306C;
+}
+
+.AreaAdmin{
+    margin-top: 5%;
+    font-size: xx-large;
+    text-align: center;
+    color: #30306C;
+}
+
+.welcome{
+    margin-left: 18%;
+    border: 2px ridge;   
+    border-color: #30306C;
+    height: 100px;
+    width: 65%;
+    text-align: center;
+}
+
+.hrAdmin{
+    border: none;
+    height: 45px;
+    width: 100%;
+}
+
+.blu2{
+    margin-left: 0%;
+    margin-top: -8px;
+    text-align: center;
+    background-color: #FFFFFF;
+    color: #30306C;
+    font-size: smaller;
+}
+
+
+
+
