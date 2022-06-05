@@ -80,7 +80,7 @@ for (var i = 0; i < btns.length; i++) {
             <div class="logo"><img class="logoimmagine" src="images/products/Logo.png" alt="Logo"></div>
             <div class="name">ALLOGGISTUDENTI.com</div>
             <nav class="menu" fixed="right">
-                @include('layouts/_navpublic')
+                @include('layouts/_navlocatario')
             </nav>
             </div>
         </header>
