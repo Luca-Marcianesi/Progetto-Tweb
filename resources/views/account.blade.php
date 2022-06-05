@@ -25,6 +25,30 @@
 
         <div>
         @isset($account)
+        <div class="about-section">
+  <h1 class="titoloo"> {{$account->name }} {{$account->surname}}</h1>
+  <img class="locatariofotoprof" src="{{ Auth::user()->fotoprofilo }}" alt="locatore">
+
+  <p>{{$account->descrizione }}</p>
+</div>
+
+<h2 class="titoloo infpers" style="text-align:center">Informazioni Personali</h2>
+<div style="text-align:center" class="rowaccount">
+  <div class="columnaccount">
+    <div class="card">
+      <div class="containeraccount">
+        <p class="locatarioprofilo1">{{$account->name}} {{$account->surname}}</p>
+        <p  class="locatarioprofilo1"> Utente:  {{$account->role}}</p>
+        <p class="locatarioprofilo1">Nome: {{$account->name}}</p>
+        <p class="locatarioprofilo1"> Cognome: {{$account->surname}}</p>
+        <p class="locatarioprofilo1"> Data di nascita: {{$account->data_nascita }}</p>
+        <p class="locatarioprofilo1"> Sesso: {{$account->sesso}}</p>
+        <p><a class="button" href="{{ route('modificaAccount') }}">Modifica</a><p>
+      </div>
+    </div>
+  </div>
+
+<!--
         <section class= "profilolocatario">
             <div class= "fotoprofilo">
                 <p class="locatarioprofilo"> {{$account->name }} {{$account->surname}}</p>
@@ -42,6 +66,7 @@
                 <p class="locatarioprofilo1"> Data di nascita: {{$account->data_nascita }}</p>
                 <p class="locatarioprofilo1"> Sesso: {{$account->sesso}}</p>
             </div>
+-->
         </section>
         @endisset()
         </div>

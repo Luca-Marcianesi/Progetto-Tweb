@@ -1352,6 +1352,74 @@ footer{
   }
 
   /*profilo locatario e locatore*/
+
+  .columnaccount {
+    margin-left: 33.3%;
+    float: center;
+    width: 33.3%;
+    margin-bottom: 16px;
+    padding: 0 8px;
+  }
+
+  .locatariofotoprof{
+    float: center;
+    width: 20%;
+    height: 20%;
+    border: #30306C;
+    border-style: double;
+  }
+  
+
+  .card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    margin: 8px;
+  }
+  
+  .about-section {
+    padding: 50px;
+    text-align: center;
+    background-color: #fac49d;
+    color: white;
+  }
+  
+  .containeraccount {
+    padding: 0 16px;
+  }
+  
+  .containeraccount::after, .row::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  
+ 
+  
+  .buttonaccount {
+    border: none;
+    outline: 0;
+    display: inline-block;
+    padding: 8px;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+  }
+  
+  .buttonaccount:hover {
+    background-color: #555;
+  }
+
+  .infpers{
+      color: #FF974B;
+  }
+  
+  @media screen and (max-width: 650px) {
+    .columnaccount {
+      width: 100%;
+      display: block;
+    }
+  }
   .profilolocatario{
       margin: 8%;
   }
