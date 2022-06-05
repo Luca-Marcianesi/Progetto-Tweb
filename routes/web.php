@@ -50,6 +50,13 @@ Route::post('/locatore/annunciLocatore/aggiungiAppartamento', 'locatoreControlle
 Route::post('/locatore/annunciLocatore/aggiungiPostoLetto', 'locatoreController@aggiungiOffertaPostoLetto')
         ->name('aggiungiPostoLetto');
 
+Route::get('/locatore/aggiungiServizi{id}', 'locatoreController@showServizi')
+        ->name('showAggiungiServizi');
+
+
+Route::post('/locatore/annunciLocatore/Servizi{id}', 'locatoreController@setServizi')
+        ->name('aggiungiServizi');
+
 Route::get('/account', 'UserController@showAccount')
         ->name('showAccount');
 
