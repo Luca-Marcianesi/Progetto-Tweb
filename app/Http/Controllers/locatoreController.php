@@ -178,8 +178,10 @@ class locatoreController extends Controller {
         if($request->uni){
             $this->_serviziModel->addUni($id);
         }
+
+        return redirect()->route('mieiAlloggi');
     
-        return view('mieiAlloggi');
+        
     }
 
 
