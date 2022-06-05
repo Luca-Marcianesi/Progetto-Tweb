@@ -35,6 +35,9 @@ Route::get('/user', 'UserController@index')
 Route::get('/annunciLocatore', 'locatoreController@showAnnunci')
         ->name('annunci');
 
+Route::get('/annunciLocatario', 'locatarioController@showAnnunci')
+        ->name('annunci');
+
 Route::get('/annunciHome/{citta}', 'HomeController@showAnnunci')
         ->name('annunciHome');
 
@@ -69,6 +72,7 @@ Route::post('/modifica-account', 'UserController@modificaAccount')
 
 Route::get('/locatore', 'UserController@areaLocatore')
         ->name('locatore');
+
 
 Route::get('/ImieiAlloggi', 'locatoreController@showMieiAlloggi')
         ->name('mieiAlloggi');
@@ -128,7 +132,7 @@ Route::get('/locatore/offerta{id}', 'HomeController@showAnnuncioSingoloLocatore'
         ->name('dettagliAnnuncio');
 
 
-Route::get('/locatore/offerta{id}', 'HomeController@showAnnuncioSingoloLocatario')
+Route::get('/locatario/offerta{id}', 'HomeController@showAnnuncioSingoloLocatario')
         ->name('dettagliAnnuncio');
 
 
