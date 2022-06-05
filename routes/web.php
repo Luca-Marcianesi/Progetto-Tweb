@@ -26,7 +26,7 @@ Route::get('/admin/newproduct', 'AdminController@addProduct')
 Route::post('/admin/newproduct', 'AdminController@storeProduct')
         ->name('newproduct.store');
 
-Route::get('/admin', 'AdminController@index')
+Route::get('/admin', 'AdminController@getHome')
         ->name('admin');
 
 Route::get('/user', 'UserController@index')

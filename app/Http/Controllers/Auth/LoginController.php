@@ -38,7 +38,7 @@ use AuthenticatesUsers;
                 break;
             case 'locatario': return '/locatario';
                 break;
-            case 'admin': return '/locatario';
+            case 'admin': return '/home';
                 break;
             default: return '/';
         };

@@ -17,7 +17,7 @@
         </header>
 
         <div>
-                @include('home')
+            @yield('content')
         </div>
         
         <footer>

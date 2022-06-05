@@ -3,10 +3,32 @@
 @section('title', 'Area Admin')
 
 @section('content')
-<div class="static">
-    <h3>Area Amministratore</h3>
-    <p>Benvenuto {{ Auth::user()->name }} {{ Auth::user()->surname }}</p>
-    <p>Seleziona la funzione da attivare</p>
+<hr class="hrAdmin">
+<div>
+    <h3 class="AreaAdmin"><u>Area Amministratore</u></h3>
+    <hr class="hrAdmin">
+    <div class="welcome">
+        <p class="pAdmin"> Benvenuto {{ Auth::user()->name }} {{ Auth::user()->surname }}.
+        Questa è la tua area riservata. Di seguito sono elencate le principali ed attuali statistiche del sito.
+        </p>
+    </div>
+    <hr class="hrAdmin">
+    <section class="treimg">
+        <div class="container">
+            <ul class="griglia3img">
+                <li><img class ="foto" src="images/products/Casa_arancione-removebg-preview.png" >
+                @isset($numero_offerte)
+                <p class="blu2"> Al momento nel sito <br> sono presenti <br> {{$numero_offerte}} offerte </p></li>
+                @endisset()
+                <li><img class ="foto" src="images/products/Rent-removebg-preview.png">
+                @isset($occupati)
+                <p class="blu2"> Al momento nel sito <br> sono locati <br> {{$occupati}} alloggi </p></li>
+                @endisset()
+                <li><img class ="foto" src="images/products/Offerta_di_alloggio-removebg-preview.png">
+                <p class="blu2"> Al momento nel sito <br> sono state fatte <br> x offerte dai locatari </p></li>
+            </ul>
+        </div>
+    </section>
 </div>
 @endsection
 
