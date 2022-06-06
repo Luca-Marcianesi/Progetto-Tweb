@@ -4,11 +4,13 @@ namespace App\Http\Controllers;
 
 use App\Models\ListaCitta;
 use App\Models\MieiAlloggi;
+use App\Models\GestioneServizi;
 use App\Models\Resources\Offerta;
 use App\Models\Resources\Interagisce;
 use App\Models\Resources\PostoLetto;
 use App\Models\Resources\Appartamento;
 use App\Http\Requests\OffertaRequest;
+use App\Http\Requests\ServiziRequest;
 use App\Http\Requests\ModificaOffertaRequest;
 use App\Http\Requests\NewAppartamentoRequest;
 use App\Http\Requests\NewPostoLettoRequest;
@@ -18,6 +20,8 @@ class locatoreController extends Controller {
     public function __construct() {
         $this->middleware('can:isLocatore');
         $this->_alloggiModel = new MieiAlloggi;
+        $this->_serviziModel = new GestioneServizi;
+
     }
 
     public function areaLocatore() {
@@ -78,51 +82,7 @@ class locatoreController extends Controller {
 
         }else{
             
-        }
-
-        
-                    
-    }
-
-
-    public function aggiungiOfferta(OffertaRequest $request){ 
-        $offerta = new Offerta;
-        $offerta->stato = "libera";
-        $offerta->titolo = $request->titolo;
-        $offerta->descrizione_breve = $request->desc_b;
-        $offerta->città = $request->città;
-        $offerta->locazione = $request->locazione;
-        $offerta->prezzo = $request->prezzo;
-        $offerta->tipo = $request->tipo;
-        $offerta->descrizione = $request->desc_l;
-        $offerta->genere = $request->genere;
-        $offerta->save();
-
-        $interazione = new Interagisce;
-        $interazione->utente = auth()->user()->username;
-        $interazione->offerta = $offerta->id;
-        $interazione->tipo_interazione = "c";
-        $interazione->data = date("Y-m-d");
-        $interazione->save();
-
-        if($request->tipo ==  "P"){
-            $postoletto = new PostoLetto;
-            $postoletto->offerta = $offerta->id;
-            $postoletto->posti_letto_appartamento = 1;
-            $postoletto->posti_letto_camera = 1;
-            $postoletto->dimensioni_camera = 1;
-            $postoletto->save();
-        }
-        else{
-            $appartamento = new Appartamento;
-            $appartamento->offerta = $offerta->id;
-            $appartamento->posti_letto_appartamento = 1;
-            $appartamento->numero_di_camere = 2;
-            $appartamento->dimensioni =24;
-            $appartamento->save();
-        }
-
-    return view('areaLocatore');               
+        }               
     }
 
     public function aggiungiOffertaAppartamento(NewAppartamentoRequest $request){ 
@@ -156,34 +116,12 @@ class locatoreController extends Controller {
         $appartamento->cucina =$request->cucina;
         $appartamento->locale_ricreativo =$request->l_ricreativo;
         $appartamento->save();
-        return view('mieiAlloggi');
+
+        return redirect()->route('showAggiungiServizi', [$offerta]);
+        
 
         //return response()->json(['redirect' => route('mieiAlloggi')]);
 
-        /*
-
-        $possiede_bagni = new Possiede;
-        $possiede_bagni->tipo = "bagni";
-        $possiede_bagni->quantita = $request->bagni;
-        $possiede_bagni->offerta = $offerta->id;
-        $possiede_bagni->save();
-
-        /*
-        if($request->fibra){
-            $possiede_fibra = new Possiede;
-            $possiede_fibra->tipo = "fibra";
-            $possiede_fibra->offerta = $offerta->id;
-            $possiede_fibra->save();
-        }
-        
-        
-        if($request->uni){
-            $possiede_uni = new Possiede;
-            $possiede_uni->tipo = "vicino università";
-            $possiede_uni->offerta = $offerta->id;
-            $possiede_uni->save();
-        }
-        */
               
     }
 
@@ -216,11 +154,36 @@ class locatoreController extends Controller {
         $postoletto->posti_letto_camera = $request->posti_letto_camera;
         $postoletto->dimensioni_camera = $request->dimensioni_camera;
         $postoletto->save();
+
+        $id = $offerta->id;
         
-        return view('mieiAlloggi');
+        return redirect()->route('showAggiungiServizi', [$id]);
 
         /* return response()->json(['redirect' => route('mieiAlloggi')]);    */          
     }
+
+    public function showServizi($id) {
+
+        return view('formAggiuntaServizi')
+                        ->with('id', $id);
+                        
+    }
+
+    public function setServizi(ServiziRequest $request ,$id) {
+       
+        $this->_serviziModel->addBagno($id,$request->bagni);
+        if($request->fibra){
+            $this->_serviziModel->addFibra($id);
+        }
+        if($request->uni){
+            $this->_serviziModel->addUni($id);
+        }
+
+        return redirect()->route('mieiAlloggi');
+    
+        
+    }
+
 
     public function modificaOfferta(ModificaOffertaRequest $request,$id){ 
         
@@ -265,9 +228,8 @@ class locatoreController extends Controller {
         
 
                     
+    }                 
     }
-
-
     
 
-}
+    

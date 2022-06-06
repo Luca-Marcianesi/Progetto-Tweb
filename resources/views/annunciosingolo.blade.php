@@ -23,7 +23,6 @@
       <div class="imgaffitto">
            @include('helpers/annunciosingoloImg', ['imgFile' => $offerta->image])
            </div>
-      <!--  DA VEDERE PERCHè NON SI VEDE L'IMMAGINE -->
       </div>
 
       <div class="columnsections col2">
@@ -47,5 +46,9 @@
      
       </div>
     </div>
-
+    <footer>
+            @include('layouts/-footer')
+        </footer>
+    </body>
+</html>
     
