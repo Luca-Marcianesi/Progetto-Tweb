@@ -1,3 +1,5 @@
+<link href="popup.js" rel="stylesheet">
+<script defer src="script.js"></script>
 <div>  
   <footer class="footer">
     <div class="row footer-container">
