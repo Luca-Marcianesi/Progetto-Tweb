@@ -183,6 +183,17 @@
 <section id="faq" class="faq-container">
   <div class="titoloo">FAQ</div>
 
+  @isset($topFaqs)
+@foreach ($topFaqs as $faq)
+
+<h1 class="faq-page">{{$faq->domanda}}</h1>
+      <div class="faq-body">
+      <h1 class="faq-answer">{{$faq->risposta}}</h1>
+</div>
+  @endforeach
+@endisset()
+  </section>
+<!--
       <h1 class="faq-page">Domanda 1</h1>
       <div class="faq-body">
       <h1 class="faq-answer">è possibile modificare gli annunci in ogni momento: la modifica verrà visualizzata
@@ -211,7 +222,7 @@
       <div class="faq-body">
       <h1 class="faq-answer">è possibile modificare gli annunci in ogni momento: la modifica verrà visualizzata
             24 ore dopo il salvataggio
-  </h1>      </div>
+  </h1>      </div>-->
 
 <script src="js/faq-js.js"></script>
 </section>

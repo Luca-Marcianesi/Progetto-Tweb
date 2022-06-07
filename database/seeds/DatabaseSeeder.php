@@ -82,5 +82,12 @@ class DatabaseSeeder extends Seeder {
             'email_verified_at' => NULL, 'username' => 'adminadmin', 'password' => Hash::make('adminadmin'), 'descrizione' => 'adminadmin', 'role' => 'admin']
         ]);
 
+        
+        DB::table('faq')->insert([
+            ['domanda'=>'domanda1', 'risposta'=>'risposta1',  'stato'=>'visibile'],
+            ['domanda'=>'domanda2', 'risposta'=>'risposta2',  'stato'=>'visibile'],
+            ['domanda'=>'domanda3', 'risposta'=>'risposta3',  'stato'=>'visibile'],
+        ]);
+
 }
 }
