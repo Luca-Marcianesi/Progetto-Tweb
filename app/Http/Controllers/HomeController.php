@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\ListaCitta;
+use App\Models\Annunci;
+use App\User;
 use App\Models\Resources\Offerta;
 
 class HomeController extends Controller
@@ -17,6 +19,7 @@ class HomeController extends Controller
     {
         
         $this->_ListaCittaModel = new ListaCitta;
+        $this->_annunciModel = new Annunci;
     }
 
     /**
@@ -56,9 +59,13 @@ class HomeController extends Controller
                               
 
     public function showAnnuncioSingoloLocatario($id){
+        $proprietario = $this->_annunciModel->getProprietario($id);
+        //$utente = User::find($proprietario->utente);
         $offerta = $this->_ListaCittaModel->getOffertabyId($id);
         return view('annunciosingoloLocatario')  
-                ->with('offerta', $offerta);}
+                ->with('offerta', $offerta)
+                ->with('proprietario',$proprietario);
+            }
         
                         
 }

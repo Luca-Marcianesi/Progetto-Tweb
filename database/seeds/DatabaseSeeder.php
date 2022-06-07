@@ -14,28 +14,12 @@ class DatabaseSeeder extends Seeder {
     public function run() {
     
         DB::table('offerta')->insert([
-            ['id' => 1, 'stato' => 'libera', 'città'=>'Ancona', 'locazione' => 'Via del Pignattello 55', 'prezzo' => 450, 'genere' => 'M', 'descrizione_breve' => ' 4 camere, 2 bagni, 5 inquilini',
-            'descrizione'=>'Affittasi Camera Singola ad Ancona, Via del Pignattello 55 per 450 Euro al mese. Sono disponibili i seguenti servizi: internet, televisione, lavatrice.Riscaldamento Autonomo.', 'titolo'=>'Stanza terzo piano', 'tipo'=>'Posto Letto','image'=>'affitto-stanza.jpg'],
-            ['id' => 2, 'stato' => 'libera','città'=>'Ancona', 'locazione' => 'Via Pluto 80', 'prezzo' => 250, 'genere' => '', 'descrizione_breve' => ' 4 camere, 2 bagni, 5 inquilini',
-            'descrizione'=>'Affittasi Camera Singola ad Ancona, Via del Pignattello 55 per 450 Euro al mese. Sono disponibili i seguenti servizi: internet, televisione, lavatrice.Riscaldamento Autonomo.','titolo'=>'Stanza terzo piano', 'tipo'=>'Posto Letto','image'=>'affitto-stanza.jpg'],
-            ['id' => 3, 'stato' => 'libera', 'città'=>'Ancona','locazione' => 'Via Colombo 100', 'prezzo' => 300, 'genere' => 'F','descrizione_breve' => ' 4 camere, 2 bagni, 5 inquilini',
-            'descrizione'=>'Affittasi Camera Singola ad Ancona, Via del Pignattello 55 per 450 Euro al mese. Sono disponibili i seguenti servizi: internet, televisione, lavatrice.Riscaldamento Autonomo.','titolo'=>'Stanza terzo piano', 'tipo'=>'Posto Letto','image'=>'affitto-stanza.jpg'],
-            ['id' => 4, 'stato' => 'libera', 'città'=>'Ancona','locazione' => 'Via Raffaele 15', 'prezzo' => 180, 'genere' => 'M','descrizione_breve' => ' 4 camere, 2 bagni, 5 inquilini',
-            'descrizione'=>'Affittasi Camera Singola ad Ancona, Via del Pignattello 55 per 450 Euro al mese. Sono disponibili i seguenti servizi: internet, televisione, lavatrice.Riscaldamento Autonomo.','titolo'=>'Stanza terzo piano', 'tipo'=>'Posto Letto','image'=>'affitto-stanza.jpg'],
-            ['id' => 5, 'stato' => 'libera', 'città'=>'Ancona','locazione' => 'Via Ciccio 25', 'prezzo' => 230, 'genere' => '','descrizione_breve' => ' 4 camere, 2 bagni, 5 inquilini',
-            'descrizione'=>'Affittasi Camera Singola ad Ancona, Via del Pignattello 55 per 450 Euro al mese. Sono disponibili i seguenti servizi: internet, televisione, lavatrice.Riscaldamento Autonomo.','titolo'=>'Stanza terzo piano', 'tipo'=>'Posto Letto','image'=>'affitto-stanza.jpg'],
-            ['id' => 6, 'stato' => 'libera', 'città'=>'Ancona','locazione' => 'Via Romeo 44', 'prezzo' => 300, 'genere' => 'F','descrizione_breve' => ' 4 camere, 2 bagni, 5 inquilini',
-            'descrizione'=>'Affittasi Camera Singola ad Ancona, Via del Pignattello 55 per 450 Euro al mese. Sono disponibili i seguenti servizi: internet, televisione, lavatrice.Riscaldamento Autonomo.','titolo'=>'Stanza terzo piano', 'tipo'=>'Posto Letto','image'=>'affitto-stanza.jpg'],
-            ['id' => 7, 'stato' => 'libera', 'città'=>'Ancona','locazione' => 'Via Solferino 74', 'prezzo' => 120, 'genere' => '','descrizione_breve' => ' 4 camere, 2 bagni, 5 inquilini',
-            'descrizione'=>'Affittasi Camera Singola ad Ancona, Via del Pignattello 55 per 450 Euro al mese. Sono disponibili i seguenti servizi: internet, televisione, lavatrice.Riscaldamento Autonomo.','titolo'=>'Stanza terzo piano', 'tipo'=>'Posto Letto','image'=>'affitto-stanza.jpg'],
-            ['id' => 8, 'stato' => 'libera', 'città'=>'Ancona','locazione' => 'Via Pozzetto 69', 'prezzo' => 400, 'genere' => 'F','descrizione_breve' => ' 4 camere, 2 bagni, 5 inquilini',
-            'descrizione'=>'Affittasi Camera Singola ad Ancona, Via del Pignattello 55 per 450 Euro al mese. Sono disponibili i seguenti servizi: internet, televisione, lavatrice.Riscaldamento Autonomo.','titolo'=>'Stanza terzo piano', 'tipo'=>'Posto Letto','image'=>'affitto-stanza.jpg'],
-            ['id' => 9, 'stato' => 'libera', 'città'=>'Ancona','locazione' => 'Via Cesare Battisti 42', 'prezzo' => 350, 'genere' => 'M','descrizione_breve' => ' 4 camere, 2 bagni, 5 inquilini',
-            'descrizione'=>'Affittasi Camera Singola ad Ancona, Via del Pignattello 55 per 450 Euro al mese. Sono disponibili i seguenti servizi: internet, televisione, lavatrice.Riscaldamento Autonomo.','titolo'=>'Stanza terzo piano', 'tipo'=>'Posto Letto','image'=>'affitto-stanza.jpg'],
-            ['id' => 10, 'stato' => 'libera','città'=>'Ancona', 'locazione' => 'Via Umberto I', 'prezzo' => 250, 'genere' => '','descrizione_breve' => ' 4 camere, 2 bagni, 5 inquilini',
-            'descrizione'=>'Affittasi Camera Singola ad Ancona, Via del Pignattello 55 per 450 Euro al mese. Sono disponibili i seguenti servizi: internet, televisione, lavatrice.Riscaldamento Autonomo.','titolo'=>'Stanza terzo piano', 'tipo'=>'Posto Letto','image'=>'affitto-stanza.jpg'],
-            ['id' => 11, 'stato' => 'libera', 'città'=>'Ancona','locazione' => 'Via Rossano 32', 'prezzo' => 200, 'genere' => '','descrizione_breve' => ' 4 camere, 2 bagni, 5 inquilini',
-            'descrizione'=>'Affittasi Camera Singola ad Ancona, Via del Pignattello 55 per 450 Euro al mese. Sono disponibili i seguenti servizi: internet, televisione, lavatrice.Riscaldamento Autonomo.','titolo'=>'Stanza terzo piano', 'tipo'=>'Posto Letto','image'=>'affitto-stanza.jpg']
+            ['id' => 1, 'stato' => 'libera', 'città'=>'Ancona', 'locazione' => 'Via del Pignattello 55',
+             'prezzo' => 450, 'genere' => 'M', 'descrizione_breve' => ' 4 camere, 2 bagni, 5 inquilini',
+            'descrizione'=>'Affittasi Camera Singola ad Ancona, Via del Pignattello 55 per 450 Euro al mese.
+             Sono disponibili i seguenti servizi: internet, televisione, lavatrice.Riscaldamento Autonomo.',
+             'titolo'=>'Stanza terzo piano', 'tipo'=>'Posto Letto','image'=>'affitto-stanza.jpg'],
+            
         ]);
 
         DB::table('città')->insert([
@@ -88,6 +72,13 @@ class DatabaseSeeder extends Seeder {
             ['domanda'=>'domanda2', 'risposta'=>'risposta2',  'stato'=>'visibile'],
             ['domanda'=>'domanda3', 'risposta'=>'risposta3',  'stato'=>'visibile'],
         ]);
+
+        DB::table('interagisce')->insert([
+            ['offerta'=>1, 'utente'=>'lorelore',  'tipo_interazione'=>'possiede', 'data'=>'2022-04-09'],
+           
+        ]);
+
+
 
 }
 }

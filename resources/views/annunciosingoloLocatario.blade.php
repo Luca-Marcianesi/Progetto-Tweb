@@ -36,15 +36,16 @@
        <p class="description">  {{$offerta->prezzo}}</p> 
       </div>
 
-     
+    @isset($proprietario)
     <div class="columnsectionslocatario">
     <div class="cardlocatore">
       <div class="containeraccount">
         <p class="locatarioprofilo1 infpers">Informazioni locatore</p>
-        <p class="locatarioprofilo1">Nome:</p>
-        <p class="locatarioprofilo1"> Cognome</p>
+        <p class="locatarioprofilo1">Nome:{{$proprietario->email}}</p>
+        <p class="locatarioprofilo1"> Cognome{{$proprietario->name}}</p>
         <p class="locatarioprofilo1"> descrizione </p>
         <p><a class="button" href=""> Contatta</a><p>
+    @endisset()
         <div class="chatt-popupp" id="myForm">
   <form action="/action_page.php" class="formm-containerr">
     <textarea placeholder="Poni le tue domande.." name="msgg" required></textarea>
