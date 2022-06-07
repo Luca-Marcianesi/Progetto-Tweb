@@ -1476,7 +1476,7 @@ footer{
       color: #30306C;
   }
 
-
+ 
 /*login - registrati*/
 
 .body{
@@ -1736,7 +1736,7 @@ a:hover{
 .cardlocatore{
     width: 80%;
     margin-left: 13%;
-    height: 300px;
+    height: 660px;
     padding: 1rem;
 
 }
@@ -1783,6 +1783,78 @@ margin-top: 150px;
     color: #30306C;
     text-transform: uppercase;
 }
+
+
+/*pop up chat per annuncio singolo locatario*/
+.open-buttonn {
+    background-color: #555;
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    opacity: 0.8;
+    position: fixed;
+    bottom: 23px;
+    right: 28px;
+    width: 280px;
+  }
+  
+  /* The popup chat - hidden by default */
+  .formm-popupp {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    right: 15px;
+    border: 3px solid #f1f1f1;
+    z-index: 9;
+  }
+  
+  /* Add styles to the form container */
+  .formm-containerr {
+    max-width: 300px;
+    padding: 10px;
+    background-color: white;
+  }
+  
+  /* Full-width textarea */
+  .formm-containerr textarea {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    border: none;
+    background: #f1f1f1;
+    resize: none;
+    min-height: 200px;
+  }
+  
+  /* When the textarea gets focus, do something */
+  .formm-containerr textarea:focus {
+    background-color: #ddd;
+    outline: none;
+  }
+  
+  /* Set a style for the submit/login button */
+  .formm-containerr .btnn {
+    background-color: #FF974B;
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    margin-bottom:10px;
+    opacity: 0.8;
+  }
+  
+  /* Add a red background color to the cancel button */
+  .formm-containerr .cancell {
+    background-color: #30306C;
+  }
+  
+  /* Add some hover effects to buttons */
+  .formm-containerr .btnn:hover, .open-buttonn:hover {
+    opacity: 1;
+  }
+
 
 .back-to-previous{
     background-image: url('images/products/1500306-icona-freccia-verso-l-alto-gratuito-vettoriale.png');
@@ -2211,3 +2283,4 @@ margin-top: 150px;
 .errors ul {
 	line-height: 100%;
 }
+

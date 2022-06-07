@@ -45,7 +45,22 @@
         <p class="locatarioprofilo1"> Cognome</p>
         <p class="locatarioprofilo1"> descrizione </p>
         <p><a class="button" href=""> Contatta</a><p>
+        <div class="chatt-popupp" id="myForm">
+  <form action="/action_page.php" class="formm-containerr">
+    <textarea placeholder="Poni le tue domande.." name="msgg" required></textarea>
 
+    <button type="submit" class="btnn">Invia</button>
+    <button type="button" class="btnn cancell" onclick="closeForm()">Chiudi</button>
+  </form>
+</div> 
+<script>function openForm() {
+  document.getElementById("myForm").style.display = "block";
+}
+
+function closeForm() {
+  document.getElementById("myForm").style.display = "none";
+} 
+  </script>
       </div>
     </div>
   </div>

@@ -5,6 +5,7 @@
   </div>
 
 </div>
+
 <br id="cs">
   <p class="titoloo">Chi siamo <img class="iconimage" src="images/products/posizione.png" alt="Logo posizione geografica"> </p>
   <div>
@@ -177,44 +178,23 @@
                   il login dove troverai i servizi a te dedicati </p>
   </div> 
 </section>  
-
 <section id="faq" class="faq-container">
   <div class="titoloo">FAQ</div>
+  @isset($topFaqs)
+@foreach ($topFaqs as $faq)
 
-      <h1 class="faq-page">Posso affittare più di un appartamento?</h1>
+      <h1 class="faq-page">{{$faq->domanda}}</h1>
       <div class="faq-body">
-      <h1 class="faq-answer">è possibile modificare gli annunci in ogni momento: la modifica verrà visualizzata
-            24 ore dopo il salvataggio
-  </h1>      </div>
- 
-      <h1 class="faq-page">Posso proporre un'offerta diversa dal prezzo indicato dal locatore?</h1>
-      <div class="faq-body">
-      <h1 class="faq-answer">è possibile modificare gli annunci in ogni momento: la modifica verrà visualizzata
-            24 ore dopo il salvataggio
-  </h1>      </div>
-    
-      <h1 class="faq-page">Posso visualizzare il profilo del locatore?</h1>
-      <div class="faq-body">
-      <h1 class="faq-answer">è possibile modificare gli annunci in ogni momento: la modifica verrà visualizzata
-            24 ore dopo il salvataggio
-  </h1>      </div>
+      <h1 class="faq-answer">{{$faq->risposta}}</h1>
+</div>
+  @endforeach
 
-      <h1 class="faq-page">Devo chiudere il contratto prima del termine, posso farlo?</h1>
-      <div class="faq-body">
-      <h1 class="faq-answer">è possibile modificare gli annunci in ogni momento: la modifica verrà visualizzata
-            24 ore dopo il salvataggio
-  </h1>      </div>
-
-      <h1 class="faq-page">Il locatore vedrà i miei contatti?</h1>
-      <div class="faq-body">
-      <h1 class="faq-answer">è possibile modificare gli annunci in ogni momento: la modifica verrà visualizzata
-            24 ore dopo il salvataggio
-  </h1>      </div>
+  </section>
 
 <script src="js/faq-js.js"></script>
 </section>
 
-<section >
+<section>
 <div><p class="titoloo">Inserisci la tua mail per rimanere aggiornato</p></div>
 <div class ="titoloo"> 
   <input class="areaEmail" type="text" value="" name="email" id="newsletter" placeholder="Inserisci la tua Email" title="Iscriviti alla nostra newsletter" >
@@ -240,6 +220,9 @@
 
   </div>
 
+
+
   <div id ="backBtn" class="back-to-top" ></div>
 <script src="js/backbtn.js"></script>
 </section>
+@endisset()
