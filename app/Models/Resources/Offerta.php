@@ -5,6 +5,7 @@ namespace App\Models\Resources;
 use Illuminate\Database\Eloquent\Model;
 use App\Models\Resources\Appartamento;
 use App\Models\Resources\PostoLetto;
+use App\Models\Resources\Interagisce;
 
 class Offerta extends Model {
 
@@ -14,11 +15,9 @@ class Offerta extends Model {
 
     public $timestamps = false;
 
-    public function postoLetto(){
-        return $this->hasOne(PostoLetto::class,'offerta');
+    public function interagisce()
+    {
+        return $this->hasMany(Interagisce::class,'offerta');
     }
 
-    public function appartamento(){
-        return $this->hasOne(Appartamento::class,'offerta');
-    }
 }
