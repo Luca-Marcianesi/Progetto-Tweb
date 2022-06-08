@@ -11,20 +11,10 @@
   |
  */
 
-Route::get('/selTopCat/{topCatId}/selCat/{catId}', 'PublicController@showCatalog3')
-        ->name('catalog3');
 
-Route::get('/selTopCat/{topCatId}', 'PublicController@showCatalog2')
-        ->name('catalog2');
 
-Route::get('/', 'PublicController@showCatalog1')
+Route::get('/', 'PublicController@showHome')
         ->name('catalog1');
-
-Route::get('/admin/newproduct', 'AdminController@addProduct')
-        ->name('newproduct');
-
-Route::post('/admin/newproduct', 'AdminController@storeProduct')
-        ->name('newproduct.store');
 
 Route::get('/admin', 'AdminController@getHome')
         ->name('admin');
