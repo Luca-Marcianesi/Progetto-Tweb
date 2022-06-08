@@ -23,7 +23,7 @@ class Offerta extends Migration
             $table->integer('prezzo');
             $table->string('tipo',60);
             $table->string('genere',1);
-            $table->text('descrizione',450);
+            $table->text('descrizione',1050);
             $table->text('image')->nullable();
 
             

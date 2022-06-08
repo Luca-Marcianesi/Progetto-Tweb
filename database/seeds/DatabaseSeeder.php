@@ -68,9 +68,16 @@ class DatabaseSeeder extends Seeder {
 
         
         DB::table('faq')->insert([
-            ['domanda'=>'domanda1', 'risposta'=>'risposta1',  'stato'=>'visibile'],
-            ['domanda'=>'domanda2', 'risposta'=>'risposta2',  'stato'=>'visibile'],
-            ['domanda'=>'domanda3', 'risposta'=>'risposta3',  'stato'=>'visibile'],
+            ['domanda'=>'Perchè affidarsi ad Alloggistudenti.com?', 'risposta'=>'Trovare casa in una nuova città non è mai facile. Alloggistudenti.com seleziona le migliori soluzioni, evitando il rischio di brutte esperienze e garantendo sempre un regolare contratto. ',  'stato'=>'visibile'],
+            ['domanda'=>' In quali città è attivo? ', 'risposta'=>'Siamo attivi nelle principali città universitarie italiane',  'stato'=>'visibile'],
+            ['domanda'=>' A chi si rivolge? ', 'risposta'=>'Se sei uno studente o hai bisogno di una sistemazione temporanea per un corso, un master o qualsiasi altra esigenza, abbiamo la soluzione adatta per te.
+            Se sei un proprietario e vuoi affittare rapidamente il tuo immobile, hai trovato il servizio che stavi cercando. Un’agenzia immobiliare efficiente e molto in più.',  'stato'=>'visibile'],
+            ['domanda'=>' Quanto costa? ', 'risposta'=>'Il servizio è completamente gratuito.',  'stato'=>'visibile'],
+            ['domanda'=>'Come posso modificare il mio profilo? ', 'risposta'=>'Puoi modificare il tuo profilo cliccando su “Modifica dall’area "Account".',  'stato'=>'visibile'],
+            ['domanda'=>'Chi vedrà i miei annunci? ', 'risposta'=>'Dopo la conferma di pubblicazione, l’annuncio sarà visibile a tutti gli utenti del sito.',  'stato'=>'visibile'],
+            ['domanda'=>'Posso modificare i miei annunci? ', 'risposta'=>'Potrai modificare o rimuovere il tuo annuncio in qualsiasi momento dalla sezione “Miei Alloggi".',  'stato'=>'visibile'],
+            ['domanda'=>'Come sarò contattato dai locatari? ', 'risposta'=>'Gli altri utenti potranno scriverti un messaggio attraverso il sito o potranno contattarti utilizzando i contatti diretti che hai inserito nell’annuncio. Se non desideri mostrare l’email o il telefono inseriti no-email@email.it e 00000000 come telefono.',  'stato'=>'visibile'],
+
         ]);
 
         DB::table('interagisce')->insert([

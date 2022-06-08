@@ -34,23 +34,27 @@
         @else<p class="description titolo"><a class="button buttonopziona"  href="{{ route('opziona',[$offerta->id] )}}"> Opziona</a>
         <p> 
       @endisset()
+       <p class="description titolo"><a class="button buttonopziona" href=""> Opziona</a><p> 
+       <p class = "description titolo"> Indirizzo</p> 
+       <p class="description">  {{$offerta->città}}, {{$offerta->locazione}} </p>
+       <p class = "description titolo"> Stato</p>  
+       <p class="description">  {{$offerta->stato}}</p>
        <p class = "description titolo"> Descrizione</p>  
        <p class="description">  {{$offerta->descrizione}}</p>
-       <p class = "description titolo"> Servizi inclusi</p>  
-       <p class="description">  {{$offerta->descrizione}}</p> 
        <p class = "description titolo"> canone mensile</p>  
-       <p class="description">  {{$offerta->prezzo}}</p> 
+       <p class="description"> € {{$offerta->prezzo}}</p> 
       </div>
 
     @isset($proprietario)
     <div class="columnsectionslocatario">
     <div class="cardlocatore">
       <div class="containeraccount">
-        <p class="locatarioprofilo1 infpers">Informazioni locatore</p>
-        <p class="locatarioprofilo1">Nome:{{$proprietario->email}}</p>
-        <p class="locatarioprofilo1"> Cognome{{$proprietario->name}}</p>
-        <p class="locatarioprofilo1"> descrizione </p>
-        <p><a class="button" href=""> Contatta</a><p>
+        <p class="locatarioprofilo1 infpers titolo">Locatore</p>
+        <p class="locatarioprofilo1">Nome: {{$proprietario->name}}</p>
+        <p class="locatarioprofilo1">Cognome: {{$proprietario->surname}}</p>
+        <p class="locatarioprofilo1"> Mail: {{$proprietario->email}}</p>
+        <p class="locatarioprofilo1"> Descrizione: {{$proprietario->descrizione}}</p>
+        <p class="locatarioprofilo1 titolo ">contatta <a class="buttonrotondo" href="">+</a><p>
     @endisset()
         <div class="chatt-popupp" id="myForm">
   <form action="/action_page.php" class="formm-containerr">

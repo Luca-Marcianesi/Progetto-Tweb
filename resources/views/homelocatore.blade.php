@@ -48,29 +48,6 @@
     </style>
   
 
-<section class="esploracittà">
-  <div class="container">
-    <p class="titoloo"> Visualizza annunci per città</p><br>
-    <ul class="griglia">
-      <li><img class ="foto" src="images/products/Ancona.jpg" alt="Ancona">
-        <p class="arancione">Ancona</p><p class="arancione2">
-          <a class="arancione2">Visualizza</p></a></li>
-      <li><img class ="foto" src="images/products/Milano.jpg">
-        <p class="arancione">Milano</p><p class="arancione2">
-          <a class="arancione2">Visualizza</p></a></li>
-      <li><img class ="foto" src="images/products/Roma.webp">
-        <p class="arancione">Roma</p><p class="arancione2">
-          <a class="arancione2">Visualizza</p></a></li>
-      <li><img class ="foto" src="images/products/Bari.jpg">
-        <p class="arancione">Bari</p><p class="arancione2">
-          <a class="arancione2">Visualizza</p></a></li>
-    </ul>
-    <p><a class="tuttelecittà" href="{{ route('listacitta1') }}"><b>Tutte le città</b></a></p>
-
-
-  </div>
-</section>
-
 <section id="regolamento">
   <div class="reg" > 
       <p class="regolamento1" > <b> Regolamento</b> <img class="photo" src="images/products/megafono.png" >   </p>
@@ -86,22 +63,6 @@
                   il login dove troverai i servizi a te dedicati </p>
   </div> 
 </section>  
-
-<section id="faq" class="faq-container">
-  <div class="titoloo">FAQ</div>
-  @isset($topFaqs)
-@foreach ($topFaqs as $faq)
-
-<h1 class="faq-page">{{$faq->domanda}}</h1>
-      <div class="faq-body">
-      <h1 class="faq-answer">{{$faq->risposta}}</h1>
-</div>
-  @endforeach
-
-  </section>
-
-<script src="js/faq-js.js"></script>
-</section>
 
 
 <section class="contacts-section" id="contatti">
@@ -125,4 +86,3 @@
 </section>
 <div id ="backBtn" class="back-to-top" ></div>
 <script src="js/backbtn.js"></script>
-@endisset()

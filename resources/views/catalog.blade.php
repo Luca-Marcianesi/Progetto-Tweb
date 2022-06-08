@@ -145,20 +145,17 @@
   
 <section class="esploracittà">
   <div class="container">
-    <p class="titoloo"> Esplora in base alla tua città</p><br>
+    <p class="titoloo"> Le città più cercate</p><br>
     <ul class="griglia">
       <li><img class ="foto" src="images/products/Ancona.jpg" alt="Ancona">
-        <p class="arancione">Ancona</p><p class="arancione2">
-          <a class="arancione2">Visualizza</p></a></li>
+        <p class="arancione">Ancona</li>
       <li><img class ="foto" src="images/products/Milano.jpg">
-        <p class="arancione">Milano</p><p class="arancione2">
-          <a class="arancione2">Visualizza</p></a></li>
+        <p class="arancione">Milano</li>
       <li><img class ="foto" src="images/products/Roma.webp">
-        <p class="arancione">Roma</p><p class="arancione2">
-          <a class="arancione2">Visualizza</p></a></li>
+        <p class="arancione">Roma</li>
       <li><img class ="foto" src="images/products/Bari.jpg">
-        <p class="arancione">Bari</p><p class="arancione2">
-          <a class="arancione2">Visualizza</p></a></li>
+        <p class="arancione">Bari
+        </li>
     </ul>
     <p><a class="tuttelecittà" href="{{ route('elencocitta') }}"><b>Tutte le città</b></a></p>
   </div>
