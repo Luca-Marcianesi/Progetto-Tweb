@@ -47,7 +47,6 @@
         <p class = "description titolo"> dimensioni</p>  
         <p class="description">  {{$appartamento->dimensioni}}</p>
        @endisset()
-
        
       </div>
       </div>

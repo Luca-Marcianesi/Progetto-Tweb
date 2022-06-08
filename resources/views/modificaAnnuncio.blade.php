@@ -3,7 +3,9 @@
    <head>
       <meta charset="utf-8">
       <link rel="stylesheet" type="text/css" href="{{ asset('css/stile.css') }}" >
-      <title>LaProj5 | @yield('title', 'Modifica Annunci')</title>
+      <link rel="stylesheet"  href="popup.js" >
+      <script defer src="/js/popup.js"></script>
+      <title>LaProj5 | @yield('title', 'Annunci')</title>
    </head>
    <body>
       <header class="header">
@@ -15,6 +17,7 @@
             </nav>
          </div>
       </header>
+      <hr class="spaziatura">
       <div class="wrap-contact2">
          {{ Form::open(array('route' => ['modificaOffertaProp', $offerta->id],'files' => true, 'class' => 'contact-form')) }}
          @isset($offerta)
@@ -163,10 +166,23 @@
          </div>
          @endisset()
          
-         <div class="container-form-btn">                
+         <div class="container-form-btn">               
             {{ Form::submit('Modifica Offerta', ['class' => 'button']) }}
          </div>
          {{ Form::close() }}
+         <button style="cursor: pointer" data-modal-target="#modal" class="deletebutton">ELIMINA</button>
+                  <div class="modal" id="modal">
+                    <div class="modal-header">
+                      <div class="title">Conferma</div>
+                      <button data-close-button class="close-button">x</button>
+                    </div>
+                    <div class="modal-body" align="center">
+                        Sei sicuro di voler proseguire con l'eliminazione?<br>
+                        <a href="{{ route('elimina', [$offerta->id] )}}"><button class="buttonconferma">Si</button></a>
+                        <button class="buttonconferma" data-close-button>Annulla</button>
+                    </div>
+                  </div>
+                   <div id="overlay"></div>
       </div>
    </body>
 </html>

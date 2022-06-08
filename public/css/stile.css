@@ -1179,6 +1179,7 @@ menu ul{
 
 /*footer*/
 footer{
+    position: static;
     margin-top: 100px;
     width: 100%;
     display: flex;
@@ -1644,6 +1645,7 @@ footer{
 
 
 .button, .buttonchat{
+    cursor: pointer;
     color: #FFFFFF;
     background-color: #FF974B;
     font-size: 15px;
@@ -2547,10 +2549,30 @@ u{
     pointer-events: all;
 }
 
-.popupbutton{
-    border: 1px;
-    border-color: #30306C;
-    line-height: 5px;
-    font-size: 20px;
-    font-weight: 100;
+.buttonconferma {
+    cursor: pointer;
+    align-items: center;
+    color: "FF974B";
+    text-align: center;
+    border-radius: 30%;
+    width: 50px;
+    height: 30px;
+}
+
+.deletebutton {
+    margin-top: 1%;
+    margin-left: 42%;
+    color: #FFFFFF;
+    background-color: #FF974B;
+    font-size: 15px;
+    font-weight: 600;
+    padding:12px 24px ;
+    border: none;
+    border-radius: 36px;
+}
+
+.deletebutton:hover,
+.deletebuttonchat:hover{
+    color: #FFFFFF;
+    background-color: #30306C;
 }

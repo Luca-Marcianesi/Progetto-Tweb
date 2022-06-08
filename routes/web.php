@@ -122,6 +122,9 @@ Route::get('/offerta{id}', 'HomeController@showAnnuncioSingolo')
 Route::get('/locatario/opzionaofferta{id}', 'locatarioController@opziona')
         ->name('opziona');
 
+Route::get('/locatore/eliminaofferta{id}', 'locatoreController@eliminaOfferta')
+        ->name('elimina');
+
 
 
 
@@ -146,4 +149,8 @@ Route::view('/messaggiLocatore', 'messaggiLocatore')
 
 Route::view('/messaggiLocatario', 'messaggiLocatario')
         ->name('messaggiLocatario');
+
+Route::view('/dettagliOpzionamento', 'locatarioController@showDettagliOpzionamento')
+        ->name('dettagliOpzionamento');
+
         

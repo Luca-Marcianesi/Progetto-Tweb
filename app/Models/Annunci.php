@@ -4,6 +4,7 @@ namespace App\Models;
 
 use App\User;
 use App\Models\Resources\Offerta;
+use App\Models\Resources\Interagisce;
 
 class Annunci {
 
@@ -25,4 +26,31 @@ class Annunci {
                 ->first();
     }
 
+    public function getOfferteByProp($proprietario){
+        return $offerte = Interagisce::select('offerta')->where('utente',$proprietario)->get();
+    }
+
+    
+    public function getInteressatiTotale($proprietario) {
+        $offerte = $this->getOfferteByProp($proprietario);
+        return $opzionamenti =  Interagisce::whereIn('offerta',$offerte)
+                                ->where('tipo_interazione','opziona')
+                                ->join('offerta','offerta.id','=','offerta')
+                                ->get();
+    }
+
+
+    public function assegna($id,$locatario){
+        $offerta = Offerta::find($id);
+        $offerta->stato = "assegnata";
+        $offerta->save();
+
+        $interazione = new Interagisce;
+        $interazione->utente = $locatario;
+        $interazione->offerta = $id;
+        $interazione->tipo_interazione = 'assegnata';
+        $interazione->data = date("Y-m-d");
+        $interazione->save();
+
+    }
 }
