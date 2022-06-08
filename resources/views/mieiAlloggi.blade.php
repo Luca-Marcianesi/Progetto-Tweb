@@ -26,7 +26,6 @@
                 <p class ="description titolo">  {{$alloggio->titolo}}</p> <br> <br> <br>
                 <a class="modifica" href = "{{ route('dettagliAlloggioProprietario', [$alloggio->id])}}">modifica</a>
                 <button class="modifica">elimina</button>
-
                 <div >
                     <p class = "description titolo"> Tipo</p>  
                     <p class="description"> {{$alloggio->tipo}} </p>

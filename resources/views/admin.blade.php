@@ -37,9 +37,17 @@
 @isset($topFaqs)
 @foreach ($topFaqs as $faq)
 
-  <h1 class="faq-page">{{$faq->domanda}}</h1>
+  <h1 class="faq-page">{{$faq->domanda}}
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <a href=""><i class="icon-bar a fa fa-search"></i></a>
+ <!-- <a href="{{ route('modificaFaq', [$faq->id])}}"><i class="icon-bar a fa fa-search"></i></a> --->
+
+  <a href="#"><i class="icon-bar a  fa fa-trash"></i></a>
+  </h1>
   <div class="faq-body">
   <h1 class="faq-answer">{{$faq->risposta}}</h1>
+  </div>
+  
 </div>
   @endforeach
 @endisset()
