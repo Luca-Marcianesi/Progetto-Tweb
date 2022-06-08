@@ -31,11 +31,24 @@
        <p class = "description titolo"> {{$offerta->tipo}} </p> 
        @isset($opzionata)
        <p class="description titolo">Offerta già opzionata<p>
-        @else<p class="description titolo"><a class="button buttonopziona"  href="{{ route('opziona',[$offerta->id] )}}"> Opziona</a>
-        <p> 
-      @endisset()
-       <p class="description titolo"><a class="button buttonopziona" href=""> Opziona</a><p> 
-       <p class = "description titolo"> Indirizzo</p> 
+       @else
+        <p class="description titolo">
+          <text style="cursor: pointer" class="button buttonopziona" data-modal-target="#modal">Opziona</text>
+          <div class="modal" id="modal">
+            <div class="modal-header">
+              <div class="title">Conferma</div>
+              <button data-close-button class="close-button">x</button>
+            </div>
+            <div class="modal-body" align="center">
+              Confermi di voler opzionare questo alloggio?<br>
+              <a href="{{ route('opziona', [$offerta->id] )}}"><button class="buttonconferma">Si</button></a>
+              <button class="buttonconferma" data-close-button>Annulla</button>
+            </div>
+          </div>
+          <div id="overlay"></div>
+        <p>
+       @endisset() 
+       <p class = "description titolo">Indirizzo</p> 
        <p class="description">  {{$offerta->città}}, {{$offerta->locazione}} </p>
        <p class = "description titolo"> Stato</p>  
        <p class="description">  {{$offerta->stato}}</p>

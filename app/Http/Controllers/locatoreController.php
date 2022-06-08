@@ -223,13 +223,17 @@ class locatoreController extends Controller {
         }
         */
 
-    return view('areaLocatore');
-        
-        
-
-                    
-    }                 
+    return view('areaLocatore');               
     }
+    
+    
+    public function eliminaOfferta($id){
+        $offerta = Offerta::find($id);
+        $offerta->delete();
+        return redirect()->route('mieiAlloggi');
+    }
+
+}
     
 
     

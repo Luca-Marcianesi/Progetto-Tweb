@@ -115,6 +115,9 @@ Route::get('/locatore/offerta{id}', 'HomeController@showAnnuncioSingolo')
 Route::get('/locatario/opzionaofferta{id}', 'locatarioController@opziona')
         ->name('opziona');
 
+Route::get('/locatore/eliminaofferta{id}', 'locatoreController@eliminaOfferta')
+        ->name('elimina');
+
 
 
 
