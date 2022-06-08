@@ -40,11 +40,11 @@
     <div class="columnsectionslocatario">
     <div class="cardlocatore">
       <div class="containeraccount">
-        <p class="locatarioprofilo1 infpers">Informazioni locatore</p>
-        <p class="locatarioprofilo1">Nome:{{$proprietario->email}}</p>
-        <p class="locatarioprofilo1"> Cognome{{$proprietario->name}}</p>
-        <p class="locatarioprofilo1"> descrizione </p>
-        <p><a class="button" href=""> Contatta</a><p>
+        <p class="locatarioprofilo1 infpers titolo">Locatore</p>
+        <p class="locatarioprofilo1">Nome: {{$proprietario->email}}</p>
+        <p class="locatarioprofilo1"> Cognome: {{$proprietario->name}}</p>
+        <p class="locatarioprofilo1"> Descrizione: {{$proprietario->descrizione}}</p>
+        <p class="locatarioprofilo1 titolo ">contatta <a class="buttonrotondo" href="">+</a><p>
     @endisset()
         <div class="chatt-popupp" id="myForm">
   <form action="/action_page.php" class="formm-containerr">

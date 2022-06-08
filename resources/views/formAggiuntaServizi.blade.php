@@ -16,14 +16,17 @@
             </nav>
          </div>
       </header>
+      <br><br>
       <div class="container-contact" >
-        <div class="imgicona"><img src="images/products/iconalogin.png" alt="icona" style="width: 200px;; height:auto;" ></div>
-        <h3 class ="titoloo">Inserisci offerta</h3>
-        @isset($id)
+      <div class="imgicona"><img src="images/products/iconalogin.png" alt="icona" style="width: 200px;; height:auto;" ></div> 
+        <h3 class ="titoloo">Definisci i servizi disponibili</h3>
+ @isset($id)
+        <div class="wrap-contact1">
+
         {{ Form::open(array('route' => ['aggiungiServizi', $id] ,'class' => 'contact-form')) }}
 
         <div>
-    <h1 class="label-input2">Servizi Interni</h1>
+    <h1 class="label-input2"  style="margin-top:5px; margin-bottom:5px;">Servizi Interni</h1>
     <div id="interni">
         <div>
         {{ Form::label('bagni', 'Bagni', ['class' => 'label-input']) }}
@@ -31,22 +34,21 @@
         </div>
         
     </div>
-    <h1 class="label-input2">Internet</h1>
+    <h1 class="label-input2"   style="margin-top:5px; margin-bottom:5px;">Internet</h1>
     <div id="internet">
         <div>
         {{ Form::label('fibra', 'Fibra', ['class' => 'label-input']) }}
-        {{ Form::checkbox('fibra', 'fibra',false,['class' => 'input', 'id' => 'fibra']) }}
+        {{ Form::checkbox('fibra', 'fibra',false,['class' => 'inputcheck', 'id' => 'fibra']) }}
         </div>
     </div>
-    <h1 class="label-input2">Posizione</h1>
+    <h1 class="label-input2"   style="margin-top:5px; margin-bottom:5px;">Posizione</h1>
     <div id="posizione">
         <div>
         {{ Form::label('uni', 'Vicino Università', ['class' => 'label-input']) }}
-        {{ Form::checkbox('uni','uni', false,['class' => 'input', 'id' => 'uni']) }}
+        {{ Form::checkbox('uni','uni', false,['class' => 'inputcheck', 'id' => 'uni']) }}
         </div>
     </div>
-    <h1 class="label-input2">Altro</h1>
-    <div id="altro">
+
     
 
     </div>
@@ -56,7 +58,8 @@
     @endisset()
 </div>
 
-        
+
+</div>
     
       <footer>
          @include('layouts/-footer')

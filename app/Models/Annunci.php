@@ -15,7 +15,7 @@ class Annunci {
 
     public function getProprietario($id) {
         $interazione = $this->getInterazione($id);
-        return $utente = User::where('username',$interazione->utente)->first();;
+        return $utente = User::where('username',$interazione->utente)->first();
     }
 
 }

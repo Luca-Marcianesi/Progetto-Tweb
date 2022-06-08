@@ -78,8 +78,7 @@
           </p>
           <img class="student" src="images/products/studente.jpeg" alt="Studente">
           <p class="studentdescription"> "grazie a questo sito web sono riuscito a trovare l'alloggio fatto su misura
-            per me, non mi sarei aspettato di raggiungere questo risultato con un click.Lo consiglio a tutti, io non avrei potuto
-            farne a meno "
+            per me, non mi sarei aspettato di raggiungere questo risultato con un click.Lo consiglio a tutti."
           </p>
           <div class="dots">
             <span class="dot"></span>
@@ -178,21 +177,7 @@
                   il login dove troverai i servizi a te dedicati </p>
   </div> 
 </section>  
-<section id="faq" class="faq-container">
-  <div class="titoloo">FAQ</div>
-  @isset($topFaqs)
-@foreach ($topFaqs as $faq)
 
-      <h1 class="faq-page">{{$faq->domanda}}</h1>
-      <div class="faq-body">
-      <h1 class="faq-answer">{{$faq->risposta}}</h1>
-</div>
-  @endforeach
-
-  </section>
-
-<script src="js/faq-js.js"></script>
-</section>
 
 <section>
 <div><p class="titoloo">Inserisci la tua mail per rimanere aggiornato</p></div>
@@ -225,4 +210,3 @@
   <div id ="backBtn" class="back-to-top" ></div>
 <script src="js/backbtn.js"></script>
 </section>
-@endisset()
