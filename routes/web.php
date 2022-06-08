@@ -19,6 +19,12 @@ Route::get('/', 'PublicController@showHome')
 Route::get('/admin', 'AdminController@getHome')
         ->name('admin');
 
+Route::get('/modificaFaq{id}', 'AdminController@showModificaFaq')
+        ->name('modificaFaq');
+
+Route::post('/modificaFaq', 'AdminController@modificaFaq')
+        ->name('modificaFaq');
+
 Route::get('/user', 'UserController@index')
         ->name('user')->middleware('can:isUser');
 
@@ -58,6 +64,7 @@ Route::get('/modifica-account', 'UserController@showModificaAccount')
 
 Route::post('/modifica-account', 'UserController@modificaAccount')
         ->name('modificaAccount');
+
 
 
 Route::get('/locatore', 'UserController@areaLocatore')
@@ -129,7 +136,7 @@ Route::post('/locatore/modificaOff{id}', 'locatoreController@modificaOfferta')
 
 
 Route::get('/locatore/offerta{id}', 'HomeController@showAnnuncioSingoloLocatore')
-        ->name('dettagliAnnuncio');
+        ->name('AnnuncioSingoloLocatore');
 
 
 Route::get('/locatario/offerta{id}', 'HomeController@showAnnuncioSingoloLocatario')
@@ -142,4 +149,8 @@ Route::view('/messaggiLocatore', 'messaggiLocatore')
 
 Route::view('/messaggiLocatario', 'messaggiLocatario')
         ->name('messaggiLocatario');
+
+Route::view('/dettagliOpzionamento', 'locatarioController@showDettagliOpzionamento')
+        ->name('dettagliOpzionamento');
+
         

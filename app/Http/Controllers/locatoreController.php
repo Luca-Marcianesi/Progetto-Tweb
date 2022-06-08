@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\ListaCitta;
 use App\Models\MieiAlloggi;
 use App\Models\GestioneServizi;
+use App\Models\Annunci;
 use App\Models\Resources\Offerta;
 use App\Models\Resources\Interagisce;
 use App\Models\Resources\PostoLetto;
@@ -21,6 +22,8 @@ class locatoreController extends Controller {
         $this->middleware('can:isLocatore');
         $this->_alloggiModel = new MieiAlloggi;
         $this->_serviziModel = new GestioneServizi;
+        $this->_annunciModel = new Annunci;
+
 
     }
 
@@ -42,7 +45,9 @@ class locatoreController extends Controller {
 
     public function showMieiAlloggi(){
             $offerte = $this->_alloggiModel->getMieiAlloggi(auth()->user()->username);
+            $interessati = $this->_annunciModel->getInteressatiTotale(auth()->user()->username);
             return view('mieiAlloggi')
+                    ->with('interessati',$interessati)
                     ->with('mieiAlloggi',$offerte);                        
         }
 
@@ -53,10 +58,13 @@ class locatoreController extends Controller {
 
             $dettagli_postoLetto = PostoLetto::find($id);
 
+            $interessati = $this->_annunciModel->getInteressatiTotale();
+
             return view('annunciosingoloLocatore')
                             ->with('offerta', $offerta)
                             ->with('postoLetto', $dettagli_postoLetto)
-                            ->with('appartamento',$dettagli_appartamento);
+                            ->with('appartamento',$dettagli_appartamento)
+                            ->with('interessati',$interessati);
         }
 
 
@@ -182,6 +190,22 @@ class locatoreController extends Controller {
         return redirect()->route('mieiAlloggi');
     
         
+    }
+
+
+    public function showDettagliOpzionamento($offerta,$utente){
+        $off = Offerta::find($offerta);
+        $user = User::where('username',$utente)->first();
+        return view('getstioneInteressati')
+            ->with('offerta',$off)
+            ->with('utente',$user);
+
+    }
+
+    public function assegna($id,$locatario){
+        $this->_annunciModel->assegna($id,$locatario);
+        return redirect()->route('mieiAlloggi');
+
     }
 
 

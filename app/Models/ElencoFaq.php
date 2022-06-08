@@ -9,4 +9,10 @@ class ElencoFaq {
 
     public function getFaqs() {
         return Faq::where('stato','visibile')->get();
-    }}
+    }
+
+    public function getFaqsbyId($id) {
+        return Faq::where('stato','visibile')->get($id);
+    }
+
+}

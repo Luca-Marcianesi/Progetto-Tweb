@@ -437,7 +437,6 @@ a {
 
 .wrap-input {
   width: 100%;
-  position: relative;
   background-color: transparent;
   margin-bottom: 12px;
 }
@@ -541,6 +540,15 @@ a {
   position: relative;
 }
 
+.wrap-contact-faq {
+    max-width: 90%;
+    background: #fac49d;
+    border-radius: 2px;
+    padding: 30px 30px;
+  }
+
+
+
 .wrap-contact2{
  max-width: 700px;
   background: #fac49d;
@@ -584,6 +592,26 @@ a {
   color: #555555;
 }
 
+.formfaq{
+    max-width: 90%;
+    background: #fac49d;
+    border-radius: 2px;
+    padding: 30px 30px;
+    position: relative;
+
+}
+.inputfaq {
+    display: block;
+    width: 90%; 
+    background: #f2f2f2;
+    border-radius: 2px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    color: #686868;
+    line-height: 20px;
+    padding: 5px;
+    margin-top: 5px;
+  }
 /*home*/
 
 *{
@@ -1860,6 +1888,11 @@ margin-top: 150px;
     width: 33.3%;
 }
 
+.columnsectionslocatore{
+    float: left;
+    width: 43.3%;
+}
+
     
 .columntext,
 .columnprice{
@@ -2431,7 +2464,6 @@ u{
 
 
 .icon-bar {
-    width: 90%; /* Full-width */
     padding: 0;
     background-color: #ffffff; /* Dark-grey background */
     overflow: auto; /* Overflow due to float */
@@ -2440,7 +2472,7 @@ u{
   .icon-bar a {
     float: left; /* Float links side by side */
     text-align: center; /* Center-align text */
-    width: 30px; /* Equal width (5 icons with 20% width each = 100%) */
+    width: auto; /* Equal width (5 icons with 20% width each = 100%) */
     padding:0; /* Some top and bottom padding */
     color: #30306C; /* White text color */
     font-size: 36px; /* Increased font size */
