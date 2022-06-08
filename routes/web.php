@@ -33,10 +33,10 @@ Route::get('/user', 'UserController@index')
         ->name('user')->middleware('can:isUser');
 
 Route::get('/annunciLocatore', 'locatoreController@showAnnunci')
-        ->name('annunci');
+        ->name('annunciLocatore');
 
 Route::get('/annunciLocatario', 'locatarioController@showAnnunci')
-        ->name('annunci');
+        ->name('annunciLocatario');
 
 Route::get('/annunciHome/{citta}', 'HomeController@showAnnunci')
         ->name('annunciHome');

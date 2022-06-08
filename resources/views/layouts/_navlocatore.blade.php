@@ -1,6 +1,6 @@
 <ul class="menu_ul_home">
     <li class ="menu_ul_li"><a  class = "menu_ul_li_a" href="{{ route('home') }}">Home</a></li>
-    <li class ="menu_ul_li"><a  class = "menu_ul_li_a" href="{{ route('annunci') }}" >Annunci</a></li>
+    <li class ="menu_ul_li"><a  class = "menu_ul_li_a" href="{{ route('annunciLocatore') }}" >Annunci</a></li>
     <li class ="menu_ul_li"><a class = "menu_ul_li_a" href="{{ route('mieiAlloggi') }}" >Miei Alloggi</a></li>
     <li class="menu_ul_li"><a class = "menu_ul_li_a" href="{{ route('aggiungiOfferta') }}"> Inserisci</a>
     <li class ="menu_ul_li"><a  class = "menu_ul_li_a" href="#contatti" >Messaggi</a></li>
