@@ -6,8 +6,15 @@ use App\Models\Admin;
 use App\Models\Resources\Product;
 use App\Http\Requests\NewProductRequest;
 use App\Models\Resources\Offerta;
+use App\Models\ElencoFaq;
 
 class AdminController extends Controller {
+
+      
+    public function __construct() {
+        $this->_ElencoFaqModel = new ElencoFaq;
+    }
+    
 
     public function getHome(){
         $numero_offerte = Offerta::count();
@@ -24,5 +31,12 @@ class AdminController extends Controller {
 
     public function getOfferteLocatari(){
         
+    }
+
+    public function showCatalog1() {
+
+        $Faqs = $this->_ElencoFaqModel->getFaqs();
+            return view('admin')
+            ->with('topFaqs', $Faqs);
     }
 }

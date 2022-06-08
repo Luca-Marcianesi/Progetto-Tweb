@@ -2407,6 +2407,27 @@ u{
     font-size: smaller;
 }
 
+
+.icon-bar {
+    width: 90%; /* Full-width */
+    padding: 0;
+    background-color: #ffffff; /* Dark-grey background */
+    overflow: auto; /* Overflow due to float */
+  }
+  
+  .icon-bar a {
+    float: left; /* Float links side by side */
+    text-align: center; /* Center-align text */
+    width: 30px; /* Equal width (5 icons with 20% width each = 100%) */
+    padding:0; /* Some top and bottom padding */
+    color: #30306C; /* White text color */
+    font-size: 36px; /* Increased font size */
+  }
+  
+  .icon-bar a:hover {
+    background-color: #FF974B; /* Add a hover color */
+  }
+  
 /*Popups*/
 
 *, *::after, *::before{
