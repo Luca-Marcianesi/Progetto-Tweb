@@ -14,7 +14,7 @@ class Interagisci extends Migration
     public function up()
     {
         Schema::create('interagisce', function (Blueprint $table) {
-            $table->bigIncrements('offerta');            
+            $table->integer('offerta');            
             $table->string('utente');
             $table->string('tipo_interazione',10);               
             $table->date('data');                        

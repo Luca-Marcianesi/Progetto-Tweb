@@ -60,10 +60,11 @@ class HomeController extends Controller
 
     public function showAnnuncioSingoloLocatario($id){
         $proprietario = $this->_annunciModel->getProprietario($id);
-        //$utente = User::find($proprietario->utente);
+        $opzionata = $this->_annunciModel->getOpzionamento($id,auth()->user()->username);
         $offerta = $this->_ListaCittaModel->getOffertabyId($id);
         return view('annunciosingoloLocatario')  
                 ->with('offerta', $offerta)
+                ->with('opzionata',$opzionata)
                 ->with('proprietario',$proprietario);
             }
         

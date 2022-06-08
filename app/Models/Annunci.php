@@ -18,4 +18,11 @@ class Annunci {
         return $utente = User::where('username',$interazione->utente)->first();;
     }
 
+    public function getOpzionamento($id,$username) {
+        return $interazione = Offerta::find($id)->interagisce()
+                ->where('utente', $username)
+                ->where('tipo_interazione','opziona')
+                ->first();
+    }
+
 }

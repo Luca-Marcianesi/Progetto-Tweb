@@ -50,7 +50,15 @@ class locatarioController extends Controller {
         }
 
 
-
+    public function opziona($id){
+        $interazione = new Interagisce;
+        $interazione->utente = auth()->user()->username;
+        $interazione->offerta = $id;
+        $interazione->tipo_interazione = 'opziona';
+        $interazione->data = date("Y-m-d");
+        $interazione->save();
+        return $this->showAnnunci();
+    }
        
     public function alloggiFiltrati(FiltriRequest $request){
         if($request->tipo == null){
