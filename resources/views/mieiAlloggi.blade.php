@@ -56,7 +56,7 @@
             <tr>
                 <td>{{$interessato->titolo}}</td>
                 <td>{{$interessato->utente}}</td>
-                <td><a href= "{{ route('dettagliOpzionamento', [$interessato->offerta,$interessato->utente])}}">Visualizza</a></td>
+                <td><a href= "{{ route('dettagliOpzionamento', ['offerta'=>$interessato->offerta,'utente'=>$interessato->utente])}}">Visualizza</a></td>
             </tr>  
             @endforeach
         </table>

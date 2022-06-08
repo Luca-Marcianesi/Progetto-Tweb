@@ -150,7 +150,7 @@ Route::view('/messaggiLocatore', 'messaggiLocatore')
 Route::view('/messaggiLocatario', 'messaggiLocatario')
         ->name('messaggiLocatario');
 
-Route::view('/dettagliOpzionamento', 'locatarioController@showDettagliOpzionamento')
+Route::get('/dettagliOpzionamento{offerta}/{utente}', 'locatoreController@showDettagliOpzionamento')
         ->name('dettagliOpzionamento');
 
         

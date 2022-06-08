@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\User;
 use App\Models\ListaCitta;
 use App\Models\MieiAlloggi;
 use App\Models\GestioneServizi;
@@ -196,7 +197,7 @@ class locatoreController extends Controller {
     public function showDettagliOpzionamento($offerta,$utente){
         $off = Offerta::find($offerta);
         $user = User::where('username',$utente)->first();
-        return view('getstioneInteressati')
+        return view('gestioneInteressati')
             ->with('offerta',$off)
             ->with('utente',$user);
 
