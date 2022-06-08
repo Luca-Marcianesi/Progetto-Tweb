@@ -27,20 +27,14 @@
 
       <div class="columnsections col2">
        <p class = "description titolo"> {{$offerta->tipo}} </p>  
-       <ul class ="ann">
-        <li>
-         <p> <a class="annuncibutton" href="{{ route('listacitta1') }}"> Opziona </a></p>
-         </li>
-         <li>
-         <p> <a class="annuncibutton" href="{{ route('listacitta1') }}"> Contatta </a></p>
-         </li>
-        </ul>
+       <p class = "description titolo"> Indirizzo</p> 
+       <p class="description">  {{$offerta->città}}, {{$offerta->locazione}} </p>
+       <p class = "description titolo"> Stato</p>  
+       <p class="description">  {{$offerta->stato}}</p>
        <p class = "description titolo"> Descrizione</p>  
        <p class="description">  {{$offerta->descrizione}}</p>
-       <p class = "description titolo"> Servizi inclusi</p>  
-       <p class="description">  {{$offerta->descrizione}}</p> 
        <p class = "description titolo"> canone mensile</p>  
-       <p class="description">  {{$offerta->prezzo}}</p> 
+       <p class="description"> € {{$offerta->prezzo}}</p> 
       </div>
 
      

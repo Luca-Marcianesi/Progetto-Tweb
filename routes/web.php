@@ -116,7 +116,7 @@ Route::get('/home', 'HomeController@index')
 rotta per visualizzare il singolo annuncio
 */
 
-Route::get('/locatore/offerta{id}', 'HomeController@showAnnuncioSingolo')
+Route::get('/offerta{id}', 'HomeController@showAnnuncioSingolo')
         ->name('dettagliAnnuncio');
 
 Route::get('/locatario/opzionaofferta{id}', 'locatarioController@opziona')
@@ -137,7 +137,7 @@ Route::get('/locatore/offerta{id}', 'HomeController@showAnnuncioSingoloLocatore'
 
 
 Route::get('/locatario/offerta{id}', 'HomeController@showAnnuncioSingoloLocatario')
-        ->name('dettagliAnnuncio');
+        ->name('dettagliAnnuncioLocatario');
 
 
 Route::view('/messaggiLocatore', 'messaggiLocatore')
