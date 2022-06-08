@@ -34,16 +34,21 @@
     <h3 class="AreaAdmin"><u>Faq</u></h3>
     <section id="faq" class="faq-container">
 
-  @isset($topFaqs)
+@isset($topFaqs)
 @foreach ($topFaqs as $faq)
 
-<h1 class="faq-page">{{$faq->domanda}}</h1>
-      <div class="faq-body">
-      <h1 class="faq-answer">{{$faq->risposta}}</h1>
+  <h1 class="faq-page">{{$faq->domanda}}</h1>
+  <div class="faq-body">
+  <h1 class="faq-answer">{{$faq->risposta}}</h1>
 </div>
   @endforeach
 @endisset()
   </section>
+</div>
+
+
+  <script src="js/faq-js.js"></script>
+</section>
 
 </div>
 @endsection
