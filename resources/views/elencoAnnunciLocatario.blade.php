@@ -162,7 +162,7 @@ for (var i = 0; i < btns.length; i++) {
           </div>
           <div class="columnimg columnprice">
             <p class="testocolonna"> CANONE MENSILE <br>{{$offerta->prezzo}} EURO  </p>
-          <p> <a class="dettaglibutton" href="{{ route('dettagliAnnuncio', [$offerta->id]) }}"> dettagli </a></p>
+          <p> <a class="dettaglibutton" href="{{ route('dettagliAnnuncioLocatario', [$offerta->id]) }}"> dettagli </a></p>
           </div>
           <div id="content"></div>
     </div>
