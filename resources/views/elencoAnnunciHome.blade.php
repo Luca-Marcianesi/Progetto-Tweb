@@ -18,11 +18,17 @@
 
         <div>
         @isset($offerte)
+        @isset($topCities)
 <section class="cittàselezionata">
     <nav class="menu" fixed="right">
         <ul>
             <li> <a href="catalogo.html"  id ="backButton" class="back-to-previous"> </a></li>
-            <li class="cittàsel"><h3 class="nomecittàselezionata">citta</h3></li>
+            @foreach ($topCities as $citta)
+            <li class="cittàsel"><h3 class="nomecittàselezionata">{{ $citta->name }}</h3></li>
+            @endforeach
+            @endisset()
+
+
         </ul>
     </nav>
 @foreach ($offerte as $offerta)

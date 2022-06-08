@@ -137,30 +137,6 @@
   </div>
   <script src="js/reviews.js"></script>
   </section>
-  
-
-<section class="esploracittà">
-  <div class="container">
-    <p class="titolo"> Esplora in base alla tua città</p><br>
-    <ul class="griglia">
-      <li><img class ="foto" src="images/products/Ancona.jpg" alt="Ancona">
-        <p class="arancione">Ancona></p><p class="arancione2">
-          <a class="arancione2">Visualizza</p></a></li>
-      <li><img class ="foto" src="images/products/Milano.jpg">
-        <p class="arancione">Milano></p><p class="arancione2">
-          <a class="arancione2">Visualizza</p></a></li>
-      <li><img class ="foto" src="images/products/Roma.webp">
-        <p class="arancione">Roma></p><p class="arancione2">
-          <a class="arancione2">Visualizza</p></a></li>
-      <li><img class ="foto" src="images/products/Bari.jpg">
-        <p class="arancione">Bari></p><p class="arancione2">
-          <a class="arancione2">Visualizza</p></a></li>
-    </ul>
-    <p><a class="tuttelecittà" href="{{ route('listacitta1') }}"><b>Tutte le città</b></a></p>
-
-
-  </div>
-</section>
 
 <section id="regolamento">
   <div class="reg" > 
@@ -204,8 +180,6 @@
     <p class="contact-info"> Via Brecce Bianche 1 (AN) </p>
 
   </div>
-
-
 
   <div id ="backBtn" class="back-to-top" ></div>
 <script src="js/backbtn.js"></script>

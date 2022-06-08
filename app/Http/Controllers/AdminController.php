@@ -19,9 +19,15 @@ class AdminController extends Controller {
     public function getHome(){
         $numero_offerte = Offerta::count();
         $occupati = $this->getOccupati();
+        $Faqs = $this->_ElencoFaqModel->getFaqs();
+
         return view('admin')
             ->with('numero_offerte', $numero_offerte)
-            ->with('occupati', $occupati);
+            ->with('occupati', $occupati)
+            ->with('topFaqs', $Faqs);
+
+        
+        
     }    
 
     public function getOccupati(){
@@ -33,10 +39,11 @@ class AdminController extends Controller {
         
     }
 
-    public function showCatalog1() {
+  /*  public function showFaq() {
+
 
         $Faqs = $this->_ElencoFaqModel->getFaqs();
             return view('admin')
             ->with('topFaqs', $Faqs);
     }
-}
+*/}

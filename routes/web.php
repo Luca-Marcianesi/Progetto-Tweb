@@ -74,8 +74,6 @@ Route::get('/locatario', 'UserController@areaLocatario')
 Route::get('/listacitta', 'PublicController@showCatalog1')
         ->name('listacitta1');
 
-Route::get('/admin', 'AdminController@showCatalog1')
-        ->name('admin');
 
 
 // Rotte per l'autenticazione
