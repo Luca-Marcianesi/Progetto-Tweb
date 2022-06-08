@@ -133,7 +133,7 @@ Route::post('/locatore/modificaOff{id}', 'locatoreController@modificaOfferta')
 
 
 Route::get('/locatore/offerta{id}', 'HomeController@showAnnuncioSingoloLocatore')
-        ->name('dettagliAnnuncio');
+        ->name('AnnuncioSingoloLocatore');
 
 
 Route::get('/locatario/offerta{id}', 'HomeController@showAnnuncioSingoloLocatario')
