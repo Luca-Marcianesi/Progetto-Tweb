@@ -3,6 +3,8 @@
     <head>
         <meta charset="utf-8">
         <link rel="stylesheet" type="text/css" href="{{ asset('css/stile.css') }}" >
+        <link rel="stylesheet"  href="popup.js" >
+        <script defer src="/js/popup.js"></script>
         <title>LaProj5 | @yield('title', 'Annunci')</title>
     </head>
     <body>
@@ -27,6 +29,11 @@
 
       <div class="columnsectionslocatario ">
        <p class = "description titolo"> {{$offerta->tipo}} </p> 
+       @isset($opzionata)
+       <p class="description titolo">Offerta già opzionata<p>
+        @else<p class="description titolo"><a class="button buttonopziona"  href="{{ route('opziona',[$offerta->id] )}}"> Opziona</a>
+        <p> 
+      @endisset()
        <p class="description titolo"><a class="button buttonopziona" href=""> Opziona</a><p> 
        <p class = "description titolo"> Indirizzo</p> 
        <p class="description">  {{$offerta->città}}, {{$offerta->locazione}} </p>
