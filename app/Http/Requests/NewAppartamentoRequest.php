@@ -27,7 +27,7 @@ class NewAppartamentoRequest extends FormRequest {
         return [
             'titolo' => 'required|max:25',
             'desc_b' => 'required',
-            'desc_l' => 'required|max:30',
+            'desc_l' => 'required|max:1000',
             'prezzo' => 'required|integer|min:0',
             'genere' => 'required|string',
             'città' => 'required|string',

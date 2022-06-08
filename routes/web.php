@@ -19,6 +19,12 @@ Route::get('/', 'PublicController@showHome')
 Route::get('/admin', 'AdminController@getHome')
         ->name('admin');
 
+Route::get('/modificaFaq{id}', 'AdminController@showModificaFaq')
+        ->name('modificaFaq');
+
+Route::post('/modificaFaq', 'AdminController@modificaFaq')
+        ->name('modificaFaq');
+
 Route::get('/user', 'UserController@index')
         ->name('user')->middleware('can:isUser');
 
@@ -58,6 +64,7 @@ Route::get('/modifica-account', 'UserController@showModificaAccount')
 
 Route::post('/modifica-account', 'UserController@modificaAccount')
         ->name('modificaAccount');
+
 
 
 Route::get('/locatore', 'UserController@areaLocatore')

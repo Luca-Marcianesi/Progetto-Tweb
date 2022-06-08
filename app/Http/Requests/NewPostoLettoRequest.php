@@ -27,7 +27,7 @@ class NewPostoLettoRequest extends FormRequest {
         return [
             'titolo' => 'required|max:25',
             'desc_b' => 'required',
-            'desc_l' => 'required|max:30',
+            'desc_l' => 'required|max:1000',
             'città' => 'string|required',
             'locazione' => 'string|required',
             'prezzo' => 'required|integer|min:0',

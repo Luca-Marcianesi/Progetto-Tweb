@@ -39,6 +39,22 @@ class AdminController extends Controller {
         
     }
 
+    public function showModificaFaq($id){
+        $Faqs = $this->_ElencoFaqModel->getFaqsbyDomanda($id);
+        return view('modificaFaq')
+              ->with('topFaqs', $Faqs);
+
+    }
+
+    public function modificaFaq(ModificaFaqRequest $request){
+        $Faqs = $this->_ElencoFaqModel->getFaqs();
+        $Faqs->domanda = $request->domanda;
+        $Faqs->risposta = $request->risposta;
+        $Faqs->save();
+
+        return view('admin');
+    }
+
   /*  public function showFaq() {
 
 
