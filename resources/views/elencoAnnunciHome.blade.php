@@ -2,25 +2,28 @@
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
     <script>
-// function myFunction() {
-  // Declare variables
- // var input, filter, ul, li, a, i, txtValue;
-  //input = document.getElementById('myInput');
- // filter = input.value.toUpperCase();
- // ul = document.getElementById("myUL");
-//  li = ul.getElementsByTagName('li');
 
-  // Loop through all list items, and hide those who don't match the search query
- // for (i = 0; i < li.length; i++) {
-   // a = li[i].getElementsByTagName("a")[0];
-   // txtValue = a.textContent || a.innerText;
-  //  if (txtValue.toUpperCase().indexOf(filter) > -1) {
-  //    li[i].style.display = "";
- //   } else {
- //     li[i].style.display = "none";
- //   }
- // }
-//}
+/* When the user clicks on the button,
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+function filterFunction() {
+  var input, filter, ul, li, a, i;
+  input = document.getElementById("myInput");
+  filter = input.value.toUpperCase();
+  div = document.getElementById("myDropdown");
+  a = div.getElementsByTagName("a");
+  for (i = 0; i < a.length; i++) {
+    txtValue = a[i].textContent || a[i].innerText;
+    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+      a[i].style.display = "";
+    } else {
+      a[i].style.display = "none";
+    }
+  }
+}
 
 filterSelection("all")
 function filterSelection(c) {
@@ -69,7 +72,8 @@ for (var i = 0; i < btns.length; i++) {
     this.className += " active";
   });
 }
-</script>
+
+    </script>
         <meta charset="utf-8">
         <link rel="stylesheet" type="text/css" href="{{ asset('css/stile.css') }}" >
         <title>LaProj5 | @yield('title', 'Annunci')</title>
@@ -97,8 +101,21 @@ for (var i = 0; i < btns.length; i++) {
 </section>
 
 <section class="filtri">
-    <div class="containerchat">
-    <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Città d'interesse..">
+<div class="containerchat">
+    <div class="dropdown">
+  <button onclick="myFunction()" class="dropbtn">Città</button>
+  <div id="myDropdown" class="dropdown-content">
+    <input type="text" placeholder="Città di interesse.." id="myInput" onkeyup="filterFunction()">
+    <a href="#ancona">Ancona</a>
+    <a href="#bologna">Bologna</a>
+    <a href="#brescia">Brescia</a>
+    <a href="#camerino">Camerino</a>
+    <a href="#chieti">Chieti</a>
+    <a href="#roma">Roma</a>
+    <a href="#torino">Torino</a>
+  </div>
+</div>
+
 
 <br><br><br>
 
@@ -110,34 +127,61 @@ for (var i = 0; i < btns.length; i++) {
 </div>
 
 <div id="myBtnContainer">
-  <button class="  btn filterDiv  appartamento postoletto" onclick="filterSelection('prezzo')"> Prezzo</button>
-  <button class="  btn filterDiv  appartamento" onclick="filterSelection('dimensioneapp')"> Dimensione appartamento</button>
-  <button class=" btn filterDiv appartamento" onclick="filterSelection('postilettototali')"> Posti Letto Totali</button>
+  <button class=" btn filterDiv  appartamento" onclick="filterSelection('prezzoapp')"> Prezzo</button>
+  <button class=" btn filterDiv  appartamento" onclick="filterSelection('dimensioneapp')"> Dimensione appartamento</button>
+  <button class=" btn filterDiv appartamento" onclick="filterSelection('numerocamere')"> Numero Camere Totali</button>
+  <button class=" btn filterDiv appartamento" onclick="filterSelection('postilettototaliap')"> Posti Letto Totali</button>
+  <button class=" btn filterDiv appartamento postoletto" onclick="filterSelection('servizi')"> Servizi</button>
+  <button class=" btn filterDiv postoletto" onclick="filterSelection('prezzoletto')"> Prezzo</button>
   <button class=" btn filterDiv postoletto" onclick="filterSelection('dimensionestanza')">Dimensione Stanza</button>
   <button class=" btn filterDiv postoletto" onclick="filterSelection('postilettoinstanza')"> Posti Letto in Stanza</button>
-
+  <button class=" btn filterDiv postoletto" onclick="filterSelection('postilettototalista')"> Posti Letto Totali</button>
 </div>
 
 
 <div id="myBtnContainer">
-  <button class=" btn filterDiv prezzo" onclick="filterSelection('400')"> < 400 </button>
-  <button class=" btn filterDiv prezzo" onclick="filterSelection('500')"> 400-600 </button>
-  <button class=" btn filterDiv prezzo" onclick="filterSelection('600')"> > 600 </button>
+  <button class=" btn filterDiv prezzoapp" onclick="filterSelection('400')"> < 400 </button>
+  <button class=" btn filterDiv prezzoapp" onclick="filterSelection('500')"> 400-600 </button>
+  <button class=" btn filterDiv prezzoapp" onclick="filterSelection('600')"> > 600 </button>
 
   <button class=" btn filterDiv dimensioneapp" onclick="filterSelection('1')"> < 50 mq </button>
   <button class=" btn filterDiv dimensioneapp" onclick="filterSelection('2')">   50 - 150 mq </button>
   <button class=" btn filterDiv dimensioneapp" onclick="filterSelection('3')"> > 150 mq </button>
 
-  <button class=" btn filterDiv postilettototali" onclick="filterSelection('unodue')"> 1 - 2 </button>
-  <button class=" btn filterDiv postilettototali" onclick="filterSelection('trequattro')"> 3 - 4 </button>
-  <button class=" btn filterDiv postilettototali" onclick="filterSelection('cinque')"> 5 - 6 </button>
+  <button class=" btn filterDiv numerocamere" onclick="filterSelection('unodue')"> 1 - 2 </button>
+  <button class=" btn filterDiv numerocamere" onclick="filterSelection('trequattro')">   3 - 4 </button>
+  <button class=" btn filterDiv numerocamere" onclick="filterSelection('cinque')"> > 5 </button>
 
-  <button class=" btn filterDiv dimensionestanza" onclick="filterSelection('400')"> < 30 mq </button>
-  <button class=" btn filterDiv dimensionestanza" onclick="filterSelection('500')"> 30 - 60 mq </button>
-  <button class=" btn filterDiv dimensionestanza" onclick="filterSelection('600')"> > 60 mq </button>
+  <button class=" btn filterDiv postilettototaliap" onclick="filterSelection('tre')"> < 3 </button>
+  <button class=" btn filterDiv postilettototaliap" onclick="filterSelection('quattrocinque')"> 4 - 5 </button>
+  <button class=" btn filterDiv postilettototaliap" onclick="filterSelection('sei')"> > 6 </button>
+
+  <button class=" btn filterDiv prezzoletto" onclick="filterSelection('200')"> < 200 </button>
+  <button class=" btn filterDiv prezzoletto" onclick="filterSelection('225')"> 200-250 </button>
+  <button class=" btn filterDiv prezzoletto" onclick="filterSelection('250')"> > 250 </button>
+
+  <button class=" btn filterDiv dimensionestanza" onclick="filterSelection('30')"> < 30 mq </button>
+  <button class=" btn filterDiv dimensionestanza" onclick="filterSelection('50')"> 30 - 60 mq </button>
+  <button class=" btn filterDiv dimensionestanza" onclick="filterSelection('60')"> > 60 mq </button>
 
   <button class=" btn filterDiv postilettoinstanza" onclick="filterSelection('uno')"> 1 </button>
-  <button class=" btn filterDiv postilettoinstanza" onclick="filterSelection('duetre')"> 2 - 3 </button>
+  <button class=" btn filterDiv postilettoinstanza" onclick="filterSelection('due')"> 2 </button>
+  <button class=" btn filterDiv postilettoinstanza" onclick="filterSelection('tre')"> > 3 </button>
+
+  <button class=" btn filterDiv postilettototalista" onclick="filterSelection('unodue')"> 1 - 2 </button>
+  <button class=" btn filterDiv postilettototalista" onclick="filterSelection('trequattro')"> 3 - 4 </button>
+  <button class=" btn filterDiv postilettototalista" onclick="filterSelection('cinque')"> > 5 </button>
+
+  <button class=" btn filterDiv servizi" onclick="filterSelection('ariacond')"> Aria Condizionata </button>
+  <button class=" btn filterDiv servizi" onclick="filterSelection('riscaldamento')"> Riscaldamento autonomo</button>
+  <button class=" btn filterDiv servizi" onclick="filterSelection('cucina')"> Cucina </button>
+  <button class=" btn filterDiv servizi" onclick="filterSelection('bagnopriv')"> Bagno Privato </button>
+  <button class=" btn filterDiv servizi" onclick="filterSelection('angolostudio')"> Angolo Studio </button>
+  <button class=" btn filterDiv servizi" onclick="filterSelection('localericr')"> Locale Ricreativo </button>
+  <button class=" btn filterDiv servizi" onclick="filterSelection('terrazzo')"> Terrazzo </button>
+  <button class=" btn filterDiv servizi" onclick="filterSelection('postoauto')"> Posto Auto </button>
+  <button class=" btn filterDiv servizi" onclick="filterSelection('lavatrice')"> Lavatrice </button>
+  <button class=" btn filterDiv servizi" onclick="filterSelection('lavastoviglie')"> Lavastoviglie </button>
 
 
 
@@ -145,7 +189,7 @@ for (var i = 0; i < btns.length; i++) {
 
     </div>
 
-    </section>
+</section>
 
 @foreach ($offerte as $offerta)
 <section class="annunci">
@@ -178,5 +222,5 @@ for (var i = 0; i < btns.length; i++) {
         <footer>
             @include('layouts/-footer')
         </footer>
-    </body>
+  </body>
 </html>
