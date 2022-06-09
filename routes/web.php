@@ -21,10 +21,10 @@ Route::get('/', 'PublicController@showHome')
 Route::get('/admin', 'AdminController@getHome')
         ->name('admin');
 
-Route::get('/modificaFaq{id}', 'AdminController@showModificaFaq')
-        ->name('modificaFaq');
+Route::get('/modificaFaq{domanda}', 'AdminController@showModificaFaq')
+        ->name('showmodificaFaq');
 
-Route::post('/modificaFaq', 'AdminController@modificaFaq')
+Route::post('/modificaFaq{domanda}', 'AdminController@modificaFaq')
         ->name('modificaFaq');
 
 

@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <link rel="stylesheet" type="text/css" href="{{ asset('css/stile.css') }}" >
-        <title>LaProj5 | @yield('title', 'I miei Alloggi')</title>
+        <title>LaProj5 | @yield('title', 'Catalogo')</title>
     </head>
     <body>
         <header class="header">
@@ -18,28 +18,28 @@
             </nav>
             </div>
         </header>
-        <div class="titoloo">Interessati</div>
         @isset($interessati)
-
+        <div class="titoloo">Interessati</div>
         <table class="center">
-  <tr>
-    <th class="tabellatitolo" >Offerta</th>
-    <th class="tabellatitolo">Utente</th>
-    <th class="tabellatitolo">Visualizza</th>
-  </tr>
-  @foreach($interessati as $interessato)
-  <tr>
-    <td  class="tabellaelem">{{$interessato->titolo}}</td>
-    <td class="tabellaelem">{{$interessato->utente}}</td>
-    <td><a href= "{{ route('dettagliOpzionamento', [$interessato->offerta,$interessato->utente])}}">+</a></td>  </tr>
-
-</table> 
-       
-  @endforeach
-
-@endisset()
+            <tr>
+                <th class="tabellatitolo" >Offerta</th>
+                <th class="tabellatitolo" >Nome</th>
+                <th class="tabellatitolo">Visualizza</th>
+            </tr>
+            @foreach($interessati as $interessato)
+            <tr>
+                <td  class="tabellaelem">{{$interessato->titolo}}</td>
+                <td class="tabellaelem">{{$interessato->utente}}</td>
+                <td style="text-align:center" class="tabellaelem"><a href= "{{ route('dettagliOpzionamento', ['offerta'=>$interessato->offerta,'utente'=>$interessato->utente])}}"> + </a></td>
+            </tr>  
+            @endforeach
+        </table>
+        @endisset()
+        
         @isset($mieiAlloggi)
         <div>
+        <div class="titoloo">I miei alloggi</div>
+
             @foreach ($mieiAlloggi as $alloggio)
             <div class="annunciosingololoc">
                 <p class ="description titolo">{{$alloggio->titolo}}</p> <br> <br> <br>
@@ -63,23 +63,7 @@
             @endforeach
             @endisset()
         </div>
-        <hr class="spaziatura">
-        @isset($interessati)
-        <div>Interessati</div>
-        <table>
-            <tr>
-                <th>Offerta</th>
-                <th>Nome</th>
-            </tr>
-            @foreach($interessati as $interessato)
-            <tr>
-                <td>{{$interessato->titolo}}</td>
-                <td>{{$interessato->utente}}</td>
-                <td><a href= "{{ route('dettagliOpzionamento', ['offerta'=>$interessato->offerta,'utente'=>$interessato->utente])}}">Visualizza</a></td>
-            </tr>  
-            @endforeach
-        </table>
-        @endisset()
+     
         
         <footer>
             @include('layouts/-footer')

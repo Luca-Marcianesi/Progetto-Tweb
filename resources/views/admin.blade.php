@@ -39,8 +39,8 @@
 
   <h1 class="faq-page">{{$faq->domanda}}
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <a href=""><i class="icon-bar a fa fa-search"></i></a>
- <!-- <a href="{{ route('modificaFaq', [$faq->id])}}"><i class="icon-bar a fa fa-search"></i></a> --->
+ <!-- <a href=""><i class="icon-bar a fa fa-search"></i></a>-->
+  <a href="{{ route('showmodificaFaq', [$faq->domanda])}}"><i class="icon-bar a fa fa-search"></i></a>
 
   <a href="#"><i class="icon-bar a  fa fa-trash"></i></a>
   </h1>

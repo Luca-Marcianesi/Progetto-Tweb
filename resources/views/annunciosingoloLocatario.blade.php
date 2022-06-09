@@ -40,7 +40,7 @@
               <div class="title">Conferma</div>
               <button data-close-button class="close-button">x</button>
             </div>
-            <div class="modal-body" align="center">
+            <div class="modal-body">
               Confermi di voler opzionare questo alloggio?<br>
               <a href="{{ route('opziona', [$offerta->id] )}}"><button class="buttonconferma">Si</button></a>
               <button class="buttonconferma" data-close-button>Annulla</button>

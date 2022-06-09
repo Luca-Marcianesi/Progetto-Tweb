@@ -21,15 +21,16 @@
         </header>
         <section>
 <div class="container-contact">
+@isset($Faq)
+  <p>{{$Faq}} ciao ciao</p> {{$Faq}}
 
         <h3 class ="titoloo">Modifica Contenuti</h3> <br>
 <div class="wrap-contact-faq">
-         {{ Form::open(array('route' => ['modificaFaq', $topFaqs->id],'files' => true, 'class' => 'contact-form')) }}
-         @isset($topFaqs)
+         {{ Form::open(array('route' => ['modificaFaq', $Faq->domanda],'files' => true, 'class' => 'contact-form')) }}
 
          <div  class="wrap-input">
             {{ Form::label('domanda', 'Domanda', ['class' => 'label-input']) }}
-            {{ Form::text('domanda',($topFaqs->domanda),   ['class' => 'input', 'id' => 'domanda']) }}
+            {{ Form::text('domanda',($Faq->domanda),   ['class' => 'input', 'id' => 'domanda']) }}
             @if ($errors->first('domanda'))
             <ul class="errors">
                @foreach ($errors->get('domanda') as $message)
@@ -41,7 +42,7 @@
 
          <div  class="wrap-input">
             {{ Form::label('risposta', 'Risposta', ['class' => 'label-input']) }}
-            {{ Form::text('risposta',($topFaqs->risposta),   ['class' => 'input', 'id' => 'risposta']) }}
+            {{ Form::text('risposta',($Faq->risposta),   ['class' => 'input', 'id' => 'risposta']) }}
             @if ($errors->first('risposta'))
             <ul class="errors">
                @foreach ($errors->get('risposta') as $message)

@@ -11,8 +11,8 @@ class ElencoFaq {
         return Faq::where('stato','visibile')->get();
     }
 
-    public function getFaqsbyId($id) {
-        return Faq::where('stato','visibile')->get();
+    public function getFaqsbyId($domanda) {
+        return Faq::where('domanda',$domanda)->first();
     }
 
 }
