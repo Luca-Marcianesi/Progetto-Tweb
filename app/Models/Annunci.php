@@ -72,6 +72,15 @@ class Annunci {
                                 ->get();
     }
 
+    public function getAssegnati($proprietario) {
+        $offerte = $this->getOfferteByProp($proprietario);
+        return $opzionamenti =  Interagisce::whereIn('offerta',$offerte)
+                                ->where('tipo_interazione','assegnata')
+                                ->join('offerta','offerta.id','=','offerta')
+                                ->where('stato','libera')
+                                ->get();
+    }
+
 
     public function assegna($id,$locatario){
         $offerta = Offerta::find($id);

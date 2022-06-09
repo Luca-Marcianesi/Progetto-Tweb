@@ -47,7 +47,9 @@ class locatoreController extends Controller {
     public function showMieiAlloggi(){
             $offerte = $this->_alloggiModel->getMieiAlloggi(auth()->user()->username);
             $interessati = $this->_annunciModel->getInteressatiTotale(auth()->user()->username);
+            $assegnati = $this->_annunciModel->getAssegnati(auth()->user()->username);
             return view('mieiAlloggi')
+                    ->with('assegnati',$assegnati)
                     ->with('interessati',$interessati)
                     ->with('mieiAlloggi',$offerte);                        
         }
