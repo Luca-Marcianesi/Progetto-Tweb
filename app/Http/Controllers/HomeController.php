@@ -4,6 +4,10 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\ListaCitta;
+use App\Models\Annunci;
+use App\Models\ElencoFaq;
+
+use App\User;
 use App\Models\Resources\Offerta;
 
 class HomeController extends Controller
@@ -17,6 +21,9 @@ class HomeController extends Controller
     {
         
         $this->_ListaCittaModel = new ListaCitta;
+        $this->_annunciModel = new Annunci;
+        $this->_ElencoFaqModel = new ElencoFaq;
+
     }
 
     /**
@@ -25,8 +32,9 @@ class HomeController extends Controller
      * @return \Illuminate\Contracts\Support\Renderable
      */
     public function index()
-    {
-        return view('catalog');
+    { $Faqs = $this->_ElencoFaqModel->getFaqs();
+        return view('catalog')
+                ->with('topFaqs', $Faqs);
     }
 
     public function showlistacitta(){ 
@@ -56,9 +64,24 @@ class HomeController extends Controller
                               
 
     public function showAnnuncioSingoloLocatario($id){
+        $proprietario = $this->_annunciModel->getProprietario($id);
+        $opzionata = $this->_annunciModel->getOpzionamento($id,auth()->user()->username);
+        $assegnata = $this->_annunciModel->getAssegnamento($id);
+        $appartamento = $this->_annunciModel->getAppartamento($id);
+        $postoLetto = $this->_annunciModel->getPostoLetto($id);
+        $servzi = $this->_annunciModel->getServizi($id);
+        $servziConQuantità = $this->_annunciModel->getServiziConQuantita($id);
         $offerta = $this->_ListaCittaModel->getOffertabyId($id);
         return view('annunciosingoloLocatario')  
-                ->with('offerta', $offerta);}
+                ->with('offerta', $offerta)
+                ->with('appartamento', $appartamento)
+                ->with('postoLetto', $postoLetto)
+                ->with('servizi', $servzi)
+                ->with('serviziQ', $servziConQuantità)
+                ->with('opzionata',$opzionata)
+                ->with('assegnata',$assegnata)
+                ->with('proprietario',$proprietario);
+            }
         
                         
 }

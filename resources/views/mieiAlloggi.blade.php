@@ -18,15 +18,53 @@
             </nav>
             </div>
         </header>
+        @isset($interessati)
+        <div class="titoloo">Interessati</div>
+        <table class="center">
+            <tr>
+                <th class="tabellatitolo" >Offerta</th>
+                <th class="tabellatitolo" >Nome</th>
+                <th class="tabellatitolo">Visualizza</th>
+            </tr>
+            @foreach($interessati as $interessato)
+            <tr>
+                <td  class="tabellaelem">{{$interessato->titolo}}</td>
+                <td class="tabellaelem">{{$interessato->utente}}</td>
+                <td style="text-align:center" class="tabellaelem"><a href= "{{ route('dettagliOpzionamento', ['offerta'=>$interessato->offerta,'utente'=>$interessato->utente])}}"> + </a></td>
+            </tr>  
+            @endforeach
+        </table>
+        @endisset()
+
+        <hr class="spaziatura">
+
+        @isset($assegnati)
+        <div class="titoloo">Assegnati</div>
+        <table class="center">
+            <tr>
+                <th class="tabellatitolo" >Offerta</th>
+                <th class="tabellatitolo" >Nome</th>
+                <th class="tabellatitolo">Visualizza contratto</th>
+            </tr>
+            @foreach($assegnati as $assegnato)
+            <tr>
+                <td  class="tabellaelem">{{$assegnato->titolo}}</td>
+                <td class="tabellaelem">{{$assegnato->utente}}</td>
+                <td style="text-align:center" class="tabellaelem"></td>
+            </tr>  
+            @endforeach
+        </table>
+        @endisset()
+        
         @isset($mieiAlloggi)
         <div>
+        <div class="titoloo">I miei alloggi</div>
+
             @foreach ($mieiAlloggi as $alloggio)
             <div class="annunciosingololoc">
-                <p class ="description titolo">  {{$alloggio->titolo}}</p> <br> <br> <br>
-                <a class="modifica" href = "{{ route('dettagliAlloggioProprietario', [$alloggio->id])}}">modifica</a>
-                <button class="modifica">elimina</button>
-
-                <div >
+                <p class ="description titolo">{{$alloggio->titolo}}</p> <br> <br> <br>
+                  <a class="modifica" href = "{{ route('dettagliAlloggioProprietario', [$alloggio->id])}}">modifica</a>
+                <div>
                     <p class = "description titolo"> Tipo</p>  
                     <p class="description"> {{$alloggio->tipo}} </p>
                     <p class = "description titolo"> Indirizzo</p>  
@@ -45,6 +83,7 @@
             @endforeach
             @endisset()
         </div>
+     
         
         <footer>
             @include('layouts/-footer')

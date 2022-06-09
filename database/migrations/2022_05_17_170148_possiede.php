@@ -14,9 +14,10 @@ class Possiede extends Migration
     public function up()
     {
         Schema::create('possiede', function (Blueprint $table) {
-            $table->bigIncrements('offerta');            
+            $table->bigIncrements('id');
+            $table->integer('offerta');            
             $table->string('tipo',30); 
-            $table->integer('quantita');
+            $table->integer('quantita')->nullable();
             
             
         });

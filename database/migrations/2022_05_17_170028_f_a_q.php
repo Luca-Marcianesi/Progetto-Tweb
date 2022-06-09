@@ -15,7 +15,7 @@ class FAQ extends Migration
     {
         Schema::create('faq', function (Blueprint $table) {
             $table->string('domanda');            
-            $table->string('risposta');
+            $table->text('risposta');
             $table->string('stato');
            
         });

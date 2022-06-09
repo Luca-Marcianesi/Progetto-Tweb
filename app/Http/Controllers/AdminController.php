@@ -5,46 +5,61 @@ namespace App\Http\Controllers;
 use App\Models\Admin;
 use App\Models\Resources\Product;
 use App\Http\Requests\NewProductRequest;
+use App\Models\Resources\Offerta;
+use App\Models\ElencoFaq;
 
 class AdminController extends Controller {
 
-    protected $_adminModel;
-
+      
     public function __construct() {
-        $this->middleware('can:isAdmin');
-        $this->_adminModel = new Admin;
+        $this->_ElencoFaqModel = new ElencoFaq;
+    }
+    
+
+    public function getHome(){
+        $numero_offerte = Offerta::count();
+        $occupati = $this->getOccupati();
+        $Faqs = $this->_ElencoFaqModel->getFaqs();
+
+        return view('admin')
+            ->with('numero_offerte', $numero_offerte)
+            ->with('occupati', $occupati)
+            ->with('topFaqs', $Faqs);
+
+        
+        
+    }    
+
+    public function getOccupati(){
+        $occupati = Offerta::where('stato', 'occupato')->count();
+        return $occupati;
     }
 
-    public function index() {
+    public function getOfferteLocatari(){
+        
+    }
+
+    public function showModificaFaq($domanda){
+        $Faq = $this->_ElencoFaqModel->getFaqsbyId($domanda);
+        return view('modificaFaq')
+              ->with('Faq', $Faq);
+
+    }
+
+     public function modificaFaq(ModificaFaqRequest $request, $domanda){
+        $Faqs = $this->_ElencoFaqModel->getFaqsbyId($domanda);
+        $Faqs->domanda = $request->domanda;
+        $Faqs->risposta = $request->risposta;
+        $Faqs->save();
+
         return view('admin');
     }
 
-    public function addProduct() {
-        $prodCats = $this->_adminModel->getProdsCats()->pluck('name', 'catId');
-        return view('product.insert')
-                        ->with('cats', $prodCats);
+  /*  public function showFaq() {
+
+
+        $Faqs = $this->_ElencoFaqModel->getFaqs();
+            return view('admin')
+            ->with('topFaqs', $Faqs);
     }
-
-    public function storeProduct(NewProductRequest $request) {
-
-        if ($request->hasFile('image')) {
-            $image = $request->file('image');
-            $imageName = $image->getClientOriginalName();
-        } else {
-            $imageName = NULL;
-        }
-
-        $product = new Product;
-        $product->fill($request->validated());
-        $product->image = $imageName;
-        $product->save();
-
-        if (!is_null($imageName)) {
-            $destinationPath = public_path() . '/images/products';
-            $image->move($destinationPath, $imageName);
-        };
-
-        return redirect()->action('AdminController@index');
-    }
-
-}
+*/}

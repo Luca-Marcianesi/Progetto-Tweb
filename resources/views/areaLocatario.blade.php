@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <link rel="stylesheet" type="text/css" href="{{ asset('css/stile.css') }}" >
-        <title>LaProj5 | @yield('title', 'Catalogo')</title>
+        <title>LaProj5 | @yield('title', 'area Locatario')</title>
     </head>
     <body>
         <header class="header">

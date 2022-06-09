@@ -3,7 +3,7 @@
 @section('title', 'Home')
 
 @section('content')
-<section class="home">
+<section class="home" >
 <div class="firstimagehome">
   <div class="alignment"><b>TROVA L'ALLOGGIO<br> GIUSTO PER TE</b>
   <img class="keys" src="images/products/chiavi-removebg-preview.png" alt="Passaggio di chiavi">
@@ -11,6 +11,7 @@
 </div>
 </section>
 <br>
+<section id="chisiamo">
   <p class="titoloo">Chi siamo <img class="iconimage" src="images/products/posizione.png" alt="Logo posizione geografica"> </p>
   <div>
     <p class="whoarewetext">Sei uno studente e cerchi un alloggio nella tua città universitaria?
@@ -103,7 +104,7 @@
           </p>
           <img class="student" src="images/products/studentessa2.webp" alt="Studentessa">
           <p class="studentdescription">"ho trovato la casa perfetta per me nel centro di Roma, ho la fermata dell'
-            autobus a due passi e due simpatiche coinquiline. Tutto grazie ad ALLOGGISTUDENTI.com. Studenti in cerca di 
+            autobus a due passi. Tutto grazie ad ALLOGGISTUDENTI.com. Studenti in cerca di 
             alloggio dovrebbero iscriversi! "
           </p>
           <div class="dots">
@@ -145,20 +146,17 @@
   
 <section class="esploracittà">
   <div class="container">
-    <p class="titoloo"> Esplora in base alla tua città</p><br>
+    <p class="titoloo"> Le città più cercate</p><br>
     <ul class="griglia">
       <li><img class ="foto" src="images/products/Ancona.jpg" alt="Ancona">
-        <p class="arancione">Ancona</p><p class="arancione2">
-          <a class="arancione2">Visualizza</p></a></li>
+        <p class="arancione">Ancona</li>
       <li><img class ="foto" src="images/products/Milano.jpg">
-        <p class="arancione">Milano</p><p class="arancione2">
-          <a class="arancione2">Visualizza</p></a></li>
+        <p class="arancione">Milano</li>
       <li><img class ="foto" src="images/products/Roma.webp">
-        <p class="arancione">Roma</p><p class="arancione2">
-          <a class="arancione2">Visualizza</p></a></li>
+        <p class="arancione">Roma</li>
       <li><img class ="foto" src="images/products/Bari.jpg">
-        <p class="arancione">Bari</p><p class="arancione2">
-          <a class="arancione2">Visualizza</p></a></li>
+        <p class="arancione">Bari
+        </li>
     </ul>
     <p><a class="tuttelecittà" href="{{ route('elencocitta') }}"><b>Tutte le città</b></a></p>
   </div>
@@ -183,6 +181,17 @@
 <section id="faq" class="faq-container">
   <div class="titoloo">FAQ</div>
 
+  @isset($topFaqs)
+@foreach ($topFaqs as $faq)
+
+<h1 class="faq-page">{{$faq->domanda}}</h1>
+      <div class="faq-body">
+      <h1 class="faq-answer">{{$faq->risposta}}</h1>
+</div>
+  @endforeach
+@endisset()
+  </section>
+<!--
       <h1 class="faq-page">Domanda 1</h1>
       <div class="faq-body">
       <h1 class="faq-answer">è possibile modificare gli annunci in ogni momento: la modifica verrà visualizzata
@@ -211,7 +220,7 @@
       <div class="faq-body">
       <h1 class="faq-answer">è possibile modificare gli annunci in ogni momento: la modifica verrà visualizzata
             24 ore dopo il salvataggio
-  </h1>      </div>
+  </h1>      </div>-->
 
 <script src="js/faq-js.js"></script>
 </section>
@@ -224,7 +233,7 @@
   <button type="submit" title="Sottoscrivi"  class="blubuttons">Invia</button>
 </div>
 </section>
-
+<hr class="spaziatura">
 
 <section class="contacts-section" id="contatti">
   <div class="contactscolumn">

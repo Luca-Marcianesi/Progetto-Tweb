@@ -61,7 +61,7 @@
 
             <div  class="wrap-input">
                 {{ Form::label('role', 'Tipo utente', ['class' => 'label-input']) }}
-                {{ Form::select('role',['1' => 'Locatore','2' => 'Locatario'], '', ['class' => 'input','id' => 'role']) }}
+                {{ Form::select('role',['locatore' => 'Locatore','locatario' => 'Locatario'], '', ['class' => 'input','id' => 'role']) }}
                 @if ($errors->first('role'))
                 <ul class="errors">
                     @foreach ($errors->get('role') as $message)
@@ -101,6 +101,18 @@
                 @if ($errors->first('descrizione'))
                 <ul class="errors">
                     @foreach ($errors->get('descrizione') as $message)
+                    <li>{{ $message }}</li>
+                    @endforeach
+                </ul>
+                @endif
+            </div>
+            
+            <div  class="wrap-input">
+                {{ Form::label('fotoprofilo', 'Foto Profilo', ['class' => 'label-input']) }}
+                {{ Form::text('fotoprofilo', '', ['class' => 'input','id' => 'fotoprofilo']) }}
+                @if ($errors->first('fotoprofilo'))
+                <ul class="errors">
+                    @foreach ($errors->get('fotoprofilo') as $message)
                     <li>{{ $message }}</li>
                     @endforeach
                 </ul>

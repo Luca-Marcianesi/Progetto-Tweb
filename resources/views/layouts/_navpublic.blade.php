@@ -1,5 +1,5 @@
 <ul class="menu_ul_home">
-    <li class ="menu_ul_li"><a  class = "menu_ul_li_a" href="#cs">Chi siamo</a></li>
+    <li class ="menu_ul_li"><a  class = "menu_ul_li_a" href="#chisiamo">Chi siamo</a></li>
     <li class ="menu_ul_li"><a  class = "menu_ul_li_a" href="#regolamento" >Regolamento</a></li>
     <li class ="menu_ul_li"><a class = "menu_ul_li_a" href="#faq" >F.A.Q.</a></li>
     <li class ="menu_ul_li"><a  class = "menu_ul_li_a" href="#contatti" >Contatti</a></li>

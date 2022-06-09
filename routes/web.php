@@ -11,29 +11,24 @@
   |
  */
 
-Route::get('/selTopCat/{topCatId}/selCat/{catId}', 'PublicController@showCatalog3')
-        ->name('catalog3');
+//Ingresso al sito
 
-Route::get('/selTopCat/{topCatId}', 'PublicController@showCatalog2')
-        ->name('catalog2');
-
-Route::get('/', 'PublicController@showCatalog1')
+Route::get('/', 'PublicController@showHome')
         ->name('catalog1');
 
-Route::get('/admin/newproduct', 'AdminController@addProduct')
-        ->name('newproduct');
+//Admin
 
-Route::post('/admin/newproduct', 'AdminController@storeProduct')
-        ->name('newproduct.store');
-
-Route::get('/admin', 'AdminController@index')
+Route::get('/admin', 'AdminController@getHome')
         ->name('admin');
 
-Route::get('/user', 'UserController@index')
-        ->name('user')->middleware('can:isUser');
+Route::get('/modificaFaq{domanda}', 'AdminController@showModificaFaq')
+        ->name('showmodificaFaq');
 
-Route::get('/annunciLocatore', 'locatoreController@showAnnunci')
-        ->name('annunci');
+Route::post('/modificaFaq{domanda}', 'AdminController@modificaFaq')
+        ->name('modificaFaq');
+
+
+//Home
 
 Route::get('/annunciHome/{citta}', 'HomeController@showAnnunci')
         ->name('annunciHome');
@@ -41,21 +36,95 @@ Route::get('/annunciHome/{citta}', 'HomeController@showAnnunci')
 Route::get('/elencocitta', 'HomeController@showlistacitta')
         ->name('elencocitta');
 
+Route::view('/where', 'where')
+        ->name('where');
+
+Route::view('/who', 'who')
+        ->name('who');
+
+Route::get('/home', 'HomeController@index')
+        ->name('home');
+
+
+//Locatore
+
+Route::get('/annunciLocatore', 'locatoreController@showAnnunci')
+        ->name('annunciLocatore');
+
 Route::get('/locatore/annunciLocatore', 'locatoreController@showaggiungiofferta')
         ->name('aggiungiOfferta');
 
-Route::post('/locatore/annunciLocatore', 'locatoreController@aggiungiOfferta')
-        ->name('aggiungiOfferta');
+Route::post('/locatore/annunciLocatore/aggiungiAppartamento', 'locatoreController@aggiungiOffertaAppartamento')
+        ->name('aggiungiAppartamento');
+        
+Route::post('/locatore/annunciLocatore/aggiungiPostoLetto', 'locatoreController@aggiungiOffertaPostoLetto')
+        ->name('aggiungiPostoLetto');
+        
+Route::get('/locatore/aggiungiServizi{id}', 'locatoreController@showServizi')
+        ->name('showAggiungiServizi');
+
+Route::post('/locatore/annunciLocatore/Servizi{id}', 'locatoreController@setServizi')
+        ->name('aggiungiServizi');
+
+Route::get('/opziona{id}/{locatario}', 'locatoreController@assegna')
+        ->name('assegnaOfferta');
+        
+Route::get('/ImieiAlloggi', 'locatoreController@showMieiAlloggi')
+        ->name('mieiAlloggi');
+
+Route::get('/dettagliOpzionamento{offerta}/{utente}', 'locatoreController@showDettagliOpzionamento')
+        ->name('dettagliOpzionamento');
+
+Route::get('/stipulaContratto{offerta}/{locatario}', 'locatoreController@stipulaContratto')
+        ->name('stipulaContratto');
+
+Route::post('/locatore/modificaOff{id}', 'locatoreController@modificaOfferta')
+        ->name('modificaOffertaProp');
+
+Route::get('/locatore/mieiAlloggi{id}', 'locatoreController@showModificaOfferta')
+        ->name('dettagliAlloggioProprietario');
+
+Route::post('/locatore/modificaOff{id}', 'locatoreController@modificaOfferta')
+        ->name('modificaOffertaProp');
+
+Route::get('/locatore/eliminaofferta{id}', 'locatoreController@eliminaOfferta')
+        ->name('elimina');
+
+
+
+//Locatario
+
+Route::get('/annunciLocatario', 'locatarioController@showAnnunci')
+        ->name('annunciLocatario');
+
+Route::get('/locatario/opzionaofferta{id}', 'locatarioController@opziona')
+        ->name('opziona');
+
+
+//User
+
+
+
 
 Route::get('/account', 'UserController@showAccount')
         ->name('showAccount');
 
+Route::get('/modifica-account', 'UserController@showModificaAccount')
+        ->name('modificaAccount');
+
+Route::post('/modifica-account', 'UserController@modificaAccount')
+        ->name('modificaAccount');
 
 Route::get('/locatore', 'UserController@areaLocatore')
         ->name('locatore');
 
-Route::get('/ImieiAlloggi', 'locatoreController@showMieiAlloggi')
-        ->name('mieiAlloggi');
+Route::get('/user', 'UserController@index')
+        ->name('user')->middleware('can:isUser');
+
+        
+
+
+
 
 Route::get('/locatario', 'UserController@areaLocatario')
         ->name('locatario');
@@ -63,6 +132,8 @@ Route::get('/locatario', 'UserController@areaLocatario')
 
 Route::get('/listacitta', 'PublicController@showCatalog1')
         ->name('listacitta1');
+
+
 
 // Rotte per l'autenticazione
 Route::get('login', 'Auth\LoginController@showLoginForm')
@@ -79,36 +150,30 @@ Route::get('register', 'Auth\RegisterController@showRegistrationForm')
 
 Route::post('register', 'Auth\RegisterController@register');
 
-Route::view('/where', 'where')
-        ->name('where');
-
-Route::view('/who', 'who')
-        ->name('who');
-
-// Rotte inserite dal comando artisan "ui vue --auth" 
-// Auth::routes();
-// Route::get('/home', 'HomeController@index')->name('home');
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')
-        ->name('home');
+
 /*
 rotta per visualizzare il singolo annuncio
+
+
+
 */
 
-Route::get('/locatore/offerta{id}', 'HomeController@showAnnuncioSingolo')
-        ->name('dettagliAnnuncio');
-Route::get('/locatore/mieiAlloggi{id}', 'locatoreController@getAllInfoAlloggio')
-        ->name('dettagliAlloggioProprietario');
-
+Route::get('/offerta{id}', 'HomeController@showAnnuncioSingolo')
+        ->name('dettagliAnnuncio'); //da cambiare controller
 
 Route::get('/locatore/offerta{id}', 'HomeController@showAnnuncioSingoloLocatore')
-        ->name('dettagliAnnuncio');
+        ->name('AnnuncioSingoloLocatore'); //da cambiare controller
 
 
-Route::get('/locatore/offerta{id}', 'HomeController@showAnnuncioSingoloLocatario')
-        ->name('dettagliAnnuncio');
+Route::get('/locatario/offerta{id}', 'HomeController@showAnnuncioSingoloLocatario')
+        ->name('dettagliAnnuncioLocatario'); //da cambiare controller
+
+
+
+
 
 
 Route::view('/messaggiLocatore', 'messaggiLocatore')
@@ -117,4 +182,4 @@ Route::view('/messaggiLocatore', 'messaggiLocatore')
 
 Route::view('/messaggiLocatario', 'messaggiLocatario')
         ->name('messaggiLocatario');
-        
+     

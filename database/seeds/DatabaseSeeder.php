@@ -14,28 +14,12 @@ class DatabaseSeeder extends Seeder {
     public function run() {
     
         DB::table('offerta')->insert([
-            ['id' => 1, 'stato' => 'libera', 'città'=>'Ancona', 'locazione' => 'Via del Pignattello 55', 'prezzo' => 450, 'genere' => 'M', 'descrizione_breve' => ' 4 camere, 2 bagni, 5 inquilini',
-            'descrizione'=>'Affittasi Camera Singola ad Ancona, Via del Pignattello 55 per 450 Euro al mese. Sono disponibili i seguenti servizi: internet, televisione, lavatrice.Riscaldamento Autonomo.', 'titolo'=>'Stanza terzo piano', 'tipo'=>'Posto Letto'],
-            ['id' => 2, 'stato' => 'libera','città'=>'Ancona', 'locazione' => 'Via Pluto 80', 'prezzo' => 250, 'genere' => '', 'descrizione_breve' => ' 4 camere, 2 bagni, 5 inquilini',
-            'descrizione'=>'Affittasi Camera Singola ad Ancona, Via del Pignattello 55 per 450 Euro al mese. Sono disponibili i seguenti servizi: internet, televisione, lavatrice.Riscaldamento Autonomo.','titolo'=>'Stanza terzo piano', 'tipo'=>'Posto Letto'],
-            ['id' => 3, 'stato' => 'libera', 'città'=>'Ancona','locazione' => 'Via Colombo 100', 'prezzo' => 300, 'genere' => 'F','descrizione_breve' => ' 4 camere, 2 bagni, 5 inquilini',
-            'descrizione'=>'Affittasi Camera Singola ad Ancona, Via del Pignattello 55 per 450 Euro al mese. Sono disponibili i seguenti servizi: internet, televisione, lavatrice.Riscaldamento Autonomo.','titolo'=>'Stanza terzo piano', 'tipo'=>'Posto Letto'],
-            ['id' => 4, 'stato' => 'libera', 'città'=>'Ancona','locazione' => 'Via Raffaele 15', 'prezzo' => 180, 'genere' => 'M','descrizione_breve' => ' 4 camere, 2 bagni, 5 inquilini',
-            'descrizione'=>'Affittasi Camera Singola ad Ancona, Via del Pignattello 55 per 450 Euro al mese. Sono disponibili i seguenti servizi: internet, televisione, lavatrice.Riscaldamento Autonomo.','titolo'=>'Stanza terzo piano', 'tipo'=>'Posto Letto'],
-            ['id' => 5, 'stato' => 'libera', 'città'=>'Ancona','locazione' => 'Via Ciccio 25', 'prezzo' => 230, 'genere' => '','descrizione_breve' => ' 4 camere, 2 bagni, 5 inquilini',
-            'descrizione'=>'Affittasi Camera Singola ad Ancona, Via del Pignattello 55 per 450 Euro al mese. Sono disponibili i seguenti servizi: internet, televisione, lavatrice.Riscaldamento Autonomo.','titolo'=>'Stanza terzo piano', 'tipo'=>'Posto Letto'],
-            ['id' => 6, 'stato' => 'libera', 'città'=>'Ancona','locazione' => 'Via Romeo 44', 'prezzo' => 300, 'genere' => 'F','descrizione_breve' => ' 4 camere, 2 bagni, 5 inquilini',
-            'descrizione'=>'Affittasi Camera Singola ad Ancona, Via del Pignattello 55 per 450 Euro al mese. Sono disponibili i seguenti servizi: internet, televisione, lavatrice.Riscaldamento Autonomo.','titolo'=>'Stanza terzo piano', 'tipo'=>'Posto Letto'],
-            ['id' => 7, 'stato' => 'libera', 'città'=>'Ancona','locazione' => 'Via Solferino 74', 'prezzo' => 120, 'genere' => '','descrizione_breve' => ' 4 camere, 2 bagni, 5 inquilini',
-            'descrizione'=>'Affittasi Camera Singola ad Ancona, Via del Pignattello 55 per 450 Euro al mese. Sono disponibili i seguenti servizi: internet, televisione, lavatrice.Riscaldamento Autonomo.','titolo'=>'Stanza terzo piano', 'tipo'=>'Posto Letto'],
-            ['id' => 8, 'stato' => 'libera', 'città'=>'Ancona','locazione' => 'Via Pozzetto 69', 'prezzo' => 400, 'genere' => 'F','descrizione_breve' => ' 4 camere, 2 bagni, 5 inquilini',
-            'descrizione'=>'Affittasi Camera Singola ad Ancona, Via del Pignattello 55 per 450 Euro al mese. Sono disponibili i seguenti servizi: internet, televisione, lavatrice.Riscaldamento Autonomo.','titolo'=>'Stanza terzo piano', 'tipo'=>'Posto Letto'],
-            ['id' => 9, 'stato' => 'libera', 'città'=>'Ancona','locazione' => 'Via Cesare Battisti 42', 'prezzo' => 350, 'genere' => 'M','descrizione_breve' => ' 4 camere, 2 bagni, 5 inquilini',
-            'descrizione'=>'Affittasi Camera Singola ad Ancona, Via del Pignattello 55 per 450 Euro al mese. Sono disponibili i seguenti servizi: internet, televisione, lavatrice.Riscaldamento Autonomo.','titolo'=>'Stanza terzo piano', 'tipo'=>'Posto Letto'],
-            ['id' => 10, 'stato' => 'libera','città'=>'Ancona', 'locazione' => 'Via Umberto I', 'prezzo' => 250, 'genere' => '','descrizione_breve' => ' 4 camere, 2 bagni, 5 inquilini',
-            'descrizione'=>'Affittasi Camera Singola ad Ancona, Via del Pignattello 55 per 450 Euro al mese. Sono disponibili i seguenti servizi: internet, televisione, lavatrice.Riscaldamento Autonomo.','titolo'=>'Stanza terzo piano', 'tipo'=>'Posto Letto'],
-            ['id' => 11, 'stato' => 'libera', 'città'=>'Ancona','locazione' => 'Via Rossano 32', 'prezzo' => 200, 'genere' => '','descrizione_breve' => ' 4 camere, 2 bagni, 5 inquilini',
-            'descrizione'=>'Affittasi Camera Singola ad Ancona, Via del Pignattello 55 per 450 Euro al mese. Sono disponibili i seguenti servizi: internet, televisione, lavatrice.Riscaldamento Autonomo.','titolo'=>'Stanza terzo piano', 'tipo'=>'Posto Letto']
+            ['id' => 1, 'stato' => 'libera', 'città'=>'Ancona', 'locazione' => 'Via del Pignattello 55',
+             'prezzo' => 450, 'genere' => 'M', 'descrizione_breve' => ' 4 camere, 2 bagni, 5 inquilini',
+            'descrizione'=>'Affittasi Camera Singola ad Ancona, Via del Pignattello 55 per 450 Euro al mese.
+             Sono disponibili i seguenti servizi: internet, televisione, lavatrice.Riscaldamento Autonomo.',
+             'titolo'=>'Stanza terzo piano', 'tipo'=>'Posto Letto','image'=>'affitto-stanza.jpg'],
+            
         ]);
 
         DB::table('città')->insert([
@@ -74,12 +58,34 @@ class DatabaseSeeder extends Seeder {
         ]);
 
         DB::table('users')->insert([
-            ['id' => 1, 'name' => 'lariolario', 'surname'=>'lariolario', 'email' => 'lariolario@gmail.com', 'sesso' => 'M', 'data_nascita' => '2022-06-09', 'image' => NULL,
-            'email_verified_at'=>NULL, 'username'=>'lariolario', 'password'=>Hash::make('lariolario'), 'descrizione'=>'lariolario', 'role'=>'locatario'],
-            ['id' => 2, 'name' => 'lorelore', 'surname'=>'lariolario', 'email' => 'lorelore@gmail.com', 'sesso' => 'M', 'data_nascita' => '2022-05-09', 'image' => NULL,
-            'email_verified_at'=>NULL, 'username'=>'lorelore', 'password'=>Hash::make('lorelore'), 'descrizione'=>'lariolario', 'role'=>'locatore'],
+            ['id' => 1, 'name' => 'lariolario', 'surname'=> 'lariolario', 'email' => 'lariolario@gmail.com', 'sesso' => 'M', 'data_nascita' => '2022-06-09', 'image' => NULL,
+            'email_verified_at' => NULL, 'username'=> 'lariolario', 'password'=> Hash::make('lariolario'), 'descrizione'=> 'lariolario', 'role'=>'locatario'],
+            ['id' => 2, 'name' => 'lorelore', 'surname'=> 'lorelore', 'email' => 'lorelore@gmail.com', 'sesso' => 'M', 'data_nascita' => '2022-05-09', 'image' => NULL,
+            'email_verified_at' => NULL, 'username'=> 'lorelore', 'password'=>Hash::make('lorelore'), 'descrizione'=> 'lorelore', 'role' => 'locatore'],
+            ['id' => 3, 'name' => 'adminadmin', 'surname' => 'adminadmin', 'email' => 'adminadmin@gmail.com', 'sesso' => 'M', 'data_nascita' => '2022-04-09', 'image' => NULL,
+            'email_verified_at' => NULL, 'username' => 'adminadmin', 'password' => Hash::make('adminadmin'), 'descrizione' => 'adminadmin', 'role' => 'admin']
+        ]);
+
+        
+        DB::table('faq')->insert([
+            ['domanda'=>'Perchè affidarsi ad Alloggistudenti.com?', 'risposta'=>'Trovare casa in una nuova città non è mai facile. Alloggistudenti.com seleziona le migliori soluzioni, evitando il rischio di brutte esperienze e garantendo sempre un regolare contratto. ',  'stato'=>'visibile'],
+            ['domanda'=>' In quali città è attivo? ', 'risposta'=>'Siamo attivi nelle principali città universitarie italiane',  'stato'=>'visibile'],
+            ['domanda'=>' A chi si rivolge? ', 'risposta'=>'Se sei uno studente o hai bisogno di una sistemazione temporanea per un corso, un master o qualsiasi altra esigenza, abbiamo la soluzione adatta per te.
+            Se sei un proprietario e vuoi affittare rapidamente il tuo immobile, hai trovato il servizio che stavi cercando. Un’agenzia immobiliare efficiente e molto in più.',  'stato'=>'visibile'],
+            ['domanda'=>' Quanto costa? ', 'risposta'=>'Il servizio è completamente gratuito.',  'stato'=>'visibile'],
+            ['domanda'=>'Come posso modificare il mio profilo? ', 'risposta'=>'Puoi modificare il tuo profilo cliccando su “Modifica dall’area "Account".',  'stato'=>'visibile'],
+            ['domanda'=>'Chi vedrà i miei annunci? ', 'risposta'=>'Dopo la conferma di pubblicazione, l’annuncio sarà visibile a tutti gli utenti del sito.',  'stato'=>'visibile'],
+            ['domanda'=>'Posso modificare i miei annunci? ', 'risposta'=>'Potrai modificare o rimuovere il tuo annuncio in qualsiasi momento dalla sezione “Miei Alloggi".',  'stato'=>'visibile'],
+            ['domanda'=>'Come sarò contattato dai locatari? ', 'risposta'=>'Gli altri utenti potranno scriverti un messaggio attraverso il sito o potranno contattarti utilizzando i contatti diretti che hai inserito nell’annuncio. Se non desideri mostrare l’email o il telefono inseriti no-email@email.it e 00000000 come telefono.',  'stato'=>'visibile'],
+
+        ]);
+
+        DB::table('interagisce')->insert([
+            ['offerta'=>1, 'utente'=>'lorelore',  'tipo_interazione'=>'possiede', 'data'=>'2022-04-09'],
            
         ]);
+
+
 
 }
 }

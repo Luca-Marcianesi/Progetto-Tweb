@@ -5,6 +5,7 @@
   </div>
 
 </div>
+
 <br id="cs">
   <p class="titoloo">Chi siamo <img class="iconimage" src="images/products/posizione.png" alt="Logo posizione geografica"> </p>
   <div>
@@ -77,8 +78,7 @@
           </p>
           <img class="student" src="images/products/studente.jpeg" alt="Studente">
           <p class="studentdescription"> "grazie a questo sito web sono riuscito a trovare l'alloggio fatto su misura
-            per me, non mi sarei aspettato di raggiungere questo risultato con un click.Lo consiglio a tutti, io non avrei potuto
-            farne a meno "
+            per me, non mi sarei aspettato di raggiungere questo risultato con un click.Lo consiglio a tutti."
           </p>
           <div class="dots">
             <span class="dot"></span>
@@ -98,7 +98,7 @@
           </p>
           <img class="student" src="images/products/studentessa2.webp" alt="Studentessa">
           <p class="studentdescription">"ho trovato la casa perfetta per me nel centro di Roma, ho la fermata dell'
-            autobus a due passi e due simpatiche coinquiline. Tutto grazie ad ALLOGGISTUDENTI.com. Studenti in cerca di 
+            autobus a due passi. Tutto grazie ad ALLOGGISTUDENTI.com. Studenti in cerca di 
             alloggio dovrebbero iscriversi! " "
           </p>
           <div class="dots">
@@ -137,30 +137,6 @@
   </div>
   <script src="js/reviews.js"></script>
   </section>
-  
-
-<section class="esploracittà">
-  <div class="container">
-    <p class="titolo"> Esplora in base alla tua città</p><br>
-    <ul class="griglia">
-      <li><img class ="foto" src="images/products/Ancona.jpg" alt="Ancona">
-        <p class="arancione">Ancona></p><p class="arancione2">
-          <a class="arancione2">Visualizza</p></a></li>
-      <li><img class ="foto" src="images/products/Milano.jpg">
-        <p class="arancione">Milano></p><p class="arancione2">
-          <a class="arancione2">Visualizza</p></a></li>
-      <li><img class ="foto" src="images/products/Roma.webp">
-        <p class="arancione">Roma></p><p class="arancione2">
-          <a class="arancione2">Visualizza</p></a></li>
-      <li><img class ="foto" src="images/products/Bari.jpg">
-        <p class="arancione">Bari></p><p class="arancione2">
-          <a class="arancione2">Visualizza</p></a></li>
-    </ul>
-    <p><a class="tuttelecittà" href="{{ route('listacitta1') }}"><b>Tutte le città</b></a></p>
-
-
-  </div>
-</section>
 
 <section id="regolamento">
   <div class="reg" > 
@@ -178,43 +154,8 @@
   </div> 
 </section>  
 
-<section id="faq" class="faq-container">
-  <div class="titoloo">FAQ</div>
 
-      <h1 class="faq-page">Posso affittare più di un appartamento?</h1>
-      <div class="faq-body">
-      <h1 class="faq-answer">è possibile modificare gli annunci in ogni momento: la modifica verrà visualizzata
-            24 ore dopo il salvataggio
-  </h1>      </div>
- 
-      <h1 class="faq-page">Posso proporre un'offerta diversa dal prezzo indicato dal locatore?</h1>
-      <div class="faq-body">
-      <h1 class="faq-answer">è possibile modificare gli annunci in ogni momento: la modifica verrà visualizzata
-            24 ore dopo il salvataggio
-  </h1>      </div>
-    
-      <h1 class="faq-page">Posso visualizzare il profilo del locatore?</h1>
-      <div class="faq-body">
-      <h1 class="faq-answer">è possibile modificare gli annunci in ogni momento: la modifica verrà visualizzata
-            24 ore dopo il salvataggio
-  </h1>      </div>
-
-      <h1 class="faq-page">Devo chiudere il contratto prima del termine, posso farlo?</h1>
-      <div class="faq-body">
-      <h1 class="faq-answer">è possibile modificare gli annunci in ogni momento: la modifica verrà visualizzata
-            24 ore dopo il salvataggio
-  </h1>      </div>
-
-      <h1 class="faq-page">Il locatore vedrà i miei contatti?</h1>
-      <div class="faq-body">
-      <h1 class="faq-answer">è possibile modificare gli annunci in ogni momento: la modifica verrà visualizzata
-            24 ore dopo il salvataggio
-  </h1>      </div>
-
-<script src="js/faq-js.js"></script>
-</section>
-
-<section >
+<section>
 <div><p class="titoloo">Inserisci la tua mail per rimanere aggiornato</p></div>
 <div class ="titoloo"> 
   <input class="areaEmail" type="text" value="" name="email" id="newsletter" placeholder="Inserisci la tua Email" title="Iscriviti alla nostra newsletter" >

@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
+<<<<<<< HEAD
     <script>
 
 /* When the user clicks on the button,
@@ -74,6 +75,8 @@ for (var i = 0; i < btns.length; i++) {
 }
 
     </script>
+=======
+>>>>>>> 5e86ec141911f48baf960920a603859cd3db86f5
         <meta charset="utf-8">
         <link rel="stylesheet" type="text/css" href="{{ asset('css/stile.css') }}" >
         <title>LaProj5 | @yield('title', 'Annunci')</title>
@@ -91,11 +94,17 @@ for (var i = 0; i < btns.length; i++) {
 
         <div>
         @isset($offerte)
+        @isset($topCities)
 <section class="cittàselezionata">
     <nav class="menu" fixed="right">
         <ul>
             <li> <a href="catalogo.html"  id ="backButton" class="back-to-previous"> </a></li>
-            <li class="cittàsel"><h3 class="nomecittàselezionata">citta</h3></li>
+            @foreach ($topCities as $citta)
+            <li class="cittàsel"><h3 class="nomecittàselezionata">{{ $citta->name }}</h3></li>
+            @endforeach
+            @endisset()
+
+
         </ul>
     </nav>
 </section>
@@ -195,8 +204,9 @@ for (var i = 0; i < btns.length; i++) {
 <section class="annunci">
     <div class="annuncio">
           <div class="columnimg">
-            <img class="imgaffitto" src="images/affitto-stanza.jpg" alt="imgaffitto">
-          </div>
+          <div class="imgaffittocol">
+          @include('helpers/annunciImg', ['imgFile' => $offerta->image])
+           </div>           </div>
           <div class="columnimg columntext">
 
           <p class="titolocolonna"> {{$offerta->tipo}} :  {{$offerta->titolo}}   </p>

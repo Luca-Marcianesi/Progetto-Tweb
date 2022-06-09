@@ -29,15 +29,15 @@ class AuthServiceProvider extends ServiceProvider
         });
 
         Gate::define('isUser', function ($user) {
-            return $user->hasRole('1');
+            return $user->hasRole('locatore','locatario','admin');
         });
 
         Gate::define('isLocatore', function ($user) {
-            return $user->hasRole('1');
+            return $user->hasRole('locatore');
         });
 
         Gate::define('isLocatario', function ($user) {
-            return $user->hasRole('2');
+            return $user->hasRole('locatario');
         });
 
         Gate::define('show-discount', function ($user) {

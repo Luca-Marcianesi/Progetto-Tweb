@@ -6,7 +6,12 @@ http://www.freecsstemplates.org
 Released for free under a Creative Commons Attribution 2.5 License
 */
 
-body {
+    html {
+        height: 100%;
+    }
+
+    body {
+    height: 100%;
 	margin: 0;
 	padding: 0;
 	background: #E3E7ED url(images/img01.gif) repeat-x left top;
@@ -203,12 +208,6 @@ a {
 	background: url(images/img06.jpg) no-repeat left bottom;
 }
 
-/* Static */
-
-.static {
-	padding: 60px 20px 20px 20px;
-}
-
 /* Content */
 
 #content {
@@ -264,13 +263,13 @@ a {
 .prod .image {
 	float:left;
 	text-align: left;
-    width: 80px;
+    width: 490px;
 	height: inherit;
 }
 
 .prod .image .imagefrm {
-    width: 80px;
-	height: 80px;
+    width: 400px;
+	height: 500px;
 	padding-top: 10px;
 }
 
@@ -420,7 +419,7 @@ a {
 /* Footer */
 
 #footer {
-	height: 50px;
+	height: 80px;
 	margin: 0 auto;
 	padding: 0px 0 15px 0;
 	font-family: Arial, Helvetica, sans-serif;
@@ -443,7 +442,6 @@ a {
 
 .wrap-input {
   width: 100%;
-  position: relative;
   background-color: transparent;
   margin-bottom: 12px;
 }
@@ -458,7 +456,13 @@ a {
   color: #555555;
   line-height: 1,5;
 }
+.label-input2{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    color: #555555;
+    line-height: 1,5;
 
+}
 .input {
   display: block;
   width: 90%; 
@@ -476,6 +480,17 @@ a {
   margin-top: 5px;
 }
 
+.inputcheck {
+    display: block;
+    float:right;
+    background: #f2f2f2;
+    border-radius: 2px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    color: #686868;
+    padding: 5px;
+    margin-top: 3px;
+  }
 .inputbigger {
     display: block;
     width: 90%; 
@@ -530,15 +545,22 @@ a {
   position: relative;
 }
 
+.wrap-contact-faq {
+    max-width: 90%;
+    background: #fac49d;
+    border-radius: 2px;
+    padding: 30px 30px;
+  }
+
+
+
 .wrap-contact2{
- max-width: 700px;
+  margin-left: 27%;   
+  max-width: 700px;
   background: #fac49d;
   border-radius: 2px;
   padding: 30px 20px;
   position:relative;
-  margin: 20%;
-  margin-top: 1%;
-
 }
 
 .contact-form {
@@ -573,6 +595,26 @@ a {
   color: #555555;
 }
 
+.formfaq{
+    max-width: 90%;
+    background: #fac49d;
+    border-radius: 2px;
+    padding: 30px 30px;
+    position: relative;
+
+}
+.inputfaq {
+    display: block;
+    width: 90%; 
+    background: #f2f2f2;
+    border-radius: 2px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    color: #686868;
+    line-height: 20px;
+    padding: 5px;
+    margin-top: 5px;
+  }
 /*home*/
 
 *{
@@ -672,11 +714,10 @@ a {
 }
 
 .student{
-    margin-top: 2%;
     margin-left: 2%;
     border-radius: 50%;
-    width: 290px;
-    height: 200px;
+    width: 200px;
+    height: 180px;
     border: groove;
     border-color: #30306C;;
     float: left;
@@ -1141,7 +1182,8 @@ menu ul{
 
 /*footer*/
 footer{
-    margin-top: 100px;
+    position: static;
+    margin-top: 170px;
     width: 100%;
     display: flex;
     flex-wrap: wrap;
@@ -1230,6 +1272,7 @@ footer{
 }
     
 .footer-link {
+    cursor:pointer;
     color: #30306C;
     text-decoration: none;
     text-transform: none;
@@ -1260,7 +1303,80 @@ footer{
     padding-left: 18px;
 }
 
+/*Popups*/
 
+*, *::after, *::before{
+    box-sizing: border-box;
+}
+
+.modal{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: 200ms ease-in-out;
+    border: 1px solid black;
+    border-radius: 10px;
+    z-index: 10;
+    background: white;
+    width: 500px;
+    max-width: 80%;
+}
+
+.modal.active {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.modal-header {
+    padding: 10px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid black;
+}
+
+.modal-header .title {
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.modal-header .close-button {
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background: none;
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.modal-body{
+    padding: 10px 15px;
+}
+
+#overlay{
+    position: fixed;
+    opacity: 0;
+    transition: 200ms ease-in-out;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, .5);
+    pointer-events: none;
+}
+
+#overlay.active {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.popupbutton{
+    border: 1px;
+    border-color: #30306C;
+    line-height: 5px;
+    font-size: 20px;
+    font-weight: 100;
+}
 /*FAQ*/
 
     .faq-container{
@@ -1353,6 +1469,74 @@ footer{
   }
 
   /*profilo locatario e locatore*/
+
+  .columnaccount {
+    margin-left: 33.3%;
+    float: center;
+    width: 33.3%;
+    margin-bottom: 16px;
+    padding: 0 8px;
+  }
+
+  .locatariofotoprof{
+    float: center;
+    width: 20%;
+    height: 20%;
+    border: #30306C;
+    border-style: double;
+  }
+  
+
+  .card, .cardlocatore {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    margin: 8px;
+  }
+  
+  .about-section {
+    padding: 50px;
+    text-align: center;
+    background-color: #fac49d;
+    color: white;
+  }
+  
+  .containeraccount {
+    padding: 0 16px;
+  }
+  
+  .containeraccount::after, .row::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  
+ 
+  
+  .buttonaccount {
+    border: none;
+    outline: 0;
+    display: inline-block;
+    padding: 8px;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+  }
+  
+  .buttonaccount:hover {
+    background-color: #555;
+  }
+
+  .infpers{
+      color: #FF974B;
+  }
+  
+  @media screen and (max-width: 650px) {
+    .columnaccount {
+      width: 100%;
+      display: block;
+    }
+  }
   .profilolocatario{
       margin: 8%;
   }
@@ -1409,7 +1593,7 @@ footer{
       color: #30306C;
   }
 
-
+ 
 /*login - registrati*/
 
 .body{
@@ -1440,6 +1624,12 @@ footer{
     color: #30306C;
 }
 
+.label-input2
+{
+    font-size: 16px;
+    font-weight:600;
+    color: #3D444F;
+}
 .label-input1
 {color: #FF974B;}
 .input-field{
@@ -1458,6 +1648,7 @@ footer{
 
 
 .button, .buttonchat{
+    cursor: pointer;
     color: #FFFFFF;
     background-color: #FF974B;
     font-size: 15px;
@@ -1466,6 +1657,18 @@ footer{
     padding:12px 24px ;
     border: none;
     border-radius: 36px;
+}
+
+.buttonrotondo{
+    color: #FFFFFF;
+    background-color: #FF974B;
+    padding:0px 2px;
+    font-size: smaller;
+    border-radius:50%;
+    text-transform: uppercase;
+}
+.buttonopziona{
+    text-align: start;
 }
 
 .button:hover,
@@ -1650,6 +1853,21 @@ a:hover{
     font-size: large;
 }
 
+.titoloannunciolocatario{
+    color: #FF974B;
+    float: left;
+    font-size: x-large;
+    text-transform: uppercase;
+}
+
+.cardlocatore{
+    width: 80%;
+    margin-left: 13%;
+    height: 900px;
+    padding: 1rem;
+
+}
+
 .columnimg {
     color: #30306C;
     grid-template-columns: 1fr 1fr 1fr ;
@@ -1668,6 +1886,15 @@ float: right;
 margin-top: 150px;
 }
 
+.columnsectionslocatario{
+    float: left;
+    width: 33.3%;
+}
+
+.columnsectionslocatore{
+    float: left;
+    width: 43.3%;
+}
 
     
 .columntext,
@@ -1688,6 +1915,78 @@ margin-top: 150px;
     color: #30306C;
     text-transform: uppercase;
 }
+
+
+/*pop up chat per annuncio singolo locatario*/
+.open-buttonn {
+    background-color: #555;
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    opacity: 0.8;
+    position: fixed;
+    bottom: 23px;
+    right: 28px;
+    width: 280px;
+  }
+  
+  /* The popup chat - hidden by default */
+  .formm-popupp {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    right: 15px;
+    border: 3px solid #f1f1f1;
+    z-index: 9;
+  }
+  
+  /* Add styles to the form container */
+  .formm-containerr {
+    max-width: 300px;
+    padding: 10px;
+    background-color: white;
+  }
+  
+  /* Full-width textarea */
+  .formm-containerr textarea {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    border: none;
+    background: #f1f1f1;
+    resize: none;
+    min-height: 200px;
+  }
+  
+  /* When the textarea gets focus, do something */
+  .formm-containerr textarea:focus {
+    background-color: #ddd;
+    outline: none;
+  }
+  
+  /* Set a style for the submit/login button */
+  .formm-containerr .btnn {
+    background-color: #FF974B;
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    margin-bottom:10px;
+    opacity: 0.8;
+  }
+  
+  /* Add a red background color to the cancel button */
+  .formm-containerr .cancell {
+    background-color: #30306C;
+  }
+  
+  /* Add some hover effects to buttons */
+  .formm-containerr .btnn:hover, .open-buttonn:hover {
+    opacity: 1;
+  }
+
 
 .back-to-previous{
     background-image: url('images/products/1500306-icona-freccia-verso-l-alto-gratuito-vettoriale.png');
@@ -1728,9 +2027,30 @@ margin-top: 150px;
 }
 
 .imgaffitto{
-    border-radius: 5%;
-    height: 700px;
+
+    padding: 15%;
+    padding-left: 5%;
+    height: 500px;
     width: 500px;
+}
+
+.imgaffittolocatario{
+    height: 95%;
+    width: 95%;
+    padding: 1%;
+}
+.annunciimg{
+    height: 300px;
+    width: 260px;
+    padding: 8%;
+    border-radius:10% ;
+}
+
+.imgaffittocol{
+    border-radius: 5%;
+    height: 200px;
+    width: 200px;
+
 }
 
 @media screen and (max-width:1200px){
@@ -1787,6 +2107,18 @@ margin-top: 150px;
     text-align: start;
     display: inline;
     width:100%;
+
+}
+
+.tabellatitolo, .tabellaelem{
+    font-size: medium;
+    color: #FF974B;
+    border: medium solid #30306C;
+    padding: 3px ;
+}
+
+.tabellaelem{
+    color: #30306C;
 
 }
 
@@ -2095,4 +2427,225 @@ margin-top: 150px;
     border: none;
     width: 100%;
     height: 150px;
+}
+.labelpostoletto,
+.labelappartamento {
+    width: fit-content;
+    border-radius: 10%;
+    color: white;
+    cursor: pointer;
+    padding: 8px;
+    background-color: #30306C;
+  }
+
+  .labelpostoletto:focus,
+  .labelpostoletto:active,
+.labelappartamento:focus,
+.labelappartamento:active
+ {
+
+    background-color: #417FDA;
+  }
+
+
+  .labelspa{
+      margin-top: 40px;
+    display: flex;
+    flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      display: inline-flex;
+
+      
+
+  }
+  
+
+/* Forms */
+
+.formerror {
+    background: none repeat scroll 0 0 #FFECEC;
+    border: 3px solid #f93d00;
+    height: auto;
+    margin: 0 0 1px;
+    text-align: center;
+
+}
+
+.errors {
+	color: #f93d00;
+        font-size: 12px;
+}
+
+.errors ul {
+	line-height: 100%;
+}
+
+
+.errors ul {
+	line-height: 100%;
+}
+
+/*Tutti i css relativi all'area Admin*/
+
+.pAdmin{
+    padding-top: 1.5%;
+    font-size: large;
+    text-align: center;
+    color: #30306C;
+}
+
+u{
+    color: #30306C;
+}
+
+.AreaAdmin{
+    margin-top: 5%;
+    font-size: xx-large;
+    text-align: center;
+    color: #30306C;
+}
+
+.welcome{
+    margin-left: 18%;
+    border: 2px ridge;   
+    border-color: #30306C;
+    height: 130px;
+    width: 65%;
+    text-align: center;
+}
+
+.hrAdmin{
+    border: none;
+    height: 45px;
+    width: 100%;
+}
+
+.blu2{
+    margin-left: 0%;
+    margin-top: -8px;
+    text-align: center;
+    background-color: #FFFFFF;
+    color: #30306C;
+    font-size: smaller;
+}
+
+
+.icon-bar {
+    padding: 0;
+    background-color: #ffffff; /* Dark-grey background */
+    overflow: auto; /* Overflow due to float */
+  }
+  
+  .icon-bar a {
+    float: left; /* Float links side by side */
+    text-align: center; /* Center-align text */
+    width: auto; /* Equal width (5 icons with 20% width each = 100%) */
+    padding:0; /* Some top and bottom padding */
+    color: #30306C; /* White text color */
+    font-size: 36px; /* Increased font size */
+  }
+  
+  .icon-bar a:hover {
+    background-color: #FF974B; /* Add a hover color */
+  }
+  
+/*Popups*/
+
+*, *::after, *::before{
+    box-sizing: border-box;
+}
+
+.modal{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: 200ms ease-in-out;
+    border: 1px solid black;
+    border-radius: 10px;
+    z-index: 10;
+    background: white;
+    width: 500px;
+    max-width: 80%;
+}
+
+.modal.active {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.modal-header {
+    padding: 10px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid black;
+}
+
+.modal-header .title {
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.modal-header .close-button {
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background: none;
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.modal-body{
+    padding: 10px 15px;
+}
+
+#overlay{
+    position: fixed;
+    opacity: 0;
+    transition: 200ms ease-in-out;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, .5);
+    pointer-events: none;
+}
+
+#overlay.active {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.buttonconferma {
+    cursor: pointer;
+    align-items: center;
+    color: "FF974B";
+    text-align: center;
+    border-radius: 30%;
+    width: 50px;
+    height: 30px;
+}
+
+.deletebutton {
+    margin-top: 1%;
+    margin-left: 42%;
+    color: #FFFFFF;
+    background-color: #FF974B;
+    font-size: 15px;
+    font-weight: 600;
+    padding:12px 24px ;
+    border: none;
+    border-radius: 36px;
+}
+
+.deletebutton:hover,
+.deletebuttonchat:hover{
+    color: #FFFFFF;
+    background-color: #30306C;
+}
+
+.center{
+    margin-left: auto;
+    margin-right: auto;
 }

@@ -68,7 +68,8 @@ class RegisterController extends Controller
             'data_nascita'=>['required','date'],
             'sesso' => ['required', 'string', 'max:255'],
             'role' => ['required'],
-            'descrizione' => ['required', 'string', 'min:8', 'max:1000']
+            'descrizione' => ['required', 'string', 'min:8', 'max:1000'],
+            'fotoprofilo'=>['required','string']
         ]);
     }
 
@@ -90,6 +91,7 @@ class RegisterController extends Controller
             'role' => $data['role'],
             'data_nascita' => $data['data_nascita'],
             'descrizione' => $data['descrizione'],
+            'fotoprofilo'=> $data['fotoprofilo'],
 
 
 

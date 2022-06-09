@@ -31,8 +31,9 @@
 <section class="annunci">
     <div class="annuncio">
           <div class="columnimg">
-            <img class="imgaffitto" src="images/affitto-stanza.jpg" alt="imgaffitto">
-          </div>
+          <div class="imgaffittocol">
+           @include('helpers/annunciImg', ['attrs' => 'imagefrm', 'imgFile' => $offerta->image])
+           </div>           </div>
           <div class="columnimg columntext">
 
           <p class="titolocolonna"> {{$offerta->tipo}} :  {{$offerta->titolo}}   </p>
