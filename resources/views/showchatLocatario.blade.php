@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <link rel="stylesheet" type="text/css" href="{{ asset('css/stile.css') }}" >
-        <title>LaProj5 | @yield('title', 'Messaggi Locatore')</title>
+        <title>LaProj5 | @yield('title', 'Tutte le chat')</title>
     </head>
     <body>
         <header class="header">
@@ -16,8 +16,14 @@
             </div>
         </header>
 
+              @can('isLocatario')
+                @include('layouts/_navlocatario')
+              @endcan
+              @can('isLocatore')
+                @include('layouts/_navlocatore')
+              @endcan
 
-
+    <!--
     <section class="messaggilocatore">
       <div class="elencomsg">
         <div class="msg">
@@ -60,7 +66,7 @@
     </div>
 
 </section>
-
+-->
         
 
         <footer>

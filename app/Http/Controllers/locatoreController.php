@@ -16,6 +16,7 @@ use App\Http\Requests\ServiziRequest;
 use App\Http\Requests\ModificaOffertaRequest;
 use App\Http\Requests\NewAppartamentoRequest;
 use App\Http\Requests\NewPostoLettoRequest;
+use App\Models\Messaggistica;
 
 class locatoreController extends Controller {
 
@@ -24,8 +25,7 @@ class locatoreController extends Controller {
         $this->_alloggiModel = new MieiAlloggi;
         $this->_serviziModel = new GestioneServizi;
         $this->_annunciModel = new Annunci;
-
-
+        $this->_messaggisticaModel = new Messaggistica;
     }
 
     public function areaLocatore() {
@@ -258,6 +258,14 @@ class locatoreController extends Controller {
         $offerta = Offerta::find($id);
         $offerta->delete();
         return redirect()->route('mieiAlloggi');
+    }
+
+    public function showChats(){
+        $nuoveChat = $this->_messaggisticaModel->nuoveChatlocatore(auth()->user()->username);
+        $vecchieChat = $this->_messaggisticaModel->vecchieChatlocatore(auth()->user()->username);
+        return view('showchatLocatore')
+            ->with('chatNuove', $nuoveChat)
+            ->with('chatVecchie', $vecchieChat);
     }
 
 }
