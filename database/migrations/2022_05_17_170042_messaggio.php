@@ -17,6 +17,8 @@ class Messaggio extends Migration
             $table->bigIncrements('id')->unsigned();
             $table->string('testo',2500);
             $table->dateTime('data');
+            $table->string('mittente');
+            $table->integer('chat');
             
         });
     }

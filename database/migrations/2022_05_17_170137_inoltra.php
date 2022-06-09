@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class Inoltra extends Migration
+class Chat extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,11 @@ class Inoltra extends Migration
      */
     public function up()
     {
-        Schema::create('inoltra', function (Blueprint $table) {
-            $table->integer('messaggio');            
-            $table->string('mittente');            
-            $table->string('destinatario');            
+        Schema::create('chat', function (Blueprint $table) {
+            $table->bigIcrements('id');
+            $table->string('locatore');            
+            $table->string('locatario');            
+            $table->string('stato');            
            
             
         });
@@ -29,6 +30,6 @@ class Inoltra extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('inoltra');
+        Schema::dropIfExists('chat');
     }
 }
