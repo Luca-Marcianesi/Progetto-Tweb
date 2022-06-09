@@ -60,6 +60,18 @@
        <p class = "description titolo"> canone mensile</p>  
        <p class="description"> € {{$offerta->prezzo}}</p> 
       </div>
+      <p class = "description titolo">Lista Servizi disponibili</p>
+      @isset($servizi)
+      @foreach($servizi as $servizio)
+      <p class="description">
+      {{$servizio->tipo}}</p>
+      @endforeach
+      @endisset()
+      @isset($serviziQ)
+      @foreach($serviziQ as $servizioQ)
+      <p class="description">{{$servizioQ->quantita}}   {{$servizioQ->tipo}}</p>
+      @endforeach
+      @endisset()
 
     @isset($proprietario)
     <div class="columnsectionslocatario">

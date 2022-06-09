@@ -83,17 +83,6 @@ class locatoreController extends Controller {
                             ->with('appartamento',$dettagli_appartamento);
         }
 
-
-    public function alloggiFiltrati(FiltriRequest $request){
-        if($request->tipo == null){
-
-        }else if($request->tipo == 'A'){
-
-        }else{
-            
-        }               
-    }
-
     public function aggiungiOffertaAppartamento(NewAppartamentoRequest $request){ 
 
         //$request = $request->validated();
@@ -104,7 +93,7 @@ class locatoreController extends Controller {
         $offerta->città = $request->città;
         $offerta->locazione = $request->locazione;
         $offerta->prezzo = $request->prezzo;
-        $offerta->tipo = "A";
+        $offerta->tipo = "Appartameto";
         $offerta->descrizione = $request->desc_l;
         $offerta->genere = $request->genere;
         $offerta->save();
@@ -112,7 +101,7 @@ class locatoreController extends Controller {
         $interazione = new Interagisce;
         $interazione->utente = auth()->user()->username;
         $interazione->offerta = $offerta->id;
-        $interazione->tipo_interazione = "creazione";
+        $interazione->tipo_interazione = "possiede";
         $interazione->data = date("Y-m-d");
         $interazione->save();
 
@@ -127,9 +116,6 @@ class locatoreController extends Controller {
         $appartamento->save();
 
         return redirect()->route('showAggiungiServizi', [$offerta]);
-        
-
-        //return response()->json(['redirect' => route('mieiAlloggi')]);
 
               
     }
@@ -144,7 +130,7 @@ class locatoreController extends Controller {
         $offerta->città = $request->città;
         $offerta->locazione = $request->locazione;
         $offerta->prezzo = $request->prezzo;
-        $offerta->tipo = "P";
+        $offerta->tipo = "Posto Letto";
         $offerta->descrizione = $request->desc_l;
         $offerta->genere = $request->genere;
         $offerta->save();
@@ -152,7 +138,7 @@ class locatoreController extends Controller {
         $interazione = new Interagisce;
         $interazione->utente = auth()->user()->username;
         $interazione->offerta = $offerta->id;
-        $interazione->tipo_interazione = "creazione";
+        $interazione->tipo_interazione = "possiede";
         $interazione->data = date("Y-m-d");
         $interazione->save();
 
@@ -167,8 +153,7 @@ class locatoreController extends Controller {
         $id = $offerta->id;
         
         return redirect()->route('showAggiungiServizi', [$id]);
-
-        /* return response()->json(['redirect' => route('mieiAlloggi')]);    */          
+     
     }
 
     public function showServizi($id) {
@@ -253,6 +238,12 @@ class locatoreController extends Controller {
     
     
     public function eliminaOfferta($id){
+        $interazioni = Interagisce::where('offerta',$id);
+        $interazioni ->delete();
+        $interazioni = PostoLetto::where('offerta',$id);
+        $interazioni ->delete();
+        $interazioni = Appartamento::where('offerta',$id);
+        $interazioni ->delete();
         $offerta = Offerta::find($id);
         $offerta->delete();
         return redirect()->route('mieiAlloggi');

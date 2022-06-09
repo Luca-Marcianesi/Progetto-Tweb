@@ -5,6 +5,9 @@ namespace App\Models;
 use App\User;
 use App\Models\Resources\Offerta;
 use App\Models\Resources\Interagisce;
+use App\Models\Resources\Possiede;
+use App\Models\Resources\Appartamento;
+use App\Models\Resources\PostoLetto;
 
 class Annunci {
 
@@ -31,6 +34,28 @@ class Annunci {
                 ->where('tipo_interazione','assegnata')
                 ->exists()) {return false;}
             else return true;
+    }
+
+    public function getServizi($id) {
+        return Possiede::where('offerta',$id)
+        ->where('quantita',0)
+        ->get();
+    }
+
+    public function getServiziConQuantita($id) {
+        return Possiede::where('offerta',$id)
+        ->where('quantita','>',0)
+        ->get();
+    }
+
+    public function getAppartamento($id) {
+        return PostoLetto::find($id);
+    }
+
+    public function getPostoLetto($id) {
+        return Appartamento::find($id);
+
+            
     }
 
     public function getOfferteByProp($proprietario){
