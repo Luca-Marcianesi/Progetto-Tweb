@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <link rel="stylesheet" type="text/css" href="{{ asset('css/stile.css') }}" >
-        <title>LaProj5 | @yield('title', 'Catalogo')</title>
+        <title>LaProj5 | @yield('title', 'I miei Alloggi')</title>
     </head>
     <body>
         <header class="header">
@@ -18,7 +18,26 @@
             </nav>
             </div>
         </header>
-        
+        <div class="titoloo">Interessati</div>
+        @isset($interessati)
+
+        <table class="center">
+  <tr>
+    <th class="tabellatitolo" >Offerta</th>
+    <th class="tabellatitolo">Utente</th>
+    <th class="tabellatitolo">Visualizza</th>
+  </tr>
+  @foreach($interessati as $interessato)
+  <tr>
+    <td  class="tabellaelem">{{$interessato->titolo}}</td>
+    <td class="tabellaelem">{{$interessato->utente}}</td>
+    <td><a href= "{{ route('dettagliOpzionamento', [$interessato->offerta,$interessato->utente])}}">+</a></td>  </tr>
+
+</table> 
+       
+  @endforeach
+
+@endisset()
         @isset($mieiAlloggi)
         <div>
             @foreach ($mieiAlloggi as $alloggio)
@@ -44,23 +63,6 @@
             @endforeach
             @endisset()
         </div>
-        <hr class="spaziatura">
-        @isset($interessati)
-        <div>Interessati</div>
-        <table>
-            <tr>
-                <th>Offerta</th>
-                <th>Nome</th>
-            </tr>
-            @foreach($interessati as $interessato)
-            <tr>
-                <td>{{$interessato->titolo}}</td>
-                <td>{{$interessato->utente}}</td>
-                <td><a href= "{{ route('dettagliOpzionamento', [$interessato->offerta,$interessato->utente])}}">Visualizza</a></td>
-            </tr>  
-            @endforeach
-        </table>
-        @endisset()
         
         <footer>
             @include('layouts/-footer')

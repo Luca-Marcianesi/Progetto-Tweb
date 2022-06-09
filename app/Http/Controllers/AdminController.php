@@ -39,15 +39,15 @@ class AdminController extends Controller {
         
     }
 
-    public function showModificaFaq($id){
-        $Faqs = $this->_ElencoFaqModel->getFaqsbyDomanda($id);
+    public function showModificaFaq(){
+        $Faqs = $this->_ElencoFaqModel->getFaqsbyId($id);
         return view('modificaFaq')
               ->with('topFaqs', $Faqs);
 
     }
 
     public function modificaFaq(ModificaFaqRequest $request){
-        $Faqs = $this->_ElencoFaqModel->getFaqs();
+        $Faqs = $this->_ElencoFaqModel->getFaqsbyId($id);
         $Faqs->domanda = $request->domanda;
         $Faqs->risposta = $request->risposta;
         $Faqs->save();

@@ -12,7 +12,7 @@ class ElencoFaq {
     }
 
     public function getFaqsbyId($id) {
-        return Faq::where('stato','visibile')->get($id);
+        return Faq::where('stato','visibile')->get();
     }
 
 }

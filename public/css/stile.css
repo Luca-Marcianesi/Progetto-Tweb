@@ -2107,6 +2107,18 @@ margin-top: 150px;
 
 }
 
+.tabellatitolo, .tabellaelem{
+    font-size: medium;
+    color: #FF974B;
+    border: medium solid #30306C;
+    padding: 3px ;
+}
+
+.tabellaelem{
+    color: #30306C;
+
+}
+
 .infolocatore, .descriptionlocatore{
     margin-left: 5%;
 }
@@ -2575,4 +2587,9 @@ u{
 .deletebuttonchat:hover{
     color: #FFFFFF;
     background-color: #30306C;
+}
+
+.center{
+    margin-left: auto;
+    margin-right: auto;
 }
