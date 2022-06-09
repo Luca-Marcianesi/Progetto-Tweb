@@ -9,7 +9,7 @@
 </div>
 </section>
 <br id="cs">
-  <p class="titoloo">Inserisci il tuo alloggio <img class="iconimage" src="images/products/posizione.png" alt="Logo posizione geografica"> </p>
+  <p class="titoloo">Inserisci il tuo alloggio <img class="iconimage" src="/images/products/posizione.png" alt="Logo posizione geografica"> </p>
   <div>
     <p class="whoarewetext">Aiuta centinaia di studenti a trovare l'alloggio adatto alle loro esigenze.
       <br> Utilizza la nostra piattaforma per pubblicizzare il tuo appartamento o il tuo posto letto, affidati
@@ -22,11 +22,11 @@
   <div class="container">
     <ul class="griglia3img">
       <li><img class ="foto" src="images/products/lente.png" >
-       <p class="blu">Consulta decine di annunci per <br>ogni città universitaria</p></li>
+       <p class="blu">Consulta gli annunci <br> presenti sul nostro sito </p></li>
       <li><img class ="foto" src="images/products/megafono.png">
-      <p class="blu">Inserisci il tuo annuncio <br> ed affitta il tuo alloggio</p></li>
+      <p class="blu">Inserisci il tuo annuncio <br> e tutte le sue caratteristiche</p></li>
       <li><img class ="foto" src="images/products/contratto.png">
-      <p class="blu">Affidati a noi per contratti <br> sicuri e garantiti</p></li>
+      <p class="blu">Stipula un contratto con <br> chi è interessato al tuo alloggio</p></li>
     </ul>
   </div>
 </section>
@@ -53,14 +53,14 @@
       <p class="regolamento1" > <b> Regolamento</b> <img class="photo" src="images/products/megafono.png" >   </p>
   </div>
   <div class="rectangle1"> 
-      <p class="rectangle1text"> <b> Area Pubblica</b> </p>  
-      <p class="areapubtext" > Questa è l'area pubblica del sito AlloggiStudenti. <br>
-                  Al suo interno trovi tutte le informazioni generali di tuo interesse! <br> 
-                  Da questa pagina potrai accedere alla tua area riservata oppure registrarti,se ancora non lo hai fatto. <br>
-                  Di seguito puoi trovare una sezione dedicata alle FAQ e un'altra che illustra i nostri contatti</p>
-      <p class="rectangle1text"> <b> Area Privata </b> </p> 
-      <p class="areaprivtext"> Dopo esserti registrato, potrai accedere allarea riservata tramite <br> 
-                  il login dove troverai i servizi a te dedicati </p>
+      <p class="rectangle1text"> <b> Area Riservata</b> </p>  
+      <p class="areapubtext" > Questa è la tua area riservata <br>
+                  Al suo interno trovi tutte le informazioni e le funzionalità dedicate a te. <br> 
+                  Da questa pagina potrai effettuare diverse attività, tra cui consultare e modificare il tuo profilo utente, <br>
+                  inserire, consultare e modificare i tuoi annunci e messaggiare con gli altri utenti del sito e con gli interessati.</p>
+      <p class="rectangle1text"> <b> Area Pubblica </b> </p> 
+      <p class="areaprivtext"> Da questa pagina potrai sempre tornare all'area pubblica del sito <br>
+      per visionare le informazioni generali che possono interessarti, sempre rimanendo autenticato. </p>
   </div> 
 </section>  
 

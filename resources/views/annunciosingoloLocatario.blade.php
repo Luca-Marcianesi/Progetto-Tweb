@@ -10,7 +10,7 @@
     <body>
         <header class="header">
             <div class="header-container">
-            <div class="logo"><img class="logoimmagine" src="images/products/Logo.png" alt="Logo"></div>
+            <div class="logo"><img class="logoimmagine" src="/images/products/Logo.png" alt="Logo"></div>
             <div class="name">ALLOGGISTUDENTI.com</div>
             <nav class="menu" fixed="right">
                 @include('layouts/_navlocatario')
@@ -40,7 +40,7 @@
               <div class="title">Conferma</div>
               <button data-close-button class="close-button">x</button>
             </div>
-            <div class="modal-body">
+            <div align="center" class="modal-body">
               Confermi di voler opzionare questo alloggio?<br>
               <a href="{{ route('opziona', [$offerta->id] )}}"><button class="buttonconferma">Si</button></a>
               <button class="buttonconferma" data-close-button>Annulla</button>

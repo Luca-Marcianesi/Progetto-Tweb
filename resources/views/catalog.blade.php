@@ -233,7 +233,7 @@
   <button type="submit" title="Sottoscrivi"  class="blubuttons">Invia</button>
 </div>
 </section>
-
+<hr class="spaziatura">
 
 <section class="contacts-section" id="contatti">
   <div class="contactscolumn">

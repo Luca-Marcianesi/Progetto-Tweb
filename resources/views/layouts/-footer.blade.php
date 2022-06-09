@@ -5,7 +5,7 @@
   <footer class="footer">
     <div class="row footer-container">
       <div class="column">
-        <h3 class="footer-header"><img class="fcc-footer-logo" src="images/products/Logo-removebg-preview.png" alt="Logo">ALLOGGISTUDENTI.com</h3>
+        <h3 class="footer-header"><img class="fcc-footer-logo" src="/images/products/Logo-removebg-preview.png" alt="Logo">ALLOGGISTUDENTI.com</h3>
         <p class="footer-support-text">We are an independent local community and study group</p>
       </div>
       <div class="column column-2">
@@ -90,7 +90,8 @@
               <text color ="FF974B">Grazie</text> a nome di tutto lo staff di AlloggiStudenti.com
             </div>
           </div>
-          <div id="overlay"></div>        </p>
+          <div id="overlay"></div>
+        </p>
       </div>
     </div>
     <div class="bottomFooter">Copyright © 2022 ALLOGGISTUDENTI.com Tutti i diritti riservati.</div>

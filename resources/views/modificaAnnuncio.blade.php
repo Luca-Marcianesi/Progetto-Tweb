@@ -10,7 +10,7 @@
    <body>
       <header class="header">
          <div class="header-container">
-            <div class="logo"><img class="logoimmagine" src="images/products/Logo.png" alt="Logo"></div>
+            <div class="logo"><img class="logoimmagine" src="/images/products/Logo.png" alt="Logo"></div>
             <div class="name">ALLOGGISTUDENTI.com</div>
             <nav class="menu" fixed="right">
                @include('layouts/_navlocatore')
@@ -18,6 +18,7 @@
          </div>
       </header>
       <hr class="spaziatura">
+      <h3 class ="titoloo">Modifica Annuncio</h3>
       <div class="wrap-contact2">
          {{ Form::open(array('route' => ['modificaOffertaProp', $offerta->id],'files' => true, 'class' => 'contact-form')) }}
          @isset($offerta)
@@ -184,5 +185,9 @@
                   </div>
                    <div id="overlay"></div>
       </div>
+
+         <footer>
+            @include('layouts/-footer')
+        </footer>
    </body>
 </html>

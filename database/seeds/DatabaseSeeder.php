@@ -60,8 +60,8 @@ class DatabaseSeeder extends Seeder {
         DB::table('users')->insert([
             ['id' => 1, 'name' => 'lariolario', 'surname'=> 'lariolario', 'email' => 'lariolario@gmail.com', 'sesso' => 'M', 'data_nascita' => '2022-06-09', 'image' => NULL,
             'email_verified_at' => NULL, 'username'=> 'lariolario', 'password'=> Hash::make('lariolario'), 'descrizione'=> 'lariolario', 'role'=>'locatario'],
-            ['id' => 2, 'name' => 'lorelore', 'surname'=> 'lariolario', 'email' => 'lorelore@gmail.com', 'sesso' => 'M', 'data_nascita' => '2022-05-09', 'image' => NULL,
-            'email_verified_at' => NULL, 'username'=> 'lorelore', 'password'=>Hash::make('lorelore'), 'descrizione'=> 'lariolario', 'role' => 'locatore'],
+            ['id' => 2, 'name' => 'lorelore', 'surname'=> 'lorelore', 'email' => 'lorelore@gmail.com', 'sesso' => 'M', 'data_nascita' => '2022-05-09', 'image' => NULL,
+            'email_verified_at' => NULL, 'username'=> 'lorelore', 'password'=>Hash::make('lorelore'), 'descrizione'=> 'lorelore', 'role' => 'locatore'],
             ['id' => 3, 'name' => 'adminadmin', 'surname' => 'adminadmin', 'email' => 'adminadmin@gmail.com', 'sesso' => 'M', 'data_nascita' => '2022-04-09', 'image' => NULL,
             'email_verified_at' => NULL, 'username' => 'adminadmin', 'password' => Hash::make('adminadmin'), 'descrizione' => 'adminadmin', 'role' => 'admin']
         ]);

@@ -10,7 +10,7 @@
     <body>
         <header class="header">
             <div class="header-container">
-                <div class="logo"><img class="logoimmagine" src="images/products/Logo.png" alt="Logo"></div>
+                <div class="logo"><img class="logoimmagine" src="/images/products/Logo.png" alt="Logo"></div>
                 <div class="name">ALLOGGISTUDENTI.com</div>
                 <nav class="menu" fixed="right">
                 @include('layouts/_navlocatore')

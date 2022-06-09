@@ -6,7 +6,12 @@ http://www.freecsstemplates.org
 Released for free under a Creative Commons Attribution 2.5 License
 */
 
-body {
+    html {
+        height: 100%;
+    }
+
+    body {
+    height: 100%;
 	margin: 0;
 	padding: 0;
 	background: #E3E7ED url(images/img01.gif) repeat-x left top;
@@ -414,7 +419,7 @@ a {
 /* Footer */
 
 #footer {
-	height: 50px;
+	height: 80px;
 	margin: 0 auto;
 	padding: 0px 0 15px 0;
 	font-family: Arial, Helvetica, sans-serif;
@@ -550,14 +555,12 @@ a {
 
 
 .wrap-contact2{
- max-width: 700px;
+  margin-left: 27%;   
+  max-width: 700px;
   background: #fac49d;
   border-radius: 2px;
   padding: 30px 20px;
   position:relative;
-  margin: 20%;
-  margin-top: 1%;
-
 }
 
 .contact-form {
@@ -1180,7 +1183,7 @@ menu ul{
 /*footer*/
 footer{
     position: static;
-    margin-top: 100px;
+    margin-top: 170px;
     width: 100%;
     display: flex;
     flex-wrap: wrap;
