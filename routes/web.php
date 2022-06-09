@@ -78,8 +78,11 @@ Route::get('/dettagliOpzionamento{offerta}/{utente}', 'locatoreController@showDe
 Route::get('/stipulaContratto{offerta}/{locatario}', 'locatoreController@stipulaContratto')
         ->name('stipulaContratto');
 
-Route::post('/locatore/modificaOff{id}', 'locatoreController@modificaOfferta')
-        ->name('modificaOffertaProp');
+Route::post('/locatore/modificaApp{id}', 'locatoreController@modificaAppartamento')
+        ->name('modificaAppartamento');
+
+Route::post('/locatore/modificaPletto{id}', 'locatoreController@modificaPostoLetto')
+        ->name('modificaPostoLetto');
 
 Route::get('/locatore/mieiAlloggi{id}', 'locatoreController@showModificaOfferta')
         ->name('dettagliAlloggioProprietario');
