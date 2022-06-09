@@ -19,18 +19,19 @@
         </header>
         <hr class="spaziatura">
         <div style="align: center">
-            @isset($offerta)
-            @issete($utente)
-            <h2>{{$utente->nome}} {{$$utente->cognome}} ha opzionato questa offerta: "{{$offerta->titolo}}"</h2>
+        @isset($offerta)
+            @isset($utente)
+            <h2>{{$utente->name}} {{$utente->surname}} ha opzionato questa offerta: "{{$offerta->titolo}}"</h2>
             <p> Qui sotto sono riportate le caratteristiche principali dell'utente: </p>
             <ul>
-                <li> Nome: {{$utente->nome}} </li>
-                <li> Cognome: {{$utente->cognome}} </li>
+                <li> Nome: {{$utente->name}} </li>
+                <li> Cognome: {{$utente->surname}} </li>
                 <li> Genere: {{$utente->sesso}} </li>
                 <li> Descrizione: {{$utente->descrizione}} </li>
             </ul>
-            @endisset()
-            @endisset()
+            <a href="{{ route('assegnaOfferta', ['id'=>$offerta->id,'locatario'=>$utente->username])}}"><button class="button"></button></a>
+            @endisset()  
+            @endisset()       
         <footer>
         @include('layouts/-footer')
         </footer>

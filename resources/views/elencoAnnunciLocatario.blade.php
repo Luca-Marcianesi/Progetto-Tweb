@@ -157,7 +157,7 @@ for (var i = 0; i < btns.length; i++) {
           <div class="columnimg columntext">
 
           <p class="titolocolonna"> {{$offerta->tipo}} :  {{$offerta->titolo}}   </p>
-          <p class="testocolonna"> {{$offerta->descrizione_breve}} <br> {{$offerta->locazione}}</p>
+          <p class="testocolonna"> {{$offerta->descrizione_breve}} <br> {{$offerta->locazione}} <br>{{$offerta->stato}} </p>
 
           </div>
           <div class="columnimg columnprice">

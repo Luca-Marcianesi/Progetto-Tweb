@@ -45,6 +45,6 @@ class userController extends Controller {
         $account->fotoprofilo = $resqust->fotoprofilo;
         $account->save();
 
-        return view('layouts.public');
+        return view('catalog');
     }
 }

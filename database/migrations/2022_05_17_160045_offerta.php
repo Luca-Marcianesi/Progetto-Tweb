@@ -24,6 +24,8 @@ class Offerta extends Migration
             $table->string('tipo',60);
             $table->string('genere',1);
             $table->text('descrizione',1050);
+            $table->date('pLocazioneInizio')->nullable();
+            $table->date('pLocazioneFine')->nullable();
             $table->text('image')->nullable();
 
             
