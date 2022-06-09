@@ -33,7 +33,7 @@ class locatoreController extends Controller {
     }
 
     public function showAnnunci(){ 
-        $offerte = Offerta::where('stato', "libera")->get();
+        $offerte = Offerta::get();
         return view('elencoAnnunciLocatore')
                 ->with('offerte', $offerte);
                     
@@ -188,7 +188,7 @@ class locatoreController extends Controller {
             $this->_serviziModel->addUni($id);
         }
 
-        return redirect()->route('mieiAlloggi');
+        return $this->showMieiAlloggi();
     
         
     }

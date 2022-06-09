@@ -29,7 +29,7 @@
                 <li> Genere: {{$utente->sesso}} </li>
                 <li> Descrizione: {{$utente->descrizione}} </li>
             </ul>
-            <button class="button" href="{{ route('assegnaOfferta', ['id'=>$offerta->id,'locatario'=>$utente->username])}}"></button>
+            <a href="{{ route('assegnaOfferta', ['id'=>$offerta->id,'locatario'=>$utente->username])}}"><button class="button"></button></a>
             @endisset()  
             @endisset()       
         <footer>

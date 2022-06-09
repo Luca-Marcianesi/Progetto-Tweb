@@ -29,6 +29,7 @@
 
       <div class="columnsectionslocatario ">
        <p class = "description titolo"> {{$offerta->tipo}} </p> 
+       @if($assegnata)
        @isset($opzionata)
        <p class="description titolo">Offerta già opzionata<p>
        @else
@@ -48,6 +49,8 @@
           <div id="overlay"></div>
         <p>
        @endisset() 
+       @else <p class="description titolo">Offerta già assegnata<p>
+      @endif
        <p class = "description titolo">Indirizzo</p> 
        <p class="description">  {{$offerta->città}}, {{$offerta->locazione}} </p>
        <p class = "description titolo"> Stato</p>  

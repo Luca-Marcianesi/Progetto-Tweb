@@ -29,7 +29,7 @@ class locatarioController extends Controller {
     }
 
     public function showAnnunci(){ 
-        $offerte = Offerta::where('stato', "libera")->get();
+        $offerte = Offerta::get();
         return view('elencoAnnunciLocatario')
                 ->with('offerte', $offerte);
                     

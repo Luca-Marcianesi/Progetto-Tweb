@@ -26,6 +26,13 @@ class Annunci {
                 ->first();
     }
 
+    public function getAssegnamento($id) {
+        if( $interazione = Offerta::find($id)->interagisce()
+                ->where('tipo_interazione','assegnata')
+                ->exists()) {return false;}
+            else return true;
+    }
+
     public function getOfferteByProp($proprietario){
         return $offerte = Interagisce::select('offerta')->where('utente',$proprietario)->get();
     }
@@ -36,6 +43,7 @@ class Annunci {
         return $opzionamenti =  Interagisce::whereIn('offerta',$offerte)
                                 ->where('tipo_interazione','opziona')
                                 ->join('offerta','offerta.id','=','offerta')
+                                ->where('stato','libera')
                                 ->get();
     }
 
