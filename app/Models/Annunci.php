@@ -77,7 +77,6 @@ class Annunci {
         return $opzionamenti =  Interagisce::whereIn('offerta',$offerte)
                                 ->where('tipo_interazione','assegnata')
                                 ->join('offerta','offerta.id','=','offerta')
-                                ->where('stato','libera')
                                 ->get();
     }
 
