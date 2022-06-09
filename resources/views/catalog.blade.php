@@ -3,7 +3,7 @@
 @section('title', 'Home')
 
 @section('content')
-<section class="home">
+<section class="home" >
 <div class="firstimagehome">
   <div class="alignment"><b>TROVA L'ALLOGGIO<br> GIUSTO PER TE</b>
   <img class="keys" src="images/products/chiavi-removebg-preview.png" alt="Passaggio di chiavi">
@@ -11,6 +11,7 @@
 </div>
 </section>
 <br>
+<section id="chisiamo">
   <p class="titoloo">Chi siamo <img class="iconimage" src="images/products/posizione.png" alt="Logo posizione geografica"> </p>
   <div>
     <p class="whoarewetext">Sei uno studente e cerchi un alloggio nella tua città universitaria?

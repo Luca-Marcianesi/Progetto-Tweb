@@ -5,6 +5,7 @@
   </div>
 </div>
 </section>
+<section id="chisiamo">
 <br>
   <p class="titoloo">Chi siamo <img class="iconimage" src="images/products/posizione.png" alt="Logo posizione geografica"> </p>
   <div>
