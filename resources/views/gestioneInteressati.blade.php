@@ -17,19 +17,19 @@
                 </nav>
             </div>
         </header>
-        <hr class="spaziatura">
-        <div style="align: center">
+        <div class="titoloo">Interessati</div>
+        <div class="cardlocatore" style="align: center; height: 300px">
         @isset($offerta)
             @isset($utente)
-            <h2>{{$utente->name}} {{$utente->surname}} ha opzionato questa offerta: "{{$offerta->titolo}}"</h2>
-            <p> Qui sotto sono riportate le caratteristiche principali dell'utente: </p>
+            <h2 class="locatarioprofilo1 infpers titolo"  style="margin-top: 10px; font-size: medium">{{$utente->name}} {{$utente->surname}} ha opzionato questa offerta: "{{$offerta->titolo}}"</h2>
+            <p class="locatarioprofilo1 titolo" style="margin-top: 10px; font-size: medium; color:#30306C">Dati utente: </p>
             <ul>
-                <li> Nome: {{$utente->name}} </li>
-                <li> Cognome: {{$utente->surname}} </li>
-                <li> Genere: {{$utente->sesso}} </li>
-                <li> Descrizione: {{$utente->descrizione}} </li>
+                <li class="locatarioprofilo1"> Nome: {{$utente->name}} </li>
+                <li  class="locatarioprofilo1"> Cognome: {{$utente->surname}} </li>
+                <li class="locatarioprofilo1"> Genere: {{$utente->sesso}} </li>
+                <li class="locatarioprofilo1"> Descrizione: {{$utente->descrizione}} </li>
             </ul>
-            <a href="{{ route('assegnaOfferta', ['id'=>$offerta->id,'locatario'=>$utente->username])}}"><button class="button"></button></a>
+            <a href="{{ route('assegnaOfferta', ['id'=>$offerta->id,'locatario'=>$utente->username])}}"><button class="button"> assegna</button></a>
             @endisset()  
             @endisset()       
         <footer>
