@@ -14,9 +14,10 @@ class Inoltra extends Migration
     public function up()
     {
         Schema::create('inoltra', function (Blueprint $table) {
-            $table->bigIncrements('messaggio');            
+            $table->integer('messaggio');            
             $table->string('mittente');            
-            $table->string('destinatario');            
+            $table->string('destinatario');
+            $table->           
            
             
         });
