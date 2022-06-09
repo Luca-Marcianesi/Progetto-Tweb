@@ -29,7 +29,7 @@ class ModificaAccountRequest extends FormRequest {
             'surname' => 'required',
             'descrizione' => 'required|max:30',
             'data_nascita' => 'date|required',
-            'fotoprofilo' => 'string',
+            'fotoprofilo' => '',
             
         ];
     }
