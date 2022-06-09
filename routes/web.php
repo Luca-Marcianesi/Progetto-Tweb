@@ -90,7 +90,11 @@ Route::post('/locatore/modificaOff{id}', 'locatoreController@modificaOfferta')
 Route::get('/locatore/eliminaofferta{id}', 'locatoreController@eliminaOfferta')
         ->name('elimina');
 
+Route::get('/locatore/chatLocatore', 'locatoreController@showChats')
+        ->name('chatLocatore');
 
+Route::get('/locatario/chatLocatario', 'locatarioController@showChats')
+        ->name('chatLocatario');
 
 //Locatario
 
