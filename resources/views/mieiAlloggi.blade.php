@@ -44,13 +44,13 @@
             <tr>
                 <th class="tabellatitolo" >Offerta</th>
                 <th class="tabellatitolo" >Nome</th>
-                <th class="tabellatitolo">Stipula contratto</th>
+                <th class="tabellatitolo">Visualizza contratto</th>
             </tr>
             @foreach($assegnati as $assegnato)
             <tr>
                 <td  class="tabellaelem">{{$assegnato->titolo}}</td>
                 <td class="tabellaelem">{{$assegnato->utente}}</td>
-                <td style="text-align:center" class="tabellaelem"><a href= "{{ route('stipulaContratto', ['offerta'=>$interessato->offerta,'utente'=>$interessato->utente])}}"> + </a></td>
+                <td style="text-align:center" class="tabellaelem"></td>
             </tr>  
             @endforeach
         </table>
