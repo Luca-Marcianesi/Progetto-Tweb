@@ -35,6 +35,26 @@
             @endforeach
         </table>
         @endisset()
+
+        <hr class="spaziatura">
+
+        @isset($assegnati)
+        <div class="titoloo">Assegnati</div>
+        <table class="center">
+            <tr>
+                <th class="tabellatitolo" >Offerta</th>
+                <th class="tabellatitolo" >Nome</th>
+                <th class="tabellatitolo">Stipula contratto</th>
+            </tr>
+            @foreach($assegnati as $assegnato)
+            <tr>
+                <td  class="tabellaelem">{{$assegnato->titolo}}</td>
+                <td class="tabellaelem">{{$assegnato->utente}}</td>
+                <td style="text-align:center" class="tabellaelem"><a href= "{{ route('stipulaContratto', ['offerta'=>$interessato->offerta,'utente'=>$interessato->utente])}}"> + </a></td>
+            </tr>  
+            @endforeach
+        </table>
+        @endisset()
         
         @isset($mieiAlloggi)
         <div>

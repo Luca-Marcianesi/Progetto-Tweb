@@ -29,9 +29,13 @@
                 <li class="locatarioprofilo1"> Genere: {{$utente->sesso}} </li>
                 <li class="locatarioprofilo1"> Descrizione: {{$utente->descrizione}} </li>
             </ul>
-            <a href="{{ route('assegnaOfferta', ['id'=>$offerta->id,'locatario'=>$utente->username])}}"><button class="button"> assegna</button></a>
             @endisset()  
-            @endisset()       
+        @endisset()
+            @if($assegnata)
+            <a href="{{ route('assegnaOfferta', ['id'=>$offerta->id,'locatario'=>$utente->username])}}"><button class="button">assegna</button></a>
+            @else
+            <p> Offerta già assegnata </p>
+            @endif()      
         <footer>
         @include('layouts/-footer')
         </footer>

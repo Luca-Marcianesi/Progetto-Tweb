@@ -180,18 +180,27 @@ class locatoreController extends Controller {
 
 
     public function showDettagliOpzionamento($offerta,$utente){
+        $assegnata = $this->_annunciModel->getAssegnamento($offerta);
         $off = Offerta::find($offerta);
         $user = User::where('username',$utente)->first();
         return view('gestioneInteressati')
+            ->with('assegnata', $assegnata)
             ->with('offerta',$off)
             ->with('utente',$user);
 
     }
 
+    public function stipulaContratto($offerta, $utente){
+        $offassegnata = Offerta::find($offerta);
+        $user = User::where('role', 'username', $utente)->first();
+        return view('contratto')
+            ->with('offerta', $offassegnata)
+            ->with('utente', $user);
+    }
+
     public function assegna($id,$locatario){
         $this->_annunciModel->assegna($id,$locatario);
         return redirect()->route('mieiAlloggi');
-
     }
 
 

@@ -75,6 +75,9 @@ Route::get('/ImieiAlloggi', 'locatoreController@showMieiAlloggi')
 Route::get('/dettagliOpzionamento{offerta}/{utente}', 'locatoreController@showDettagliOpzionamento')
         ->name('dettagliOpzionamento');
 
+Route::get('/stipulaContratto{offerta}/{locatario}', 'locatoreController@stipulaContratto')
+        ->name('stipulaContratto');
+
 Route::post('/locatore/modificaOff{id}', 'locatoreController@modificaOfferta')
         ->name('modificaOffertaProp');
 
