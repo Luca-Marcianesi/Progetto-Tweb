@@ -16,6 +16,8 @@ use App\Http\Requests\ServiziRequest;
 use App\Http\Requests\ModificaOffertaRequest;
 use App\Http\Requests\NewAppartamentoRequest;
 use App\Http\Requests\NewPostoLettoRequest;
+use App\Http\Requests\ModificaAppartamento;
+use App\Http\Requests\ModificaPostoLetto;
 use App\Models\Messaggistica;
 
 class locatoreController extends Controller {
@@ -206,7 +208,7 @@ class locatoreController extends Controller {
     }
 
 
-    public function modificaOfferta(ModificaOffertaRequest $request,$id){ 
+    public function modificaAppartamento(ModificaAppartamento $request,$id){ 
         
         $offerta = Offerta::find($id);
         $offerta->stato = $request->stato;
@@ -217,32 +219,36 @@ class locatoreController extends Controller {
         $offerta->genere = $request->genere;
         $offerta->save();
 
-        /*
+        $appartamento = Appartamento::find($id);
+        $appartamento->cucina = $request->cucina;
+        $appartamento->locale_ricreativo = $request->locale_ricreativo;
+        $appartamento->numero_di_camere = $request->numero_di_camere;
+        $appartamento->posti_letto_appartamento = $request->posti_letto_appartamento;
+        $appartamento->dimensioni = $request->dimensioni;
+        $appartamento->save();
 
-        $interazione = new Interagisce;
-        $interazione->utente = auth()->user()->username;
-        $interazione->offerta = $offerta->id;
-        $interazione->tipo_interazione = "c";
-        $interazione->data = date("Y-m-d");
-        $interazione->save();
 
-        if($request->tipo ==  "P"){
-            $postoletto = new PostoLetto;
-            $postoletto->offerta = $offerta->id;
-            $postoletto->posti_letto_appartamento = 1;
-            $postoletto->posti_letto_camera = 1;
-            $postoletto->dimensioni_camera = 1;
-            $postoletto->save();
-        }
-        else{
-            $appartamento = new Appartamento;
-            $appartamento->offerta = $offerta->id;
-            $appartamento->posti_letto_appartamento = 1;
-            $appartamento->numero_di_camere = 2;
-            $appartamento->dimensioni =24;
-            $appartamento->save();
-        }
-        */
+    return view('areaLocatore');               
+    }
+
+    public function modificaPostoLetto(ModificaPostoLetto $request,$id){ 
+        
+        $offerta = Offerta::find($id);
+        $offerta->stato = $request->stato;
+        $offerta->titolo = $request->titolo;
+        $offerta->descrizione_breve = $request->desc_b;
+        $offerta->prezzo = $request->prezzo;
+        $offerta->descrizione = $request->desc_l;
+        $offerta->genere = $request->genere;
+        $offerta->save();
+
+        $postoLetto = PostoLetto::find($id);
+        $postoLetto->angolo_studio = $request->angolo_studio;
+        $postoLetto->posti_letto_appartamento = $request->posti_letto_appartamento;
+        $postoLetto->posti_letto_camera = $request->posti_letto_camera;
+        $postoLetto->dimensioni_camera = $request->dimensioni_camera;
+        $postoLetto->save();
+
 
     return view('areaLocatore');               
     }
