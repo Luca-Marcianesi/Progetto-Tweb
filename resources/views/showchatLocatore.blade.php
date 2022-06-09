@@ -8,14 +8,14 @@
     <body>
         <header class="header">
             <div class="header-container">
-            <div class="logo"><img class="logoimmagine" src="images/products/Logo.png" alt="Logo"></div>
+            <div class="logo"><img class="logoimmagine" src="/images/products/Logo.png" alt="Logo"></div>
             <div class="name">ALLOGGISTUDENTI.com</div>
             <nav class="menu" fixed="right">
                 @include('layouts/_navlocatore')
             </nav>
             </div>
         </header>
-
+        <hr class="spaziatura">
         <div>
           <h1>Nuove chat</h1>
           @isset($chatNuove)
@@ -26,7 +26,7 @@
             @endforeach
           @endisset()
         </div>
-        <hr>
+        <hr class="spaziatura">
         <div>
           <h1>Vecchie chat</h1>
           @isset($chatVecchie)

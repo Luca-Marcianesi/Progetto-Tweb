@@ -85,6 +85,10 @@ class DatabaseSeeder extends Seeder {
            
         ]);
 
+        DB::table('chat')->insert([
+            ['id'=>1, 'locatore'=>'lorelore', 'locatario'=>'lariolario', 'stato'=>'nuova'],   
+        ]);
+
 
 
 }
