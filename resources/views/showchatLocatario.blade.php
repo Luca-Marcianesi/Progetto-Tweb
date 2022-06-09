@@ -15,13 +15,25 @@
             </nav>
             </div>
         </header>
-
-              @can('isLocatario')
-                @include('layouts/_navlocatario')
-              @endcan
-              @can('isLocatore')
-                @include('layouts/_navlocatore')
-              @endcan
+        <hr class="spaziatura">
+        <div>
+          <h1>Nuove chat</h1>
+          @isset($chatNuove)
+            @foreach($chatNuove as $chat)
+            <a href="{{route('chat', [$chat->id])}}">{{$chat->locatore}}</a>
+            @endforeach
+          @endisset()
+        </div>
+        <hr class="spaziatura">
+        <div>
+          <h1>Vecchie chat</h1>
+          @isset($chatVecchie)
+            @foreach($chatVecchie as $chat)
+            <a href="{{route('chat', [$chat->id])}}">{{$chat->locatore}}</a>
+            @endforeach
+          @endisset()
+        </div>
+              
 
     <!--
     <section class="messaggilocatore">

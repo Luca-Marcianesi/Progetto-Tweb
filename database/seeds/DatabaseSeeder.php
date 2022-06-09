@@ -86,10 +86,14 @@ class DatabaseSeeder extends Seeder {
         ]);
 
         DB::table('chat')->insert([
-            ['id'=>1, 'locatore'=>'lorelore', 'locatario'=>'lariolario', 'stato'=>'nuova'],   
+            ['id'=>1, 'locatore'=>'lorelore', 'locatario'=>'lariolario', 'statolocatore'=>'nuovo', 'statolocatario'=>'nuovo'],   
         ]);
 
-
-
+        DB::table('messaggio')->insert([
+            ['id'=>1, 'testo'=>'ciaociao', 'data'=>'2022-06-09', 'mittente'=>'lariolario', 'chat'=>'1'],
+            ['id'=>2, 'testo'=>'hebfuewfneu', 'data'=>'2022-06-10', 'mittente'=>'lariolario', 'chat'=>'1'],
+            ['id'=>3, 'testo'=>'pippopippo', 'data'=>'2022-06-11', 'mittente'=>'lorelore', 'chat'=>'1'],
+            ['id'=>4, 'testo'=>'plutopluto', 'data'=>'2022-06-12', 'mittente'=>'lorelore', 'chat'=>'1'],
+        ]);
 }
 }

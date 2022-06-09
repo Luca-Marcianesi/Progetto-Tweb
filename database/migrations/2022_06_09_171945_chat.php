@@ -16,10 +16,9 @@ class Chat extends Migration
         Schema::create('chat', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('locatore');            
-            $table->string('locatario');            
-            $table->string('stato');            
-           
-            
+            $table->string('locatario');
+            $table->string('statolocatore');          
+            $table->string('statolocatario');
         });
     }
 

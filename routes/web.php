@@ -93,6 +93,9 @@ Route::get('/locatore/eliminaofferta{id}', 'locatoreController@eliminaOfferta')
 Route::get('/locatore/chatLocatore', 'locatoreController@showChats')
         ->name('chatLocatore');
 
+Route::get('/chat{id}', 'UserController@showchat')
+        ->name('chat');
+
 
 
 //Locatario

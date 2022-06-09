@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\ListaCitta;
 use App\Models\MieiAlloggi;
+use App\Models\Messaggistica;
 use App\Models\GestioneServizi;
 use App\Models\Resources\Offerta;
 use App\Models\Resources\Interagisce;
@@ -21,7 +22,7 @@ class locatarioController extends Controller {
         $this->middleware('can:isLocatario');
         $this->_alloggiModel = new MieiAlloggi;
         $this->_serviziModel = new GestioneServizi;
-
+        $this->_messaggisticaModel = new Messaggistica;
     }
 
     public function areaLocatario() {
@@ -67,10 +68,18 @@ class locatarioController extends Controller {
 
         }else{
             
-        }               
-                    
-    }                 
+        }                            
+    }  
+
+    public function showChats(){
+        $nuoveChat = $this->_messaggisticaModel->nuoveChatlocatario(auth()->user()->username);
+        $vecchieChat = $this->_messaggisticaModel->vecchieChatlocatario(auth()->user()->username);
+        return view('showchatLocatario')
+            ->with('chatNuove', $nuoveChat)
+            ->with('chatVecchie', $vecchieChat);
     }
+
+}
     
 
     

@@ -20,9 +20,7 @@
           <h1>Nuove chat</h1>
           @isset($chatNuove)
             @foreach($chatNuove as $chat)
-            <div>
-              {{$chat->locatario}} ti ha inviato un messaggio!
-            </div>
+            <a href="{{route('chat', [$chat->id])}}">{{$chat->locatario}}</a>
             @endforeach
           @endisset()
         </div>
@@ -31,9 +29,7 @@
           <h1>Vecchie chat</h1>
           @isset($chatVecchie)
             @foreach($chatVecchie as $chat)
-            <div>
-              {{$chat->locatario}}
-            </div>
+            <a href="{{route('chat', [$chat->id])}}">{{$chat->locatario}}</a>
             @endforeach
           @endisset()
         </div>
