@@ -16,8 +16,7 @@ class Inoltra extends Migration
         Schema::create('inoltra', function (Blueprint $table) {
             $table->integer('messaggio');            
             $table->string('mittente');            
-            $table->string('destinatario');
-            $table->           
+            $table->string('destinatario');            
            
             
         });
