@@ -19,7 +19,7 @@ class Messaggistica {
         return Chat::where('locatore', $locatore)->where('stato', 'vecchia')->get();
     }
 
-    public function vecchiaChatlocatario($locatario) {
+    public function vecchieChatlocatario($locatario) {
         return Chat::where('locatario', $locatario)->where('stato', 'vecchia')->get();
     }
 

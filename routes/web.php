@@ -93,8 +93,7 @@ Route::get('/locatore/eliminaofferta{id}', 'locatoreController@eliminaOfferta')
 Route::get('/locatore/chatLocatore', 'locatoreController@showChats')
         ->name('chatLocatore');
 
-Route::get('/locatario/chatLocatario', 'locatarioController@showChats')
-        ->name('chatLocatario');
+
 
 //Locatario
 
@@ -103,6 +102,9 @@ Route::get('/annunciLocatario', 'locatarioController@showAnnunci')
 
 Route::get('/locatario/opzionaofferta{id}', 'locatarioController@opziona')
         ->name('opziona');
+        
+Route::get('/locatario/chatLocatario', 'locatarioController@showChats')
+        ->name('chatLocatario');
 
 
 //User
